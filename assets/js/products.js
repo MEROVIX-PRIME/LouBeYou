@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-13T09:52:30.055Z
+   Обновлено: 2026-08-13T10:13:34.132Z
    ============================================================ */
 
 window.LOU_COLLECTIONS = [
@@ -822,7 +822,7 @@ window.LOU_PRODUCTS = [
     ]
   },
   {
-    "id": "noplans",
+    "id": "no-plans",
     "category": "tshirt",
     "collection": "no-plans",
     "image": "https://lh3.googleusercontent.com/d/1R4Bm9m-4iNv9-Sp1H4DBIFqBSxFvubDs",
@@ -2101,7 +2101,7 @@ window.LOU_PRODUCTS = [
     ]
   },
   {
-    "id": "mug_noplans",
+    "id": "mug_no-plans",
     "category": "mug",
     "collection": "no-plans",
     "image": "https://lh3.googleusercontent.com/d/1gH4jF2BP3U4sS6a-N5CwcDxBCqoG5MSI",
