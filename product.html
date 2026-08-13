@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lou Be You — Product</title>
+<meta name="description" content="Lou Be You product details.">
+<link rel="icon" href="assets/img/lou-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="product">
+<div data-header></div>
+<div class="wrap"><nav class="breadcrumbs breadcrumbs-product" aria-label="Breadcrumb"><a href="index.html" data-i18n="breadcrumb.home">Home</a><span>›</span><a href="shop.html" data-i18n="breadcrumb.shop">Shop</a><span>›</span><span data-product-crumb>Product</span></nav></div>
+<main class="product-page wrap" data-product-page></main>
+<div data-footer></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const id = new URLSearchParams(location.search).get("id");
+  function render() {
+    if (id && window.LOU) LOU.openProduct(id);
+    else document.querySelector("[data-product-page]").innerHTML = '<div class="empty-state"><p>Product not found.</p><a class="btn btn-primary" href="shop.html">Back to shop</a></div>';
+  }
+  document.addEventListener("products:ready", render);
+  document.addEventListener("lang:change", render);
+})();
+</script>
+</body>
+</html>

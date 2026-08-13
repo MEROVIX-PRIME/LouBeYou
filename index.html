@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lou Be You — Be cozy. Be you.</title>
+<meta name="description" content="Áo thun và cốc sứ Lou cho những buổi sáng chậm rãi và khoảnh khắc yên bình.">
+<link rel="icon" href="assets/img/lou-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+<div data-header></div>
+
+<!-- ГЕРОЙ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-photo"></div>
+    <div class="wrap">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Be cozy.</span>
+          <span data-i18n="hero.title2">Be you.</span>
+        </h1>
+        <p class="hero-text" data-i18n="hero.text">Lou is here for slow mornings, little joys and quiet moments that feel like home.</p>
+        <a href="shop.html" class="btn btn-primary btn-lg" data-i18n="hero.cta">Explore collection</a>
+        <div class="hero-proof">
+          <div class="avatars">
+            <i></i><i></i><i></i>
+          </div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="proof-text" data-i18n="hero.loved">Loved by 10,000+ cozy souls</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-cards">
+      <a class="hero-card" href="product.html?id=photo&amp;color=black">
+        <div class="hero-card-img"><img src="assets/img/mockup-tshirt-black.webp" alt=""></div>
+        <div>
+          <h3 data-hero-product="photo">Lou Be You «One More Photo»</h3>
+          <span class="link-arrow">
+            <span data-i18n="hero.card1.cta">Shop t-shirts</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <a class="hero-card" href="product.html?id=mug_noplans">
+        <div class="hero-card-img"><img src="assets/img/mockup-mug-noplans.webp" alt=""></div>
+        <div>
+          <h3 data-hero-product="mug_noplans">Lou Be You «No Plans for Today»</h3>
+          <span class="link-arrow">
+            <span data-i18n="hero.card2.cta">Shop mugs</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="torn-edge"></div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="usp">
+  <div class="wrap">
+    <div class="usp-grid" data-usp></div>
+  </div>
+</section>
+
+<!-- КОЛЛЕКЦИИ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title" data-i18n="home.collections">Collections</h2>
+      <a href="collections.html" class="link-arrow">
+        <span data-i18n="home.viewAll">View all</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="collection-carousel">
+      <button class="carousel-btn carousel-prev" data-carousel-prev aria-label="Previous collections">‹</button>
+      <div class="coll-row" data-collections tabindex="0"></div>
+      <button class="carousel-btn carousel-next" data-carousel-next aria-label="Next collections">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- БАННЕР -->
+<section class="section" style="padding-top:12px">
+  <div class="wrap">
+    <div class="banner">
+      <div class="banner-photo"></div>
+      <div class="banner-content">
+        <h2>
+          <span data-i18n="home.banner1">Little moments.</span><br>
+          <span data-i18n="home.banner2">Lou makes them even better.</span>
+        </h2>
+        <a href="shop.html" class="btn" data-i18n="home.bannerCta">Shop now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ХИТЫ -->
+<section class="section" style="padding-top:12px">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" data-i18n="home.bestsellers">Most loved</h2>
+        <p class="section-sub" data-i18n="home.bestsellersText">The Lou designs people are choosing this week.</p>
+      </div>
+      <a href="shop.html" class="link-arrow">
+        <span data-i18n="home.viewAll">View all</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="products" data-bestsellers></div>
+  </div>
+</section>
+
+<div data-footer></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  function renderUsp() {
+    const box = document.querySelector("[data-usp]");
+    const items = [
+      ["leaf", "usp.1"], ["heart", "usp.2"], ["gift", "usp.3"], ["moon", "usp.4"]
+    ];
+    box.innerHTML = items.map(function (i) {
+      return '<div class="usp-item">' + LOU.icons[i[0]] +
+        "<h3>" + LOU.t(i[1] + ".title") + "</h3>" +
+        "<p>" + LOU.t(i[1] + ".text") + "</p></div>";
+    }).join("");
+  }
+
+  function renderCollections() {
+    const box = document.querySelector("[data-collections]");
+    box.innerHTML = LOU.collections.map(function (c) {
+      const n = LOU.products.filter(function (p) { return p.collection === c.id; }).length;
+      return '<a class="coll-card" href="collections.html?c=' + encodeURIComponent(c.id) + '">' +
+        (c.hit ? '<span class="coll-hit">' + (LOU.getLang() === "vi" ? "Nổi bật" : LOU.getLang() === "ru" ? "Хит" : "Bestseller") + '</span>' : '') +
+        '<img src="' + c.image + '" alt="' + LOU.pick(c) + '" loading="lazy">' +
+        '<div class="coll-card-label"><strong>' + LOU.pick(c) + "</strong>" +
+        "<small>" + n + " " + LOU.t("collections.items") + "</small></div></a>";
+    }).join("");
+  }
+
+  function bindCarousel() {
+    const track = document.querySelector("[data-collections]");
+    const step = function () { return Math.max(240, track.clientWidth * .72); };
+    document.querySelector("[data-carousel-prev]").onclick = function () {
+      track.scrollBy({ left: -step(), behavior: "smooth" });
+    };
+    document.querySelector("[data-carousel-next]").onclick = function () {
+      track.scrollBy({ left: step(), behavior: "smooth" });
+    };
+  }
+
+  function renderBest() {
+    const best = LOU.products.slice().sort(function (a, b) {
+      return (b.stock || 0) - (a.stock || 0);
+    }).slice(0, 4);
+    LOU.renderGrid(document.querySelector("[data-bestsellers]"), best);
+  }
+
+  function renderHeroProducts() {
+    const photo = LOU.products.find(function (p) { return p.id === "photo"; });
+    const mug = LOU.products.find(function (p) { return p.id === "mug_noplans"; });
+    const photoTitle = document.querySelector('[data-hero-product="photo"]');
+    const mugTitle = document.querySelector('[data-hero-product="mug_noplans"]');
+    if (photo && photoTitle) photoTitle.textContent = LOU.pick((photo.namesByColor && photo.namesByColor.black) || photo.name);
+    if (mug && mugTitle) mugTitle.textContent = LOU.pick(mug.name);
+  }
+
+  function renderAll() { renderUsp(); renderCollections(); renderBest(); renderHeroProducts(); bindCarousel(); }
+
+  document.addEventListener("products:ready", renderAll);
+  document.addEventListener("lang:change", renderAll);
+})();
+</script>
+</body>
+</html>

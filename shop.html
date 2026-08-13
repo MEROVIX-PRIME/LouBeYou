@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lou Be You — Shop</title>
+<meta name="description" content="Áo thun và cốc sứ Lou.">
+<link rel="icon" href="assets/img/lou-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="shop">
+
+<div data-header></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <nav class="breadcrumbs breadcrumbs-shop" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="breadcrumb.home">Home</a><span>›</span><span data-i18n="breadcrumb.shop">Shop</span>
+    </nav>
+    <h1 class="page-title" data-i18n="shop.title">Shop</h1>
+    <p class="page-sub" data-i18n="shop.subtitle">Everything Lou brings to your day.</p>
+  </div>
+</div>
+
+<main class="wrap" style="padding-bottom:60px">
+  <div class="shop-topline">
+    <div class="chips category-switch" data-category-switch></div>
+    <span class="count" data-count></span>
+  </div>
+  <div class="filter-panel">
+    <label><span data-i18n="filter.type">Product type</span><select class="select" data-type></select></label>
+    <label><span data-i18n="filter.collection">Collection</span><select class="select" data-collection></select></label>
+    <label><span data-i18n="filter.size">Size</span><select class="select" data-size></select></label>
+    <label><span data-i18n="filter.price">Price</span><select class="select" data-price></select></label>
+    <label><span data-i18n="filter.stock">Availability</span><select class="select" data-stock></select></label>
+    <label><span data-i18n="filter.sort">Sort</span><select class="select" data-sort></select></label>
+    <button class="btn filter-reset" data-reset data-i18n="filter.reset">Clear filters</button>
+  </div>
+  <div class="products" data-grid></div>
+</main>
+
+<div data-footer></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const state = { type: params.get("cat") || "all", collection: "all", size: "all", price: "all", stock: "all", sort: "new" };
+  const controls = {
+    type: document.querySelector("[data-type]"), collection: document.querySelector("[data-collection]"),
+    size: document.querySelector("[data-size]"), price: document.querySelector("[data-price]"),
+    stock: document.querySelector("[data-stock]"), sort: document.querySelector("[data-sort]")
+  };
+
+  function option(value, label) { return '<option value="' + value + '">' + label + '</option>'; }
+  function renderFilters() {
+    controls.type.innerHTML = option("all", LOU.t("filter.all")) + option("tshirt", LOU.t("shop.tshirt")) + option("mug", LOU.t("shop.mug"));
+    controls.collection.innerHTML = option("all", LOU.t("filter.all")) + LOU.collections.map(function (c) { return option(c.id, LOU.pick(c)); }).join("");
+    controls.size.innerHTML = option("all", LOU.t("filter.all")) + ["XS","S","M","L","XL","XXL"].map(function (s) { return option(s, s); }).join("");
+    controls.price.innerHTML = option("all", LOU.t("filter.all")) + option("low", LOU.t("filter.priceLow")) + option("mid", LOU.t("filter.priceMid")) + option("high", LOU.t("filter.priceHigh"));
+    controls.stock.innerHTML = option("all", LOU.t("filter.all")) + option("available", LOU.t("filter.available")) + option("low", LOU.t("filter.low"));
+    controls.sort.innerHTML = option("new", LOU.t("shop.sort.new")) + option("asc", LOU.t("shop.sort.priceAsc")) + option("desc", LOU.t("shop.sort.priceDesc"));
+    Object.keys(controls).forEach(function (key) { controls[key].value = state[key]; });
+  }
+
+  function renderCategorySwitch() {
+    const labels = { all: LOU.t("filter.all"), tshirt: LOU.t("shop.tshirt"), mug: LOU.t("shop.mug") };
+    document.querySelector("[data-category-switch]").innerHTML = ["all", "tshirt", "mug"].map(function (type) {
+      return '<button class="chip ' + (state.type === type ? 'active' : '') + '" data-category="' + type + '">' + labels[type] + '</button>';
+    }).join("");
+    document.querySelectorAll("[data-category]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        state.type = button.dataset.category;
+        const u = new URL(location);
+        if (state.type === "all") u.searchParams.delete("cat"); else u.searchParams.set("cat", state.type);
+        history.replaceState(null, "", u);
+        render();
+      });
+    });
+  }
+
+  function render() {
+    renderFilters();
+    renderCategorySwitch();
+    let items = LOU.products.filter(function (p) {
+      const usd = p.price / window.LOU_CONFIG.usdToVnd;
+      return (state.type === "all" || p.category === state.type) &&
+        (state.collection === "all" || p.collection === state.collection) &&
+        (state.size === "all" || (p.sizes || []).includes(state.size)) &&
+        (state.price === "all" || (state.price === "low" && usd < 10) || (state.price === "mid" && usd >= 10 && usd < 12) || (state.price === "high" && usd >= 12)) &&
+        (state.stock === "all" || (state.stock === "available" && p.stock > 0) || (state.stock === "low" && p.stock > 0 && p.stock <= window.LOU_CONFIG.stock.lowThreshold));
+    });
+    if (state.sort === "asc") items.sort(function (a, b) { return a.price - b.price; });
+    if (state.sort === "desc") items.sort(function (a, b) { return b.price - a.price; });
+    document.querySelector("[data-count]").textContent = items.length + " " + LOU.t("shop.found");
+    LOU.renderGrid(document.querySelector("[data-grid]"), items);
+  }
+
+  Object.keys(controls).forEach(function (key) {
+    controls[key].addEventListener("change", function () { state[key] = this.value; render(); });
+  });
+  document.querySelector("[data-reset]").addEventListener("click", function () {
+    Object.assign(state, { type: "all", collection: "all", size: "all", price: "all", stock: "all", sort: "new" });
+    history.replaceState(null, "", location.pathname);
+    render();
+  });
+  document.addEventListener("products:ready", render);
+  document.addEventListener("lang:change", render);
+})();
+</script>
+</body>
+</html>

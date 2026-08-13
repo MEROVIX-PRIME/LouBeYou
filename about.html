@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lou Be You — About Lou</title>
+<link rel="icon" href="assets/img/lou-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="about">
+
+<div data-header></div>
+
+<main>
+  <section class="about-hero">
+    <div class="wrap">
+      <img src="assets/img/lou-logo.webp" alt="Lou">
+      <h1 class="page-title" data-i18n="about.title">About Lou</h1>
+      <p class="about-lead" data-i18n="about.lead"></p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="about-body">
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+      <p data-i18n="about.p3"></p>
+    </div>
+
+    <div class="about-gallery">
+      <div><img src="assets/img/design-no-plans.webp" alt="" loading="lazy"></div>
+      <div><img src="assets/img/design-one-more-page.webp" alt="" loading="lazy"></div>
+      <div><img src="assets/img/design-rain.webp" alt="" loading="lazy"></div>
+      <div><img src="assets/img/design-waiting.webp" alt="" loading="lazy"></div>
+    </div>
+
+    <div class="about-body" style="padding-bottom:40px">
+      <div class="accordion" id="shipping">
+        <div class="acc-item open">
+          <button class="acc-head"><span data-i18n="footer.shipping">Shipping</span></button>
+          <div class="acc-body" data-ship></div>
+        </div>
+        <div class="acc-item" id="returns">
+          <button class="acc-head"><span data-i18n="footer.returns">Returns</span></button>
+          <div class="acc-body" data-returns></div>
+        </div>
+        <div class="acc-item" id="faq">
+          <button class="acc-head"><span data-i18n="footer.faq">FAQ</span></button>
+          <div class="acc-body" data-faq></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px">
+        <a href="shop.html" class="btn btn-primary btn-lg" data-i18n="about.cta">Visit the shop</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const COPY = {
+    vi: {
+      ship: "Chúng tôi giao hàng trên toàn Việt Nam. Đơn hàng được xử lý trong 1–2 ngày làm việc, thời gian giao từ 2 đến 5 ngày tuỳ khu vực. Phí vận chuyển 30.000 ₫, miễn phí cho đơn từ 500.000 ₫.",
+      ret: "Bạn có thể đổi hoặc trả hàng trong 14 ngày kể từ khi nhận, với điều kiện sản phẩm chưa qua sử dụng và còn nguyên nhãn mác. Nhắn tin cho chúng tôi qua Instagram hoặc email, chúng tôi sẽ hướng dẫn từng bước.",
+      faq: "<strong>Áo có bị co sau khi giặt không?</strong><br>Không đáng kể. Hãy giặt ở nước lạnh và phơi trong bóng râm.<br><br><strong>In có bền không?</strong><br>Có. Chúng tôi in DTG, hình in giữ màu qua hàng chục lần giặt.<br><br><strong>Tôi có thể đặt số lượng lớn không?</strong><br>Được. Hãy liên hệ qua email để nhận báo giá riêng."
+    },
+    en: {
+      ship: "We ship across Vietnam. Orders are processed within 1–2 working days and arrive in 2–5 days depending on the region. Shipping is 30,000 ₫, free on orders from 500,000 ₫.",
+      ret: "You can exchange or return an item within 14 days of delivery, as long as it is unworn and still has its tags. Message us on Instagram or by email and we'll walk you through it.",
+      faq: "<strong>Will the t-shirt shrink?</strong><br>Only slightly. Wash cold and dry in the shade.<br><br><strong>How durable is the print?</strong><br>Very. We use DTG printing that holds its colour through dozens of washes.<br><br><strong>Can I order in bulk?</strong><br>Yes. Email us and we'll send you a separate quote."
+    },
+    ru: {
+      ship: "Доставляем по всему Вьетнаму. Заказ собираем за 1–2 рабочих дня, доставка занимает от 2 до 5 дней в зависимости от региона. Стоимость доставки 30 000 ₫, бесплатно от 500 000 ₫.",
+      ret: "Обменять или вернуть товар можно в течение 14 дней после получения, если он не был в носке и на нём сохранены бирки. Напиши нам в Instagram или на почту — подскажем, что делать дальше.",
+      faq: "<strong>Футболка сядет после стирки?</strong><br>Незначительно. Стирай в холодной воде и суши в тени.<br><br><strong>Насколько стойкий принт?</strong><br>Очень. Мы печатаем методом DTG — принт держит цвет десятки стирок.<br><br><strong>Можно заказать оптом?</strong><br>Да. Напиши на почту, пришлём отдельное предложение."
+    }
+  };
+
+  function render() {
+    const c = COPY[LOU.getLang()] || COPY.en;
+    document.querySelector("[data-ship]").innerHTML = c.ship;
+    document.querySelector("[data-returns]").innerHTML = c.ret;
+    document.querySelector("[data-faq]").innerHTML = c.faq;
+  }
+
+  document.querySelectorAll(".acc-head").forEach(function (h) {
+    h.innerHTML += LOU_ICON_CHEVRON();
+    h.addEventListener("click", function () { h.parentElement.classList.toggle("open"); });
+  });
+  function LOU_ICON_CHEVRON() {
+    return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+  }
+
+  document.addEventListener("products:ready", render);
+  document.addEventListener("lang:change", render);
+  document.addEventListener("DOMContentLoaded", function () { setTimeout(render, 30); });
+})();
+</script>
+</body>
+</html>

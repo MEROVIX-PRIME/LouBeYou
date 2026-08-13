@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lou Be You — Collections</title>
+<meta name="description" content="Các bộ sưu tập Lou.">
+<link rel="icon" href="assets/img/lou-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="collections">
+
+<div data-header></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1 class="page-title" data-title>Collections</h1>
+    <p class="page-sub" data-subtitle>Every collection is one of Lou's moods.</p>
+  </div>
+</div>
+
+<main class="wrap" style="padding-bottom:60px">
+  <div data-back-wrap style="margin-bottom:26px;display:none">
+    <button class="link-arrow" data-back style="transform:scaleX(1)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(180deg)"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <span data-i18n="collections.back">All collections</span>
+    </button>
+  </div>
+
+  <div class="coll-row" data-coll-grid style="grid-template-columns:repeat(auto-fill,minmax(210px,1fr))"></div>
+  <div class="products" data-prod-grid style="display:none"></div>
+</main>
+
+<div data-footer></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  let current = new URLSearchParams(location.search).get("c") || null;
+
+  const collGrid = document.querySelector("[data-coll-grid]");
+  const prodGrid = document.querySelector("[data-prod-grid]");
+  const backWrap = document.querySelector("[data-back-wrap]");
+
+  function render() {
+    const title = document.querySelector("[data-title]");
+    const sub = document.querySelector("[data-subtitle]");
+
+    if (current) {
+      const c = LOU.collections.find(function (x) { return x.id === current; });
+      const items = LOU.products.filter(function (p) { return p.collection === current; });
+
+      title.textContent = c ? LOU.pick(c) : LOU.t("collections.title");
+      sub.textContent = items.length + " " + LOU.t("collections.items");
+
+      collGrid.style.display = "none";
+      prodGrid.style.display = "grid";
+      backWrap.style.display = "block";
+      LOU.renderGrid(prodGrid, items);
+    } else {
+      title.textContent = LOU.t("collections.title");
+      sub.textContent = LOU.t("collections.subtitle");
+
+      collGrid.style.display = "grid";
+      prodGrid.style.display = "none";
+      backWrap.style.display = "none";
+
+      collGrid.innerHTML = LOU.collections.map(function (c) {
+        const n = LOU.products.filter(function (p) { return p.collection === c.id; }).length;
+        return '<button class="coll-card" data-c="' + c.id + '">' +
+          (c.hit ? '<span class="coll-hit">' + (LOU.getLang() === "vi" ? "Nổi bật" : LOU.getLang() === "ru" ? "Хит" : "Bestseller") + '</span>' : '') +
+          '<img src="' + c.image + '" alt="' + LOU.pick(c) + '" loading="lazy">' +
+          '<div class="coll-card-label"><strong>' + LOU.pick(c) + "</strong>" +
+          "<small>" + n + " " + LOU.t("collections.items") + "</small></div></button>";
+      }).join("");
+
+      collGrid.querySelectorAll("[data-c]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          current = b.dataset.c;
+          const u = new URL(location);
+          u.searchParams.set("c", current);
+          history.pushState(null, "", u);
+          render();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    }
+  }
+
+  document.querySelector("[data-back]").addEventListener("click", function () {
+    current = null;
+    const u = new URL(location);
+    u.searchParams.delete("c");
+    history.pushState(null, "", u);
+    render();
+  });
+
+  window.addEventListener("popstate", function () {
+    current = new URLSearchParams(location.search).get("c") || null;
+    render();
+  });
+
+  document.addEventListener("products:ready", render);
+  document.addEventListener("lang:change", render);
+})();
+</script>
+</body>
+</html>

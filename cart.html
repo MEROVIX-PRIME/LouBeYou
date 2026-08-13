@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lou Be You — Cart</title>
+<link rel="icon" href="assets/img/lou-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="cart">
+
+<div data-header></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1 class="page-title" data-i18n="cart.title">Cart</h1>
+  </div>
+</div>
+
+<main class="wrap" style="padding-bottom:70px">
+
+  <!-- Пустая корзина -->
+  <div class="empty-state" data-empty style="display:none">
+    <img src="assets/img/lou-logo.webp" alt="">
+    <p data-i18n="cart.empty">Your cart is empty.</p>
+    <a href="shop.html" class="btn btn-primary" style="margin-top:16px" data-i18n="cart.emptyCta">Start shopping</a>
+  </div>
+
+  <!-- Корзина -->
+  <div class="cart-layout" data-layout>
+    <div>
+      <div class="cart-list" data-list></div>
+      <div style="margin-top:22px">
+        <a href="shop.html" class="link-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(180deg)"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span data-i18n="cart.continue">Continue shopping</span>
+        </a>
+      </div>
+
+      <!-- Форма заказа -->
+      <section style="margin-top:40px" data-checkout>
+        <h2 class="display" style="font-size:1.7rem;margin-bottom:20px" data-i18n="checkout.title">Order details</h2>
+        <form data-order-form novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="f-name"><span data-i18n="checkout.name">Full name</span> <i>*</i></label>
+              <input id="f-name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="f-phone"><span data-i18n="checkout.phone">Phone</span> <i>*</i></label>
+              <input id="f-phone" name="phone" type="tel" required autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="f-email"><span data-i18n="checkout.email">Email</span> <i>*</i></label>
+              <input id="f-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="f-city"><span data-i18n="checkout.city">City</span> <i>*</i></label>
+              <input id="f-city" name="city" required autocomplete="address-level2">
+            </div>
+            <div class="form-field full">
+              <label for="f-address"><span data-i18n="checkout.address">Address</span> <i>*</i></label>
+              <input id="f-address" name="address" required autocomplete="street-address">
+            </div>
+            <div class="form-field full">
+              <label for="f-note" data-i18n="checkout.note">Order note</label>
+              <textarea id="f-note" name="note" data-i18n-ph="checkout.notePlaceholder"></textarea>
+            </div>
+          </div>
+
+          <div class="pay-note">
+            <strong data-i18n="checkout.payment">Payment</strong><br>
+            <span data-i18n="checkout.paymentText"></span>
+          </div>
+
+          <div class="form-error" data-error data-i18n="checkout.required"></div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block" data-submit style="margin-top:8px">
+            <span data-i18n="checkout.submit">Confirm order</span>
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Итоги -->
+    <aside class="summary">
+      <h2 data-i18n="checkout.summary">Your order</h2>
+      <div class="sum-row">
+        <span data-i18n="cart.subtotal">Subtotal</span>
+        <strong data-subtotal></strong>
+      </div>
+      <div class="sum-row">
+        <span data-i18n="cart.shipping">Shipping</span>
+        <strong data-shipping></strong>
+      </div>
+      <div data-free-hint></div>
+      <div class="sum-row total">
+        <span data-i18n="cart.grandTotal">Total</span>
+        <strong data-total></strong>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Спасибо -->
+  <div class="empty-state" data-thanks style="display:none">
+    <img src="assets/img/design-no-plans.webp" alt="" style="width:190px">
+    <h2 class="display" style="font-size:2rem;margin-bottom:10px" data-i18n="thanks.title">Thank you!</h2>
+    <p data-i18n="thanks.text">Your order has been sent.</p>
+    <p style="margin-top:10px"><span data-i18n="thanks.order">Order number</span>: <strong data-order-id></strong></p>
+    <a href="index.html" class="btn btn-primary" style="margin-top:20px" data-i18n="thanks.home">Back to home</a>
+  </div>
+</main>
+
+<!-- Скрытая форма для Netlify Forms — она регистрирует форму при деплое -->
+<form name="lou-order" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name"><input type="text" name="phone">
+  <input type="email" name="email"><input type="text" name="city">
+  <input type="text" name="address"><textarea name="note"></textarea>
+  <input type="text" name="order_id"><textarea name="order_items"></textarea>
+  <input type="text" name="order_total"><input type="text" name="language">
+</form>
+
+<div data-footer></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const listEl = document.querySelector("[data-list]");
+  const layout = document.querySelector("[data-layout]");
+  const emptyEl = document.querySelector("[data-empty]");
+  const thanksEl = document.querySelector("[data-thanks]");
+  const form = document.querySelector("[data-order-form]");
+  const errEl = document.querySelector("[data-error]");
+
+  function render() {
+    const items = LOU.cart;
+
+    if (!items.length) {
+      layout.style.display = "none";
+      emptyEl.style.display = "block";
+      return;
+    }
+    layout.style.display = "grid";
+    emptyEl.style.display = "none";
+
+    listEl.innerHTML = items.map(function (it) {
+      const key = LOU.lineKey(it);
+      const meta = [it.size, it.color ? LOU.colorLabel(it.color) : ""].filter(Boolean).join(" · ");
+      return '<div class="cart-row">' +
+        '<div class="cart-thumb"><img src="' + it.image + '" alt=""></div>' +
+        '<div class="cart-info"><h3>' + LOU.pick(it.name) + "</h3>" +
+        (meta ? '<div class="cart-meta">' + meta + "</div>" : "") +
+        '<div class="cart-meta">' + LOU.money(it.price) + "</div></div>" +
+        '<div class="cart-actions">' +
+        '<div class="qty"><button data-dec="' + key + '">−</button>' +
+        '<input type="number" value="' + it.qty + '" min="1" max="99" data-q="' + key + '">' +
+        '<button data-inc="' + key + '">+</button></div>' +
+        '<div class="cart-line-total">' + LOU.money(it.price * it.qty) + "</div>" +
+        '<button class="remove-btn" data-rm="' + key + '">' + LOU.t("cart.remove") + "</button>" +
+        "</div></div>";
+    }).join("");
+
+    listEl.querySelectorAll("[data-inc]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        const it = LOU.cart.find(function (x) { return LOU.lineKey(x) === b.dataset.inc; });
+        LOU.updateQty(b.dataset.inc, it.qty + 1);
+      });
+    });
+    listEl.querySelectorAll("[data-dec]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        const it = LOU.cart.find(function (x) { return LOU.lineKey(x) === b.dataset.dec; });
+        LOU.updateQty(b.dataset.dec, it.qty - 1);
+      });
+    });
+    listEl.querySelectorAll("[data-q]").forEach(function (i) {
+      i.addEventListener("change", function () {
+        LOU.updateQty(i.dataset.q, parseInt(i.value, 10) || 1);
+      });
+    });
+    listEl.querySelectorAll("[data-rm]").forEach(function (b) {
+      b.addEventListener("click", function () { LOU.removeItem(b.dataset.rm); });
+    });
+
+    const sub = LOU.cartSubtotal();
+    const ship = LOU.shippingCost();
+    document.querySelector("[data-subtotal]").textContent = LOU.money(sub);
+    document.querySelector("[data-shipping]").textContent =
+      ship === 0 ? LOU.t("cart.shippingFree") : LOU.money(ship);
+    document.querySelector("[data-total]").textContent = LOU.money(sub + ship);
+
+    const hint = document.querySelector("[data-free-hint]");
+    const left = LOU_CONFIG.shipping.freeFrom - sub;
+    hint.innerHTML = left > 0
+      ? '<div class="free-hint">' + LOU.t("cart.freeHint", { amount: LOU.money(left) }) + "</div>"
+      : "";
+  }
+
+  function orderId() {
+    return "LOU-" + Date.now().toString(36).toUpperCase().slice(-6);
+  }
+
+  function itemsText() {
+    return LOU.cart.map(function (it) {
+      const meta = [it.size, it.color ? LOU.colorLabel(it.color) : ""].filter(Boolean).join("/");
+      return "• " + LOU.pick(it.name) + (meta ? " (" + meta + ")" : "") +
+        " × " + it.qty + " = " + LOU.money(it.price * it.qty);
+    }).join("\n");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    errEl.classList.remove("show");
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    const required = ["name", "phone", "email", "city", "address"];
+    const missing = required.filter(function (k) { return !String(data[k] || "").trim(); });
+    if (missing.length || !LOU.cart.length) {
+      errEl.classList.add("show");
+      return;
+    }
+
+    const id = orderId();
+    const sub = LOU.cartSubtotal(), ship = LOU.shippingCost();
+    const btn = document.querySelector("[data-submit]");
+    btn.disabled = true;
+    btn.querySelector("span").textContent = LOU.t("checkout.sending");
+
+    const payload = new URLSearchParams({
+      "form-name": LOU_CONFIG.orderFormName,
+      name: data.name, phone: data.phone, email: data.email,
+      city: data.city, address: data.address, note: data.note || "",
+      order_id: id,
+      order_items: itemsText(),
+      order_total: LOU.money(sub + ship) + " (" + LOU.t("cart.shipping") + ": " +
+        (ship ? LOU.money(ship) : LOU.t("cart.shippingFree")) + ")",
+      language: LOU.getLang()
+    });
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: payload.toString()
+    }).then(function (r) {
+      if (!r.ok) throw new Error("form");
+      done(id);
+    }).catch(function () {
+      // Резервный путь: открыть почтовый клиент
+      const body = "Order " + id + "\n\n" + itemsText() +
+        "\n\nTotal: " + LOU.money(sub + ship) +
+        "\n\n" + data.name + "\n" + data.phone + "\n" + data.email +
+        "\n" + data.city + ", " + data.address +
+        (data.note ? "\n\nNote: " + data.note : "");
+      window.location.href = "mailto:" + LOU_CONFIG.orderEmail +
+        "?subject=" + encodeURIComponent("Lou order " + id) +
+        "&body=" + encodeURIComponent(body);
+      done(id);
+    });
+  });
+
+  function done(id) {
+    LOU.clearCart();
+    layout.style.display = "none";
+    emptyEl.style.display = "none";
+    document.querySelector("[data-order-id]").textContent = id;
+    thanksEl.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  document.addEventListener("products:ready", render);
+  document.addEventListener("cart:change", render);
+  document.addEventListener("lang:change", render);
+})();
+</script>
+</body>
+</html>
