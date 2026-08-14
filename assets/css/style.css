@@ -519,6 +519,23 @@ html[lang="vi"] .hero-title {
 }
 .breadcrumbs a { color: var(--moss); font-weight: 700; }
 .breadcrumbs a:hover { color: var(--caramel); }
+.bc-ellipsis {
+  position: relative; cursor: pointer; font-weight: 700; color: var(--moss);
+  padding: 2px 4px; border-radius: 4px; user-select: none;
+}
+.bc-ellipsis:hover { color: var(--caramel); }
+.bc-dropdown {
+  display: none; position: absolute; top: 100%; left: 0; z-index: 100;
+  background: var(--white-soft); border: 1px solid var(--border);
+  border-radius: var(--r-sm); box-shadow: var(--shadow-md);
+  padding: 6px 0; min-width: 160px; margin-top: 4px;
+}
+.bc-dropdown.open { display: block; }
+.bc-dropdown a {
+  display: block; padding: 8px 16px; font-size: .84rem;
+  color: var(--ink); font-weight: 600; white-space: nowrap;
+}
+.bc-dropdown a:hover { background: var(--ivory); color: var(--caramel); }
 .breadcrumbs-product { justify-content: flex-start; margin: 22px 0; }
 .breadcrumbs-shop { justify-content: flex-start; }
 .shop-topline {
@@ -975,10 +992,10 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   :root { --header-h: 64px; }
 
   .breadcrumbs {
-    flex-wrap: nowrap; overflow: hidden;
-    direction: rtl; justify-content: flex-start;
+    flex-wrap: nowrap; overflow: visible;
+    justify-content: flex-start;
   }
-  .breadcrumbs > * { direction: ltr; flex-shrink: 0; white-space: nowrap; }
+  .breadcrumbs > * { flex-shrink: 0; white-space: nowrap; }
   .breadcrumbs-product { margin: 14px 0 16px; }
   .similar-row { grid-template-columns: repeat(2, 1fr); }
   .similar-card:nth-child(n+5) { display: none; }

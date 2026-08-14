@@ -978,6 +978,76 @@
     icons: ICONS, applyI18n
   };
 
+  /* ---------- Свернуть крошки на мобиле ---------- */
+  function collapseBreadcrumbs() {
+    if (window.innerWidth > 720) return;
+    document.querySelectorAll(".breadcrumbs").forEach(bc => {
+      /* Убираем предыдущий коллапс если был */
+      bc.querySelectorAll(".bc-ellipsis, [data-bc-sep]").forEach(el => el.remove());
+      bc.querySelectorAll("[data-bc-hidden]").forEach(el => { el.style.display = ""; delete el.dataset.bcHidden; });
+      /* Собираем все ноды: ссылки и разделители */
+      const children = Array.from(bc.children);
+      /* Нужны минимум 4 элемента (Home › Cat › Sub › Current) чтобы было что скрывать */
+      /* Считаем только ссылки и финальный span (не разделители ›) */
+      const items = children.filter(el => el.tagName === "A" || (el.tagName === "SPAN" && !el.textContent.trim().match(/^›$/)));
+      if (items.length <= 2) return; /* Home + текущая — скрывать нечего */
+
+      /* Скрываем средние элементы (всё кроме первого и последнего item) */
+      const toHide = [];
+      let firstFound = false;
+      let lastItem = items[items.length - 1];
+      for (let i = 0; i < children.length; i++) {
+        const el = children[i];
+        const isItem = items.includes(el);
+        if (isItem && !firstFound) { firstFound = true; continue; } /* Home — оставляем */
+        if (el === lastItem) break; /* Текущая страница — оставляем */
+        if (firstFound) toHide.push(el);
+      }
+      if (!toHide.length) return;
+
+      /* Прячем средние элементы */
+      toHide.forEach(el => { el.style.display = "none"; el.dataset.bcHidden = "1"; });
+
+      /* Вставляем "..." с разделителем перед последним разделителем */
+      const ellipsis = document.createElement("span");
+      ellipsis.className = "bc-ellipsis";
+      ellipsis.textContent = "…";
+
+      const dropdown = document.createElement("div");
+      dropdown.className = "bc-dropdown";
+      /* Собираем скрытые ссылки для дропдауна */
+      toHide.forEach(el => {
+        if (el.tagName === "A") {
+          const link = document.createElement("a");
+          link.href = el.href;
+          link.textContent = el.textContent;
+          dropdown.appendChild(link);
+        }
+      });
+      ellipsis.appendChild(dropdown);
+
+      ellipsis.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle("open");
+      });
+
+      document.addEventListener("click", function() {
+        dropdown.classList.remove("open");
+      });
+
+      /* Вставляем после первого разделителя */
+      const firstSep = children.find(el => el.tagName === "SPAN" && el.textContent.trim() === "›");
+      if (firstSep && firstSep.nextSibling) {
+        bc.insertBefore(ellipsis, firstSep.nextSibling);
+        const sep2 = document.createElement("span");
+        sep2.textContent = "›";
+        sep2.dataset.bcSep = "1";
+        bc.insertBefore(sep2, ellipsis.nextSibling);
+      }
+    });
+  }
+
   /* ---------- Старт ---------- */
   document.addEventListener("DOMContentLoaded", async () => {
     buildHeader();
@@ -986,10 +1056,13 @@
     await loadProducts();
     renderFooterCollections();
     document.dispatchEvent(new Event("products:ready"));
+    setTimeout(collapseBreadcrumbs, 100);
 
     if (location.hash.startsWith("#p=")) {
       const id = decodeURIComponent(location.hash.slice(3));
       setTimeout(() => openProduct(id), 60);
     }
   });
+  document.addEventListener("products:ready", () => setTimeout(collapseBreadcrumbs, 50));
+  document.addEventListener("lang:change", () => setTimeout(collapseBreadcrumbs, 50));
 })();
