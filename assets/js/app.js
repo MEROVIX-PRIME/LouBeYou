@@ -664,7 +664,7 @@
         <div class="pd-info">
           <div class="pd-cat">${collectionLabel(p) ? t("card.collection") + " «" + collectionLabel(p) + "»" : ""}</div>
           <h2 class="pd-title" data-pd-title>${pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name)}</h2>
-          ${"" /* quote removed — дублирует название коллекции */}
+          <div class="pd-sku"><span class="pd-sku-label">${t("product.sku")}:</span> ${p.id}</div>
           <div class="pd-price">
             <span class="price">${money(p.price, p)}</span>
             ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
@@ -717,10 +717,6 @@
             <div class="acc-item">
               <button class="acc-head">${t("product.material")}${ICONS.chevron}</button>
               <div class="acc-body">${pick(p.material) || ""}</div>
-            </div>
-            <div class="acc-item">
-              <button class="acc-head">${t("product.sku")}${ICONS.chevron}</button>
-              <div class="acc-body">${p.id}</div>
             </div>
           </div>
         </div>
@@ -985,44 +981,41 @@
       /* Убираем предыдущий коллапс если был */
       bc.querySelectorAll(".bc-ellipsis, [data-bc-sep]").forEach(el => el.remove());
       bc.querySelectorAll("[data-bc-hidden]").forEach(el => { el.style.display = ""; delete el.dataset.bcHidden; });
-      /* Собираем все ноды: ссылки и разделители */
+
       const children = Array.from(bc.children);
-      /* Нужны минимум 4 элемента (Home › Cat › Sub › Current) чтобы было что скрывать */
-      /* Считаем только ссылки и финальный span (не разделители ›) */
+      /* Ссылки и финальный span (не разделители ›) */
       const items = children.filter(el => el.tagName === "A" || (el.tagName === "SPAN" && !el.textContent.trim().match(/^›$/)));
-      if (items.length <= 2) return; /* Home + текущая — скрывать нечего */
+      if (items.length <= 2) return;
 
-      /* Скрываем средние элементы (всё кроме первого и последнего item) */
-      const toHide = [];
-      let firstFound = false;
-      let lastItem = items[items.length - 1];
-      for (let i = 0; i < children.length; i++) {
+      /* Скрываем все кроме последних 2 items (предпоследняя ссылка + текущая страница) */
+      /* Также скрываем их разделители */
+      const keepCount = 2;
+      const keepItems = items.slice(-keepCount);
+      const firstKeepIdx = children.indexOf(keepItems[0]);
+      const hiddenLinks = [];
+
+      /* Скрываем всё до первого keepItem */
+      for (let i = 0; i < firstKeepIdx; i++) {
         const el = children[i];
-        const isItem = items.includes(el);
-        if (isItem && !firstFound) { firstFound = true; continue; } /* Home — оставляем */
-        if (el === lastItem) break; /* Текущая страница — оставляем */
-        if (firstFound) toHide.push(el);
+        el.style.display = "none";
+        el.dataset.bcHidden = "1";
+        if (el.tagName === "A") hiddenLinks.push(el);
       }
-      if (!toHide.length) return;
 
-      /* Прячем средние элементы */
-      toHide.forEach(el => { el.style.display = "none"; el.dataset.bcHidden = "1"; });
+      if (!hiddenLinks.length) return;
 
-      /* Вставляем "..." с разделителем перед последним разделителем */
+      /* Создаём ". . ." кнопку с дропдауном */
       const ellipsis = document.createElement("span");
       ellipsis.className = "bc-ellipsis";
-      ellipsis.textContent = "…";
+      ellipsis.textContent = ".  .  .";
 
       const dropdown = document.createElement("div");
       dropdown.className = "bc-dropdown";
-      /* Собираем скрытые ссылки для дропдауна */
-      toHide.forEach(el => {
-        if (el.tagName === "A") {
-          const link = document.createElement("a");
-          link.href = el.href;
-          link.textContent = el.textContent;
-          dropdown.appendChild(link);
-        }
+      hiddenLinks.forEach(el => {
+        const link = document.createElement("a");
+        link.href = el.href;
+        link.textContent = el.textContent;
+        dropdown.appendChild(link);
       });
       ellipsis.appendChild(dropdown);
 
@@ -1031,20 +1024,16 @@
         e.stopPropagation();
         dropdown.classList.toggle("open");
       });
-
       document.addEventListener("click", function() {
         dropdown.classList.remove("open");
       });
 
-      /* Вставляем после первого разделителя */
-      const firstSep = children.find(el => el.tagName === "SPAN" && el.textContent.trim() === "›");
-      if (firstSep && firstSep.nextSibling) {
-        bc.insertBefore(ellipsis, firstSep.nextSibling);
-        const sep2 = document.createElement("span");
-        sep2.textContent = "›";
-        sep2.dataset.bcSep = "1";
-        bc.insertBefore(sep2, ellipsis.nextSibling);
-      }
+      /* Вставляем в начало: . . . › [предпоследняя] › [текущая] */
+      bc.insertBefore(ellipsis, bc.firstChild);
+      const sep = document.createElement("span");
+      sep.textContent = "›";
+      sep.dataset.bcSep = "1";
+      bc.insertBefore(sep, ellipsis.nextSibling);
     });
   }
 
