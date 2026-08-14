@@ -439,14 +439,14 @@ html[lang="vi"] .hero-title {
 
 /* Lou accent */
 .lou-accent {
-  font-size: 1.3em;
+  font-size: 1.56em;
   font-weight: 700;
   color: var(--caramel);
   letter-spacing: .02em;
 }
 .banner-content .lou-accent {
   color: #F2D9B8;
-  font-size: 1.35em;
+  font-size: 1.62em;
 }
 
 /* ============================================================
@@ -468,6 +468,7 @@ html[lang="vi"] .hero-title {
 .product-page .modal-box {
   width: 100%; min-width: 0; max-width: none; max-height: none; overflow: visible;
   border: 1px solid var(--border); box-shadow: var(--shadow-md);
+  border-radius: var(--r-lg);
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--caramel-soft); }
 .card-media {
@@ -692,7 +693,7 @@ html[lang="vi"] .hero-title {
 .modal-close:hover { background: var(--border); }
 
 .pd { display: grid; grid-template-columns: 1fr 1fr; min-width: 0; }
-.pd-media { min-width: 0; background: var(--ivory); padding: 34px; }
+.pd-media { min-width: 0; background: var(--ivory); padding: 34px; border-radius: var(--r-lg) 0 0 var(--r-lg); }
 .pd-main {
   aspect-ratio: 1/1; display: grid; place-items: center;
   background: var(--white-soft); border-radius: var(--r-md); overflow: hidden;
@@ -975,7 +976,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .cart-layout { grid-template-columns: 1fr; }
   .summary { position: static; }
   .pd { grid-template-columns: 1fr; }
-  .pd-media { padding: 16px; }
+  .pd-media { padding: 16px; border-radius: var(--r-lg) var(--r-lg) 0 0; }
   .pd-info { padding: 20px 18px 24px; }
   .pd-price .price { font-size: 2.2rem; }
   .pd-stock { margin-bottom: 20px; }
