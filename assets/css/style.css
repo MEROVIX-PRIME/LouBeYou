@@ -979,6 +979,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
     direction: rtl; justify-content: flex-start;
   }
   .breadcrumbs > * { direction: ltr; flex-shrink: 0; white-space: nowrap; }
+  .breadcrumbs-product { margin: 14px 0 16px; }
   .similar-row { grid-template-columns: repeat(2, 1fr); }
   .similar-card:nth-child(n+5) { display: none; }
 
