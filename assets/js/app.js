@@ -565,7 +565,7 @@
   function cardHTML(p) {
     const sb = stockBadge(p.stock);
     const collName = collectionLabel(p);
-    const catLine = collName ? (t("card.collection") + " " + collName) : "";
+    const catLine = collName ? (t("card.collection") + " «" + collName + "»") : "";
     return `
       <a class="card" href="product.html?id=${encodeURIComponent(p.id)}">
         <div class="card-media">
@@ -662,7 +662,7 @@
             `<button class="pd-thumb ${i === 0 ? "active" : ""}" data-thumb="${g}"><img src="${g}" alt=""></button>`).join("") + "</div>" : ""}
         </div>
         <div class="pd-info">
-          <div class="pd-cat">${collectionLabel(p) ? t("card.collection") + " " + collectionLabel(p) : ""}</div>
+          <div class="pd-cat">${collectionLabel(p) ? t("card.collection") + " «" + collectionLabel(p) + "»" : ""}</div>
           <h2 class="pd-title" data-pd-title>${pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name)}</h2>
           ${"" /* quote removed — дублирует название коллекции */}
           <div class="pd-price">
@@ -742,18 +742,65 @@
     const closeButton = box.querySelector("[data-modal-close]");
     if (closeButton) closeButton.addEventListener("click", closeProduct);
 
+    let currentImgIdx = 0;
+    let currentGallery = gallery.slice();
+
+    function showImage(idx) {
+      if (idx < 0 || idx >= currentGallery.length) return;
+      currentImgIdx = idx;
+      box.querySelector("[data-pd-main]").src = currentGallery[idx];
+      box.querySelectorAll(".pd-thumb").forEach((x, i) => x.classList.toggle("active", i === idx));
+      box.querySelectorAll(".pd-dot").forEach((d, i) => d.classList.toggle("active", i === idx));
+    }
+
     function bindThumbs() {
-      box.querySelectorAll("[data-thumb]").forEach(b => {
-        b.addEventListener("click", () => {
-          box.querySelector("[data-pd-main]").src = b.dataset.thumb;
-          box.querySelectorAll(".pd-thumb").forEach(x => x.classList.remove("active"));
-          b.classList.add("active");
-        });
+      box.querySelectorAll("[data-thumb]").forEach((b, i) => {
+        b.addEventListener("click", () => showImage(i));
       });
     }
+
+    /* Mobile swipe on main image */
+    (function initSwipe() {
+      const main = box.querySelector(".pd-main");
+      if (!main) return;
+      let startX = 0, startY = 0, tracking = false;
+      main.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        tracking = true;
+      }, { passive: true });
+      main.addEventListener("touchend", e => {
+        if (!tracking) return;
+        tracking = false;
+        const dx = e.changedTouches[0].clientX - startX;
+        const dy = e.changedTouches[0].clientY - startY;
+        if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return;
+        if (dx < 0 && currentImgIdx < currentGallery.length - 1) showImage(currentImgIdx + 1);
+        else if (dx > 0 && currentImgIdx > 0) showImage(currentImgIdx - 1);
+      }, { passive: true });
+    })();
+
+    function updateDots() {
+      let dotsEl = box.querySelector(".pd-dots");
+      if (currentGallery.length <= 1) { if (dotsEl) dotsEl.remove(); return; }
+      if (!dotsEl) {
+        dotsEl = document.createElement("div");
+        dotsEl.className = "pd-dots";
+        const main = box.querySelector(".pd-main");
+        main.parentNode.insertBefore(dotsEl, main.nextSibling);
+      }
+      dotsEl.innerHTML = currentGallery.map((_, i) =>
+        `<span class="pd-dot ${i === currentImgIdx ? "active" : ""}"></span>`).join("");
+      dotsEl.querySelectorAll(".pd-dot").forEach((d, i) => {
+        d.addEventListener("click", () => showImage(i));
+      });
+    }
+    updateDots();
     function renderColorGallery(color) {
       var images = ((p.galleries && p.galleries[color]) || p.gallery || [p.image]).slice();
       if (p.sizeImage) images.push(p.sizeImage);
+      currentGallery = images;
+      currentImgIdx = 0;
       box.querySelector("[data-pd-main]").src = images[0];
       const colorTitle = p.namesByColor && p.namesByColor[color];
       if (colorTitle) {
@@ -767,6 +814,7 @@
         ).join("");
         bindThumbs();
       }
+      updateDots();
     }
     bindThumbs();
 

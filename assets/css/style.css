@@ -382,14 +382,14 @@ html[lang="vi"] .hero-title {
 .carousel-next { right: -22px; }
 .coll-card {
   position: relative; border-radius: var(--r-lg); overflow: hidden;
-  background: var(--caramel-soft); aspect-ratio: 1/1;
+  background: transparent; aspect-ratio: 1/1;
   display: flex; align-items: flex-end;
   transition: transform .25s, box-shadow .25s;
 }
 .coll-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .coll-card img {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: contain; padding: 6% 6% 24%;
+  object-fit: contain; padding: 4% 4% 22%;
   transition: transform .35s;
 }
 .coll-card[data-c="fix"] img, .coll-card[href*="fix"] img { object-fit: contain; padding: 6% 6% 24%; }
@@ -514,7 +514,6 @@ html[lang="vi"] .hero-title {
   display: flex; align-items: center; justify-content: center; gap: 9px;
   flex-wrap: wrap;
   margin-bottom: 14px; color: var(--ink-soft); font-size: .84rem;
-  overflow: hidden;
 }
 .breadcrumbs a { color: var(--moss); font-weight: 700; }
 .breadcrumbs a:hover { color: var(--caramel); }
@@ -679,15 +678,18 @@ html[lang="vi"] .hero-title {
   aspect-ratio: 1/1; display: grid; place-items: center;
   background: var(--white-soft); border-radius: var(--r-md); overflow: hidden;
 }
-.pd-main img { width: 100%; height: 100%; object-fit: cover; padding: 0; }
+.pd-main img { width: 100%; height: 100%; object-fit: contain; padding: 0; }
 .pd-thumbs { display: flex; gap: 10px; margin-top: 14px; }
 .pd-thumb {
   width: 66px; height: 66px; border-radius: var(--r-sm);
   border: 2px solid transparent; background: var(--white-soft);
-  overflow: hidden; padding: 5px; transition: border-color .18s;
+  overflow: hidden; padding: 0; transition: border-color .18s;
 }
-.pd-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.pd-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .pd-thumb.active { border-color: var(--caramel); }
+.pd-dots { display: none; justify-content: center; gap: 8px; margin-top: 12px; }
+.pd-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background .2s; }
+.pd-dot.active { background: var(--caramel); }
 
 .pd-info { min-width: 0; padding: 40px 36px 36px; }
 .pd-cat {
@@ -753,7 +755,7 @@ html[lang="vi"] .hero-title {
 .acc-item + .acc-item { border-top: 1px solid var(--border); }
 
 .similar { min-width: 0; padding: 30px 36px 36px; border-top: 1px solid var(--border); }
-.similar h3 { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 18px; }
+.similar h3 { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 18px; letter-spacing: .05em; }
 .similar-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
 .similar-card { min-width: 0; text-align: left; transition: transform .2s; }
 .similar-card:hover { transform: translateY(-3px); }
@@ -761,7 +763,7 @@ html[lang="vi"] .hero-title {
   aspect-ratio: 1/1; background: var(--ivory); border-radius: var(--r-md);
   overflow: hidden; margin-bottom: 9px;
 }
-.similar-card img { width: 100%; height: 100%; object-fit: contain; padding: 12%; }
+.similar-card img { width: 100%; height: 100%; object-fit: cover; padding: 0; }
 .similar-card strong { display: block; font-size: .8rem; font-weight: 600; line-height: 1.35; margin-bottom: 3px; overflow-wrap: anywhere; }
 .similar-card span { font-size: .82rem; font-weight: 700; color: var(--caramel); }
 
@@ -936,8 +938,13 @@ html[lang="vi"] .hero-title {
   .cart-layout { grid-template-columns: 1fr; }
   .summary { position: static; }
   .pd { grid-template-columns: 1fr; }
-  .pd-media { padding: 24px; }
-  .pd-info { padding: 26px 24px 30px; }
+  .pd-media { padding: 16px; }
+  .pd-info { padding: 20px 18px 24px; }
+  .pd-price .price { font-size: 2.2rem; }
+  .pd-stock { margin-bottom: 20px; }
+  .pd-price { margin-top: 12px; margin-bottom: 8px; }
+  .pd-thumbs { display: none; }
+  .pd-dots { display: flex; }
   .similar { padding: 24px; }
   .usp-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
   .usp-item:nth-child(3) { border-left: none; }
@@ -949,9 +956,10 @@ html[lang="vi"] .hero-title {
   :root { --header-h: 64px; }
 
   .breadcrumbs {
-    flex-wrap: nowrap; direction: rtl; justify-content: flex-start;
+    flex-wrap: nowrap; overflow: hidden;
+    direction: rtl; justify-content: flex-start;
   }
-  .breadcrumbs > * { direction: ltr; flex-shrink: 0; }
+  .breadcrumbs > * { direction: ltr; flex-shrink: 0; white-space: nowrap; }
   .similar-row { grid-template-columns: repeat(2, 1fr); }
   .similar-card:nth-child(n+5) { display: none; }
 

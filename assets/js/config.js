@@ -183,7 +183,7 @@ window.LOU_CONFIG = {
   instagram: "https://www.instagram.com/lou_be_you?igsh=MW0xNmQ4N2QwMmltdw%3D%3D&utm_source=qr",
 
   /* --- ЯЗЫК ПО УМОЛЧАНИЮ ------------------------------------- */
-  defaultLang: "vi",
+  defaultLang: "en",
 
   /* --- ТАБЛИЦА РАЗМЕРОВ -------------------------------------- */
   sizeChartImage: ""
