@@ -26,13 +26,14 @@
     if (typeof obj === "string") return obj;
     return obj[lang] || obj.en || obj.vi || Object.values(obj)[0] || "";
   }
-  function money(n) {
+  function money(n, product) {
     const vnd = Number(n || 0);
     if (lang === "en") {
       return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(vnd / CFG.usdToVnd);
     }
     if (lang === "ru") {
-      return new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", maximumFractionDigits: 0 }).format(vnd / CFG.usdToVnd * CFG.usdToRub);
+      const rub = (product && product.priceRub) ? Number(product.priceRub) : (vnd / CFG.usdToVnd * CFG.usdToRub);
+      return new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", maximumFractionDigits: 0 }).format(rub);
     }
     return new Intl.NumberFormat("vi-VN").format(Math.round(vnd)) + " ₫";
   }
@@ -570,7 +571,7 @@
           <div class="card-title">${pick(p.name)}</div>
           ${p.quote ? '<div class="card-quote">' + p.quote + "</div>" : ""}
           <div class="card-foot">
-            <span class="price">${money(p.price)}</span>
+            <span class="price">${money(p.price, p)}</span>
             ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
           </div>
         </div>
@@ -657,7 +658,7 @@
           <h2 class="pd-title" data-pd-title>${pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name)}</h2>
           ${p.quote ? '<div class="pd-quote">' + p.quote + " — Lou</div>" : ""}
           <div class="pd-price">
-            <span class="price">${money(p.price)}</span>
+            <span class="price">${money(p.price, p)}</span>
             ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
           </div>
           <div class="pd-stock" data-pd-stock></div>
@@ -666,7 +667,6 @@
           <div class="field">
             <div class="field-label">
               <span>${t("product.size")}</span>
-              <button data-size-guide>${t("product.sizeGuide")}</button>
             </div>
             <div class="opts" data-opts="size">
               ${p.sizes.map(s => `<button class="opt" data-val="${s}">${s}</button>`).join("")}
@@ -725,7 +725,7 @@
             <a class="similar-card" href="product.html?id=${encodeURIComponent(s.id)}">
               <div class="sc-media"><img src="${s.image}" alt="${pick(s.name)}" loading="lazy"></div>
               <strong>${pick(s.name)}</strong>
-              <span>${money(s.price)}</span>
+              <span>${money(s.price, s)}</span>
             </a>`).join("")}
         </div>
       </div>` : ""}`;

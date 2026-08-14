@@ -995,7 +995,7 @@ html[lang="vi"] .hero-title {
   .shop-topline { align-items: flex-start; }
   .shop-topline .count { padding-top: 8px; white-space: nowrap; }
 
-  .header .logo span { display: none; }
+  .header .logo span { font-size: 1.1rem; }
   .header-contact-actions { margin-left: 6px; gap: 0; }
 
   .cart-row { flex-wrap: wrap; }
@@ -1023,7 +1023,8 @@ html[lang="vi"] .hero-title {
 }
 
 @media (max-width: 340px) {
-  .header .logo { display: none; }
+  .header .logo span { font-size: .95rem; }
+  .header .logo img { width: 26px; height: 26px; }
 }
 
 @media (max-width: 520px) {
