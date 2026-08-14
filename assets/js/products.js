@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T11:30:59.350Z
+   Обновлено: 2026-08-14T12:02:38.040Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -79,8 +79,8 @@ window.LOU_CATEGORY_TREE = {
       "mugs": {
         "name": {
           "en": "Mugs",
-          "ru": "Mugs",
-          "vi": "Mugs"
+          "ru": "Кружки",
+          "vi": "Cốc"
         },
         "image": "https://lh3.googleusercontent.com/d/1G1YUpy9_lYHJXIpktfc1jFER8ANk79XI",
         "children": {}
@@ -88,8 +88,8 @@ window.LOU_CATEGORY_TREE = {
       "aprons": {
         "name": {
           "en": "Aprons",
-          "ru": "Aprons",
-          "vi": "Aprons"
+          "ru": "Фартуки",
+          "vi": "Tạp dề"
         },
         "image": "https://lh3.googleusercontent.com/d/1zvf_3a55sUU9TBhceQ3l8EfbcTxFsr56",
         "children": {}
