@@ -211,6 +211,11 @@
       (!size || x.size === size) && (!color || x.color === color));
     return v ? v.stock : 0;
   }
+  function findVariant(p, size, color) {
+    if (!p.variants || !p.variants.length) return null;
+    return p.variants.find(x =>
+      (!size || x.size === size) && (!color || x.color === color)) || null;
+  }
   function colorLabel(code) {
     const c = CFG.colorNames[code];
     return c ? (c[lang] || c.en) : code;
@@ -288,9 +293,12 @@
   const lineKey = it => [it.id, it.size || "", it.color || ""].join("::");
 
   function addToCart(product, size, color, qty) {
+    const v = findVariant(product, size, color);
     const item = {
       id: product.id, size: size || "", color: color || "",
-      qty: qty || 1, price: product.price,
+      qty: qty || 1,
+      price: (v && v.price) || product.price,
+      priceRub: (v && v.priceRub) || product.priceRub || 0,
       name: (product.namesByColor && product.namesByColor[color]) || product.name,
       image: (product.galleries && product.galleries[color] && product.galleries[color][0]) || product.image,
       category: product.category
@@ -781,6 +789,15 @@
       stockEl.innerHTML = '<span class="badge ' + b.cls + '" style="position:static">' + b.text + "</span>";
       if (colorNameEl) colorNameEl.textContent = sel.color ? colorLabel(sel.color) : "";
 
+      /* Обновляем цену при выборе варианта */
+      const priceEl = box.querySelector(".pd-price .price");
+      if (priceEl) {
+        const v = findVariant(p, sel.size, sel.color);
+        const vPrice = v && v.price ? v.price : p.price;
+        const vPriceRub = v && v.priceRub ? v.priceRub : p.priceRub;
+        priceEl.textContent = money(vPrice, { price: vPrice, priceRub: vPriceRub });
+      }
+
       const chosen = (!p.sizes.length || sel.size) && (!p.colors.length || sel.color);
       const sold = chosen && s <= 0;
       addBtn.disabled = sold;
@@ -891,7 +908,7 @@
     get cart() { return cart; },
     cartCount, cartSubtotal, shippingCost, lineKey,
     addToCart, updateQty, removeItem, clearCart,
-    stockBadge, variantStock, colorLabel, renderGrid, cardHTML, openProduct, toast,
+    stockBadge, variantStock, findVariant, colorLabel, renderGrid, cardHTML, openProduct, toast,
     icons: ICONS, applyI18n
   };
 
