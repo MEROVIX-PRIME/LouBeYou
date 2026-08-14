@@ -577,7 +577,7 @@
         <div class="card-body">
           ${catLine ? '<div class="card-cat">' + catLine + '</div>' : ''}
           <div class="card-title">${pick(p.name)}</div>
-          ${p.quote ? '<div class="card-quote">' + p.quote + "</div>" : ""}
+          ${"" /* quote removed — дублирует название коллекции */}
           <div class="card-foot">
             <span class="price">${money(p.price, p)}</span>
             ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
@@ -664,7 +664,7 @@
         <div class="pd-info">
           <div class="pd-cat">${collectionLabel(p) ? t("card.collection") + " " + collectionLabel(p) : ""}</div>
           <h2 class="pd-title" data-pd-title>${pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name)}</h2>
-          ${p.quote ? '<div class="pd-quote">' + p.quote + " — Lou</div>" : ""}
+          ${"" /* quote removed — дублирует название коллекции */}
           <div class="pd-price">
             <span class="price">${money(p.price, p)}</span>
             ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
