@@ -18,7 +18,7 @@ window.LOU_I18N = {
     "header.emailCopied": "Đã sao chép email",
     "nav.close": "Đóng",
 
-    "hero.title1": "Thoải mái.",
+    "hero.title1": "",
     "hero.title2": "Là chính bạn.",
     "hero.text": "Lou ở đây vì những buổi sáng chậm rãi, những niềm vui nhỏ và khoảnh khắc yên bình như ở nhà.",
     "hero.cta": "Khám phá bộ sưu tập",
@@ -192,7 +192,7 @@ window.LOU_I18N = {
     "header.emailCopied": "Email copied",
     "nav.close": "Close",
 
-    "hero.title1": "Be cozy.",
+    "hero.title1": "",
     "hero.title2": "Be you.",
     "hero.text": "Lou is here for slow mornings, little joys and quiet moments that feel like home.",
     "hero.cta": "Explore collection",

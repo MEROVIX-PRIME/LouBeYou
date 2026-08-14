@@ -3,9 +3,8 @@
    ============================================================ */
 
 /* --- Шрифт Yoon SunShower -----------------------------------
-   Положи файл шрифта в assets/fonts/ и он подхватится сам.
-   Поддерживаются .woff2 / .woff / .otf / .ttf
-   Пока файла нет — используется запасной рукописный шрифт. */
+   Если файл шрифта появится в assets/fonts/, раскомментируй @font-face ниже.
+   Пока его нет — font-display начинается сразу с Gaegu.
 @font-face {
   font-family: "Yoon SunShower";
   src: url("../fonts/YoonSunShower.woff2") format("woff2"),
@@ -16,6 +15,7 @@
   font-style: normal;
   font-display: swap;
 }
+*/
 
 :root {
   /* Палитра */
@@ -35,7 +35,7 @@
   --shadow-lg: 0 20px 60px rgba(37,36,31,.14);
 
   /* Типографика */
-  --font-display: "Yoon SunShower", "Gaegu", "Comic Sans MS", cursive;
+  --font-display: "Gaegu", "Comic Sans MS", cursive;
   --font-body: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --r-sm: 10px;
@@ -49,7 +49,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
