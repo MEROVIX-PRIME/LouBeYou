@@ -383,7 +383,7 @@ html[lang="vi"] .hero-title {
 .carousel-next { right: -22px; }
 .coll-card {
   position: relative; border-radius: var(--r-lg); overflow: hidden;
-  background: var(--caramel-soft); aspect-ratio: 5/6;
+  background: linear-gradient(to bottom, var(--caramel-soft) 60%, #fff 100%); aspect-ratio: 5/6;
   border: 1px solid var(--border);
   display: flex; align-items: flex-end;
   transition: transform .25s, box-shadow .25s;
