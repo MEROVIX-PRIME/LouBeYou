@@ -778,6 +778,24 @@
         if (dx < 0 && currentImgIdx < currentGallery.length - 1) showImage(currentImgIdx + 1);
         else if (dx > 0 && currentImgIdx > 0) showImage(currentImgIdx - 1);
       }, { passive: true });
+
+      /* Lightbox — click to zoom */
+      let swipeMoved = false;
+      main.addEventListener("touchmove", () => { swipeMoved = true; }, { passive: true });
+      main.addEventListener("touchstart", () => { swipeMoved = false; }, { passive: true });
+      main.addEventListener("click", e => {
+        if (swipeMoved) return;
+        const src = box.querySelector("[data-pd-main]").src;
+        const lb = document.createElement("div");
+        lb.className = "pd-lightbox";
+        lb.innerHTML = '<img src="' + src + '" alt="">';
+        document.body.appendChild(lb);
+        requestAnimationFrame(() => lb.classList.add("show"));
+        lb.addEventListener("click", () => {
+          lb.classList.remove("show");
+          setTimeout(() => lb.remove(), 250);
+        });
+      });
     })();
 
     function updateDots() {
