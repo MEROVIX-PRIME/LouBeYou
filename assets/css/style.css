@@ -608,8 +608,8 @@ html[lang="vi"] .hero-title {
   gap: 16px;
 }
 .cat-banner {
-  display: flex; align-items: center; justify-content: center; gap: 20px;
-  padding: 14px 24px;
+  display: flex; align-items: center; gap: 20px;
+  padding: 14px 24px 14px 15%;
   min-height: 130px;
   background: var(--white-soft);
   border: 1px solid var(--border);
@@ -623,14 +623,14 @@ html[lang="vi"] .hero-title {
   border-color: var(--caramel-soft);
 }
 .cat-banner__img {
-  flex-shrink: 0; width: 110px; height: 110px;
-  border-radius: var(--r-md); overflow: visible;
+  flex-shrink: 0; width: auto; height: calc(130px - 28px);
+  overflow: visible;
   background: transparent;
 }
-.cat-banner__img img { width: 100%; height: 100%; object-fit: contain; }
+.cat-banner__img img { width: auto; height: 100%; object-fit: contain; }
 .cat-banner__name {
   font-size: 1.15rem; font-weight: 700; line-height: 1.3;
-  text-align: center; flex: 1;
+  text-align: left; flex: 1;
 }
 
 /* ---- Кнопка «Показать ещё» ---- */
@@ -653,8 +653,8 @@ html[lang="vi"] .hero-title {
 
 @media (max-width: 600px) {
   .banners-grid { grid-template-columns: 1fr; gap: 10px; }
-  .cat-banner { padding: 10px 16px; gap: 14px; min-height: 100px; }
-  .cat-banner__img { width: 84px; height: 84px; }
+  .cat-banner { padding: 10px 16px 10px 10%; gap: 14px; min-height: 100px; }
+  .cat-banner__img { height: calc(100px - 20px); }
   .cat-banner__name { font-size: .95rem; }
   .filter-panel--row { padding: 12px 14px; gap: 8px; }
   .filter-panel--row label { flex: 1 1 100%; }
@@ -1018,8 +1018,8 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .hero-text { margin-left: auto; margin-right: auto; }
   .hero-proof { justify-content: center; }
 
-  .section { padding: 44px 0; }
-  .section-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .section { padding: 30px 0; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 18px; }
   .coll-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .collection-carousel .coll-card { flex-basis: min(72vw, 250px); }
   .carousel-btn { width: 40px; height: 40px; }
