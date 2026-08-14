@@ -33,7 +33,7 @@
     <label><span data-i18n="filter.collection">Collection</span><select class="select" data-collection></select></label>
     <label><span data-i18n="filter.size">Size</span><select class="select" data-size></select></label>
     <label><span data-i18n="filter.price">Price</span><select class="select" data-price></select></label>
-    <label><span data-i18n="filter.stock">Availability</span><select class="select" data-stock></select></label>
+    <label><span data-i18n="filter.color">Color</span><select class="select" data-color></select></label>
     <label><span data-i18n="filter.sort">Sort</span><select class="select" data-sort></select></label>
     <button class="btn filter-reset" data-reset data-i18n="filter.reset">Clear filters</button>
   </div>
@@ -55,7 +55,7 @@
   var PAGE_SIZE = 8;
   var params = new URLSearchParams(location.search);
 
-  /* Текущая категория из URL: ?cat=clothes&sub=t-shits&sub2=adults */
+  /* Текущая категория из URL: ?cat=clothes&sub=t-shirts&sub2=adults */
   var state = {
     cat: params.get("cat") || "",
     sub: params.get("sub") || "",
@@ -63,7 +63,7 @@
     collection: "all",
     size: "all",
     price: "all",
-    stock: "all",
+    color: "all",
     sort: "new",
     shown: PAGE_SIZE
   };
@@ -72,7 +72,7 @@
     collection: document.querySelector("[data-collection]"),
     size: document.querySelector("[data-size]"),
     price: document.querySelector("[data-price]"),
-    stock: document.querySelector("[data-stock]"),
+    color: document.querySelector("[data-color]"),
     sort: document.querySelector("[data-sort]")
   };
 
@@ -120,13 +120,11 @@
     var items = [];
 
     if (!state.cat) {
-      /* Верхний уровень: показываем родительские категории */
       for (var slug in tree) {
         var c = tree[slug];
         items.push({ slug: slug, name: LOU.pick(c.name), image: c.image, href: 'shop.html?cat=' + encodeURIComponent(slug) });
       }
     } else if (!state.sub) {
-      /* Показываем подкатегории выбранной родительской */
       var catNode = tree[state.cat];
       if (catNode && catNode.children) {
         for (var slug in catNode.children) {
@@ -135,9 +133,8 @@
         }
       }
     } else if (!state.sub2) {
-      /* Показываем подкатегории 2-го уровня */
-      var catNode = tree[state.cat];
-      var subNode = catNode && catNode.children ? catNode.children[state.sub] : null;
+      var catNode2 = tree[state.cat];
+      var subNode = catNode2 && catNode2.children ? catNode2.children[state.sub] : null;
       if (subNode && subNode.children) {
         for (var slug in subNode.children) {
           var s2 = subNode.children[slug];
@@ -161,12 +158,37 @@
     }).join('') + '</div>';
   }
 
+  /* ---- Собираем доступные цвета из товаров ---- */
+  function getAvailableColors() {
+    var colorSet = {};
+    var products = LOU.products;
+    for (var i = 0; i < products.length; i++) {
+      var p = products[i];
+      /* Фильтруем по текущей категории */
+      if (state.cat && p.category !== state.cat) continue;
+      if (state.sub && p.subcategory !== state.sub) continue;
+      if (state.sub2 && p.subcategory2 !== state.sub2) continue;
+      if (p.colors) {
+        for (var c = 0; c < p.colors.length; c++) {
+          colorSet[p.colors[c]] = true;
+        }
+      }
+    }
+    return Object.keys(colorSet);
+  }
+
   /* ---- Фильтры ---- */
   function renderFilters() {
     controls.collection.innerHTML = option("all", LOU.t("filter.all")) + LOU.collections.map(function (c) { return option(c.id, LOU.pick(c)); }).join("");
     controls.size.innerHTML = option("all", LOU.t("filter.all")) + ["XS","S","M","L","XL","XXL"].map(function (s) { return option(s, s); }).join("");
     controls.price.innerHTML = option("all", LOU.t("filter.all")) + option("low", LOU.t("filter.priceLow")) + option("mid", LOU.t("filter.priceMid")) + option("high", LOU.t("filter.priceHigh"));
-    controls.stock.innerHTML = option("all", LOU.t("filter.all")) + option("available", LOU.t("filter.available")) + option("low", LOU.t("filter.low"));
+
+    /* Фильтр по цвету */
+    var colors = getAvailableColors();
+    controls.color.innerHTML = option("all", LOU.t("filter.all")) + colors.map(function (c) {
+      return option(c, LOU.colorLabel(c));
+    }).join("");
+
     controls.sort.innerHTML = option("new", LOU.t("shop.sort.new")) + option("asc", LOU.t("shop.sort.priceAsc")) + option("desc", LOU.t("shop.sort.priceDesc"));
     Object.keys(controls).forEach(function (key) { controls[key].value = state[key]; });
   }
@@ -174,7 +196,6 @@
   /* ---- Фильтрация товаров ---- */
   function getFilteredItems() {
     return LOU.products.filter(function (p) {
-      /* Фильтр по категории из URL */
       if (state.cat && p.category !== state.cat) return false;
       if (state.sub && p.subcategory !== state.sub) return false;
       if (state.sub2 && p.subcategory2 !== state.sub2) return false;
@@ -183,7 +204,7 @@
       return (state.collection === "all" || p.collection === state.collection) &&
         (state.size === "all" || (p.sizes || []).indexOf(state.size) !== -1) &&
         (state.price === "all" || (state.price === "low" && usd < 10) || (state.price === "mid" && usd >= 10 && usd < 12) || (state.price === "high" && usd >= 12)) &&
-        (state.stock === "all" || (state.stock === "available" && p.stock > 0) || (state.stock === "low" && p.stock > 0 && p.stock <= window.LOU_CONFIG.stock.lowThreshold));
+        (state.color === "all" || (p.colors || []).indexOf(state.color) !== -1);
     });
   }
 
@@ -199,14 +220,15 @@
 
     document.querySelector("[data-count]").textContent = items.length + " " + LOU.t("shop.found");
 
-    /* Пагинация: показываем первые state.shown штук */
     var visible = items.slice(0, state.shown);
     LOU.renderGrid(document.querySelector("[data-grid]"), visible);
 
-    /* Кнопка «Показать больше» */
+    /* Кнопка «Показать ещё» */
     var wrap = document.querySelector("[data-show-more-wrap]");
+    var btn = document.querySelector("[data-show-more]");
     if (items.length > state.shown) {
       wrap.style.display = '';
+      btn.textContent = LOU.t("shop.showMore");
     } else {
       wrap.style.display = 'none';
     }
@@ -218,7 +240,7 @@
   });
 
   document.querySelector("[data-reset]").addEventListener("click", function () {
-    Object.assign(state, { collection: "all", size: "all", price: "all", stock: "all", sort: "new", shown: PAGE_SIZE });
+    Object.assign(state, { collection: "all", size: "all", price: "all", color: "all", sort: "new", shown: PAGE_SIZE });
     render();
   });
 
