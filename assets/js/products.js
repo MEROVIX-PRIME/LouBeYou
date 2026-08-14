@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T14:23:25.734Z
+   Обновлено: 2026-08-14T14:24:09.388Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -184,8 +184,8 @@ window.LOU_PRODUCTS = [
       "https://lh3.googleusercontent.com/d/1uwKTuBonlC65QMq_ForIPN09vV3z8Q_e",
       "https://lh3.googleusercontent.com/d/1FsrwocrrpTf8NvtmT_HYObjQihj1kfUs"
     ],
-    "price": 312000,
-    "priceRub": 1020,
+    "price": 130000,
+    "priceRub": 425,
     "oldPrice": null,
     "stock": 20000,
     "sizes": [
@@ -224,7 +224,7 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 130000
       },
       {
         "sku": "Т_shirt_book",
