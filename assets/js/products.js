@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T12:15:43.440Z
+   Обновлено: 2026-08-14T12:23:31.737Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -177,7 +177,7 @@ window.LOU_PRODUCTS = [
     "category": "сlothes",
     "subcategory": "t-shirts",
     "subcategory2": "adults",
-    "collection": "just-one-more-pag",
+    "collection": "just-one-more-page",
     "image": "https://lh3.googleusercontent.com/d/1_X0xC15KDRb9scp9fSQbL_-3AEfcp_Er",
     "gallery": [
       "https://lh3.googleusercontent.com/d/1_X0xC15KDRb9scp9fSQbL_-3AEfcp_Er",
