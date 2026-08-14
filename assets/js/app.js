@@ -386,18 +386,18 @@
               <button type="button" class="header-email-copy" data-copy-email aria-label="${t("header.copyEmail")}" title="${t("header.copyEmail")}">
                 ${ICONS.mail}<span>nastakinski1991@gmai.com</span>
               </button>
+              <div class="lang lang-before-cart">
+                <button class="lang-btn" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="${DICT[lang]["lang.name"]}" title="${DICT[lang]["lang.name"]}">
+                  <span data-lang-flag>${langHTML(lang)}</span>
+                  ${ICONS.chevron}
+                </button>
+                <div class="lang-menu">
+                  ${LANGS.map(l => `<button data-set-lang="${l}" class="${l === lang ? "active" : ""}" aria-label="${DICT[l]["lang.name"]}">${langHTML(l)}</button>`).join("")}
+                </div>
+              </div>
               <a href="cart.html" class="icon-btn" aria-label="${t("nav.cart")}">
                 ${ICONS.cart}<span class="cart-badge" data-cart-badge>0</span>
               </a>
-            </div>
-            <div class="lang">
-              <button class="lang-btn" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="${DICT[lang]["lang.name"]}" title="${DICT[lang]["lang.name"]}">
-                <span data-lang-flag>${langHTML(lang)}</span>
-                ${ICONS.chevron}
-              </button>
-              <div class="lang-menu">
-                ${LANGS.map(l => `<button data-set-lang="${l}" class="${l === lang ? "active" : ""}" aria-label="${DICT[l]["lang.name"]}">${langHTML(l)}</button>`).join("")}
-              </div>
             </div>
             <button class="icon-btn burger" data-burger aria-label="${t("nav.menu")}">${ICONS.menu}</button>
           </div>
