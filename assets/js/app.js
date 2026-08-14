@@ -827,7 +827,7 @@
     });
 
     const guide = box.querySelector("[data-size-guide]");
-    if (guide) guide.addEventListener("click", openSizeGuide);
+    if (guide) guide.addEventListener("click", () => openSizeGuide(p));
 
     if (addBtn) {
       addBtn.addEventListener("click", () => {
@@ -849,23 +849,26 @@
     box.scrollTop = 0;
   }
 
-  function openSizeGuide() {
+  function openSizeGuide(prod) {
     const m = ensureModal();
     const box = m.querySelector("[data-modal-body]");
     const prev = box.innerHTML;
+    const sizeImg = prod && prod.sizeImage;
     box.innerHTML = `
       <button class="modal-close" data-back aria-label="${t("common.close")}">${ICONS.close}</button>
       <div style="padding:38px 34px 34px">
         <h2 class="display" style="font-size:1.7rem;margin-bottom:6px">${t("size.title")}</h2>
-        ${CFG.sizeChartImage
-          ? `<img src="assets/img/${CFG.sizeChartImage}" alt="${t("size.title")}" style="margin-top:18px;border-radius:16px">`
-          : `<table class="size-table">
-              <thead><tr>
-                <th>${t("size.size")}</th><th>${t("size.chest")}</th>
-                <th>${t("size.length")}</th><th>${t("size.shoulder")}</th>
-              </tr></thead>
-              <tbody>${SIZE_TABLE.map(r => `<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</tbody>
-            </table>`}
+        ${sizeImg
+          ? `<img src="${sizeImg}" alt="${t("size.title")}" style="width:100%;margin-top:18px;border-radius:16px">`
+          : CFG.sizeChartImage
+            ? `<img src="assets/img/${CFG.sizeChartImage}" alt="${t("size.title")}" style="margin-top:18px;border-radius:16px">`
+            : `<table class="size-table">
+                <thead><tr>
+                  <th>${t("size.size")}</th><th>${t("size.chest")}</th>
+                  <th>${t("size.length")}</th><th>${t("size.shoulder")}</th>
+                </tr></thead>
+                <tbody>${SIZE_TABLE.map(r => `<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</tbody>
+              </table>`}
         <p class="size-note">${t("size.note")}</p>
       </div>`;
     box.querySelector("[data-back]").addEventListener("click", () => {
