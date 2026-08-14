@@ -507,6 +507,15 @@ html[lang="vi"] .hero-title {
 .price { font-size: 1.06rem; font-weight: 700; }
 .price-old { font-size: .85rem; color: var(--ink-soft); text-decoration: line-through; }
 
+/* Цветовые кружки на карточке (видны только на мобильном) */
+.card-swatches {
+  display: none; /* скрыты на десктопе */
+}
+.card-swatch {
+  display: block; width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid #fff; box-shadow: 0 0 0 1px var(--border);
+}
+
 /* ============================================================
    ФИЛЬТРЫ МАГАЗИНА
    ============================================================ */
@@ -1027,6 +1036,32 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .carousel-prev { left: -10px; }
   .carousel-next { right: -10px; }
   .products { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+  /* Карточка товара: кружки цвета справа от картинки */
+  .card-media {
+    display: grid; grid-template-columns: 1fr auto;
+    aspect-ratio: auto; position: relative;
+  }
+  .card-media > img {
+    grid-column: 1; grid-row: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover;
+  }
+  /* badges remain absolutely positioned over the image */
+  .card-swatches {
+    display: flex !important; flex-direction: column; gap: 5px;
+    padding: 6px 5px; align-items: center; justify-content: center;
+    background: var(--ivory); grid-column: 2; grid-row: 1 / -1;
+  }
+  .card-swatch { width: 16px; height: 16px; }
+
+  /* Бейджи — меньше на мобильном, правые бейджи сдвигаем левее (не на swatch-полосу) */
+  .card-media > .badge {
+    font-size: .65rem; padding: 3px 8px;
+  }
+  .card-media > .badge-sale,
+  .card-media > .badge-hit {
+    right: auto; left: 12px; top: auto; bottom: 12px;
+  }
+
   .card-body { padding: 13px 14px 16px; }
   .card-title { font-size: .88rem; }
   .card-quote { font-size: .9rem; margin-bottom: 9px; }

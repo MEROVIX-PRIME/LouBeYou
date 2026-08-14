@@ -480,13 +480,13 @@
             </div>
             <div class="footer-col">
               <h4 data-i18n="footer.help">${t("footer.help")}</h4>
-              <a href="about.html#faq" data-i18n="footer.faq">${t("footer.faq")}</a>
-              <a href="about.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
-              <a href="about.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
+              <a href="index.html#faq" data-i18n="footer.faq">${t("footer.faq")}</a>
+              <a href="index.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
+              <a href="index.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
             </div>
             <div class="footer-col">
               <h4 data-i18n="footer.about">${t("footer.about")}</h4>
-              <a href="about.html" data-i18n="footer.story">${t("footer.story")}</a>
+              <a href="index.html" data-i18n="footer.story">${t("footer.story")}</a>
               <a href="${CFG.instagram}" target="_blank" rel="noopener">Instagram</a>
               <a href="mailto:${CFG.orderEmail}" data-i18n="footer.contact">${t("footer.contact")}</a>
             </div>
@@ -503,8 +503,8 @@
           <div class="footer-bottom">
             <span>© ${new Date().getFullYear()} Lou Be You. <span data-i18n="footer.rights">${t("footer.rights")}</span></span>
             <nav>
-              <a href="about.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
-              <a href="about.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
+              <a href="index.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
+              <a href="index.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
               <a href="mailto:${CFG.orderEmail}" data-i18n="footer.contact">${t("footer.contact")}</a>
             </nav>
           </div>
@@ -566,6 +566,12 @@
     const sb = stockBadge(p.stock);
     const collName = collectionLabel(p);
     const catLine = collName ? (t("card.collection") + " «" + collName + "»") : "";
+    const swatches = (p.colors && p.colors.length)
+      ? '<div class="card-swatches">' + p.colors.map(c => {
+          const sw = CFG.colorSwatch[c] || "#DDD4C5";
+          return '<i class="card-swatch" style="background:' + sw + '" title="' + colorLabel(c) + '"></i>';
+        }).join("") + '</div>'
+      : "";
     return `
       <a class="card" href="product.html?id=${encodeURIComponent(p.id)}">
         <div class="card-media">
@@ -573,6 +579,7 @@
           ${p.hit ? '<span class="badge badge-hit">' + t("card.hit") + '</span>' : ""}
           ${p.oldPrice ? '<span class="badge badge-sale">-' + Math.round((1 - p.price / p.oldPrice) * 100) + "%</span>" : ""}
           <img src="${p.image}" alt="${pick(p.name)}" loading="lazy">
+          ${swatches}
         </div>
         <div class="card-body">
           ${catLine ? '<div class="card-cat">' + catLine + '</div>' : ''}
