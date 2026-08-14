@@ -36,11 +36,8 @@
 <section class="wrap category-banners" data-banners style="display:none"></section>
 
 <main class="wrap" style="padding-bottom:60px">
-  <div class="filter-panel filter-panel--row">
-    <label><span data-i18n="filter.collection">Collection</span><select class="select" data-collection></select></label>
-    <label><span data-i18n="filter.size">Size</span><select class="select" data-size></select></label>
-    <label><span data-i18n="filter.price">Price</span><select class="select" data-price></select></label>
-    <label><span data-i18n="filter.color">Color</span><select class="select" data-color></select></label>
+  <div class="filter-panel filter-panel--row" data-filter-panel>
+    <!-- Динамические фильтры вставляются скриптом -->
     <label><span data-i18n="filter.sort">Sort</span><select class="select" data-sort></select></label>
     <button class="btn filter-reset" data-reset data-i18n="filter.reset">Clear filters</button>
   </div>
@@ -61,29 +58,77 @@
 (function () {
   var PAGE_SIZE = 8;
   var params = new URLSearchParams(location.search);
+  var FILTERS_DATA = window.LOU_FILTERS || {};
 
   /* Текущая категория из URL: ?cat=clothes&sub=t-shirts&sub2=adults */
   var state = {
     cat: params.get("cat") || "",
     sub: params.get("sub") || "",
     sub2: params.get("sub2") || "",
-    collection: "all",
-    size: "all",
-    price: "all",
-    color: "all",
     sort: "new",
     shown: PAGE_SIZE
+    /* Динамические фильтры добавляются при buildFilterControls */
   };
 
-  var controls = {
-    collection: document.querySelector("[data-collection]"),
-    size: document.querySelector("[data-size]"),
-    price: document.querySelector("[data-price]"),
-    color: document.querySelector("[data-color]"),
-    sort: document.querySelector("[data-sort]")
-  };
+  var filterPanel = document.querySelector("[data-filter-panel]");
+  var sortLabel = filterPanel.querySelector("[data-sort]").parentNode;
+  var dynamicLabels = [];  /* DOM-элементы динамических фильтров */
+  var dynamicKeys = [];    /* ключи фильтров в state */
 
   function option(value, label) { return '<option value="' + value + '">' + label + '</option>'; }
+
+  /* ---- Определяем текущую конфигурацию фильтров ---- */
+  function getCurrentFilterConfig() {
+    /* Приоритет: самая конкретная категория → менее конкретная → parent */
+    if (state.sub2 && FILTERS_DATA[state.sub2]) return FILTERS_DATA[state.sub2];
+    if (state.sub && FILTERS_DATA[state.sub]) return FILTERS_DATA[state.sub];
+    if (state.cat && FILTERS_DATA[state.cat]) return FILTERS_DATA[state.cat];
+    if (FILTERS_DATA["parent"]) return FILTERS_DATA["parent"];
+    /* Fallback — дефолтный набор */
+    return [
+      { key: "collection", en: "Collection", ru: "Коллекция", vi: "Bộ sưu tập" },
+      { key: "color", en: "Color", ru: "Цвет", vi: "Màu sắc" },
+      { key: "price", en: "Price", ru: "Цена", vi: "Giá" }
+    ];
+  }
+
+  /* ---- Построение DOM фильтров ---- */
+  function buildFilterControls() {
+    /* Удаляем предыдущие динамические фильтры */
+    dynamicLabels.forEach(function (el) { el.remove(); });
+    dynamicLabels = [];
+    dynamicKeys.forEach(function (key) { delete state[key]; });
+    dynamicKeys = [];
+
+    var config = getCurrentFilterConfig();
+
+    for (var i = config.length - 1; i >= 0; i--) {
+      var f = config[i];
+      var label = document.createElement("label");
+      var span = document.createElement("span");
+      span.textContent = LOU.pick(f);
+      var select = document.createElement("select");
+      select.className = "select";
+      select.dataset.filterKey = f.key;
+      label.appendChild(span);
+      label.appendChild(select);
+
+      /* Вставляем перед Sort */
+      filterPanel.insertBefore(label, sortLabel);
+      dynamicLabels.unshift(label);
+      dynamicKeys.unshift(f.key);
+      state[f.key] = "all";
+
+      /* Событие */
+      (function (key) {
+        select.addEventListener("change", function () {
+          state[key] = this.value;
+          state.shown = PAGE_SIZE;
+          render();
+        });
+      })(f.key);
+    }
+  }
 
   /* ---- Хлебные крошки с категориями ---- */
   function renderBreadcrumbs() {
@@ -165,39 +210,162 @@
     }).join('') + '</div>';
   }
 
-  /* ---- Собираем доступные цвета из товаров ---- */
-  function getAvailableColors() {
-    var colorSet = {};
-    var products = LOU.products;
-    for (var i = 0; i < products.length; i++) {
-      var p = products[i];
-      /* Фильтруем по текущей категории */
-      if (state.cat && p.category !== state.cat) continue;
-      if (state.sub && p.subcategory !== state.sub) continue;
-      if (state.sub2 && p.subcategory2 !== state.sub2) continue;
-      if (p.colors) {
-        for (var c = 0; c < p.colors.length; c++) {
-          colorSet[p.colors[c]] = true;
-        }
-      }
-    }
-    return Object.keys(colorSet);
+  /* ---- Товары текущей категории (до фильтров) ---- */
+  function getCategoryProducts() {
+    return LOU.products.filter(function (p) {
+      if (state.cat && p.category !== state.cat) return false;
+      if (state.sub && p.subcategory !== state.sub) return false;
+      if (state.sub2 && p.subcategory2 !== state.sub2) return false;
+      return true;
+    });
   }
 
-  /* ---- Фильтры ---- */
+  /* ---- Сбор доступных значений для фильтра ---- */
+  function getFilterValues(key, catProducts) {
+    var tree = window.LOU_CATEGORY_TREE || {};
+    var sizeOrder = ["XS","S","M","L","XL","XXL","2XL","3XL"];
+    var vals = [];
+
+    switch (key) {
+      case "collection":
+        var collSet = {};
+        catProducts.forEach(function (p) { if (p.collection) collSet[p.collection] = true; });
+        var avail = LOU.collections.filter(function (c) { return collSet[c.id]; });
+        vals = avail.map(function (c) { return { value: c.id, label: LOU.pick(c) }; });
+        break;
+
+      case "size":
+        var sizeSet = {};
+        catProducts.forEach(function (p) {
+          if (p.sizes) p.sizes.forEach(function (s) { sizeSet[s] = true; });
+        });
+        vals = Object.keys(sizeSet).sort(function (a, b) {
+          var ia = sizeOrder.indexOf(a), ib = sizeOrder.indexOf(b);
+          return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+        }).map(function (s) { return { value: s, label: s }; });
+        break;
+
+      case "color":
+        var colorSet = {};
+        catProducts.forEach(function (p) {
+          if (p.colors) p.colors.forEach(function (c) { colorSet[c] = true; });
+        });
+        vals = Object.keys(colorSet).map(function (c) {
+          return { value: c, label: LOU.colorLabel(c) };
+        });
+        break;
+
+      case "price":
+        vals = [
+          { value: "low", label: LOU.t("filter.priceLow") },
+          { value: "mid", label: LOU.t("filter.priceMid") },
+          { value: "high", label: LOU.t("filter.priceHigh") }
+        ];
+        break;
+
+      case "product_type":
+        /* Подкатегории внутри текущей родительской категории */
+        var typeSet = {};
+        catProducts.forEach(function (p) { if (p.subcategory) typeSet[p.subcategory] = true; });
+        Object.keys(typeSet).forEach(function (sub) {
+          var label = sub;
+          if (state.cat && tree[state.cat] && tree[state.cat].children && tree[state.cat].children[sub]) {
+            label = LOU.pick(tree[state.cat].children[sub].name);
+          }
+          vals.push({ value: sub, label: label });
+        });
+        break;
+
+      case "for_whom":
+        /* Подкатегории 2 уровня */
+        var whomSet = {};
+        catProducts.forEach(function (p) { if (p.subcategory2) whomSet[p.subcategory2] = true; });
+        Object.keys(whomSet).forEach(function (sub2) {
+          var label = sub2;
+          if (state.cat && tree[state.cat] && tree[state.cat].children) {
+            var subNode = tree[state.cat].children[state.sub];
+            if (subNode && subNode.children && subNode.children[sub2]) {
+              label = LOU.pick(subNode.children[sub2].name);
+            }
+          }
+          vals.push({ value: sub2, label: label });
+        });
+        break;
+
+      default:
+        /* Неизвестный фильтр — пробуем найти поле в товарах */
+        var customSet = {};
+        catProducts.forEach(function (p) {
+          var v = p[key];
+          if (v) {
+            if (Array.isArray(v)) v.forEach(function (x) { customSet[x] = true; });
+            else customSet[v] = true;
+          }
+        });
+        vals = Object.keys(customSet).map(function (v) { return { value: v, label: v }; });
+        break;
+    }
+    return vals;
+  }
+
+  /* ---- Проверка товара на соответствие фильтру ---- */
+  function matchesFilter(p, key, value) {
+    if (value === "all") return true;
+
+    switch (key) {
+      case "collection":
+        return p.collection === value;
+      case "size":
+        return (p.sizes || []).indexOf(value) !== -1;
+      case "color":
+        return (p.colors || []).indexOf(value) !== -1;
+      case "price":
+        var usd = p.price / window.LOU_CONFIG.usdToVnd;
+        if (value === "low") return usd < 10;
+        if (value === "mid") return usd >= 10 && usd < 12;
+        if (value === "high") return usd >= 12;
+        return true;
+      case "product_type":
+        return p.subcategory === value;
+      case "for_whom":
+        return p.subcategory2 === value;
+      default:
+        var pv = p[key];
+        if (Array.isArray(pv)) return pv.indexOf(value) !== -1;
+        return pv === value;
+    }
+  }
+
+  /* ---- Заполнение опций динамических фильтров ---- */
   function renderFilters() {
-    controls.collection.innerHTML = option("all", LOU.t("filter.all")) + LOU.collections.map(function (c) { return option(c.id, LOU.pick(c)); }).join("");
-    controls.size.innerHTML = option("all", LOU.t("filter.all")) + ["XS","S","M","L","XL","XXL"].map(function (s) { return option(s, s); }).join("");
-    controls.price.innerHTML = option("all", LOU.t("filter.all")) + option("low", LOU.t("filter.priceLow")) + option("mid", LOU.t("filter.priceMid")) + option("high", LOU.t("filter.priceHigh"));
+    var catProducts = getCategoryProducts();
+    var config = getCurrentFilterConfig();
 
-    /* Фильтр по цвету */
-    var colors = getAvailableColors();
-    controls.color.innerHTML = option("all", LOU.t("filter.all")) + colors.map(function (c) {
-      return option(c, LOU.colorLabel(c));
-    }).join("");
+    dynamicKeys.forEach(function (key, idx) {
+      var label = dynamicLabels[idx];
+      var select = label.querySelector("select");
+      var filterDef = config[idx];
 
-    controls.sort.innerHTML = option("new", LOU.t("shop.sort.new")) + option("asc", LOU.t("shop.sort.priceAsc")) + option("desc", LOU.t("shop.sort.priceDesc"));
-    Object.keys(controls).forEach(function (key) { controls[key].value = state[key]; });
+      /* Обновляем заголовок фильтра (при смене языка) */
+      label.querySelector("span").textContent = filterDef ? LOU.pick(filterDef) : key;
+
+      var vals = getFilterValues(key, catProducts);
+
+      select.innerHTML = option("all", LOU.t("filter.all")) + vals.map(function (v) {
+        return option(v.value, v.label);
+      }).join("");
+
+      /* Скрываем если значений <= 1 (кроме price — всегда показываем) */
+      label.style.display = (key !== "price" && vals.length <= 1) ? "none" : "";
+
+      /* Восстанавливаем выбранное значение */
+      select.value = state[key] || "all";
+    });
+
+    /* Сортировка — всегда одинаковая */
+    var sortSelect = document.querySelector("[data-sort]");
+    sortSelect.innerHTML = option("new", LOU.t("shop.sort.new")) + option("asc", LOU.t("shop.sort.priceAsc")) + option("desc", LOU.t("shop.sort.priceDesc"));
+    sortSelect.value = state.sort;
   }
 
   /* ---- Фильтрация товаров ---- */
@@ -207,11 +375,11 @@
       if (state.sub && p.subcategory !== state.sub) return false;
       if (state.sub2 && p.subcategory2 !== state.sub2) return false;
 
-      var usd = p.price / window.LOU_CONFIG.usdToVnd;
-      return (state.collection === "all" || p.collection === state.collection) &&
-        (state.size === "all" || (p.sizes || []).indexOf(state.size) !== -1) &&
-        (state.price === "all" || (state.price === "low" && usd < 10) || (state.price === "mid" && usd >= 10 && usd < 12) || (state.price === "high" && usd >= 12)) &&
-        (state.color === "all" || (p.colors || []).indexOf(state.color) !== -1);
+      for (var i = 0; i < dynamicKeys.length; i++) {
+        var key = dynamicKeys[i];
+        if (!matchesFilter(p, key, state[key])) return false;
+      }
+      return true;
     });
   }
 
@@ -242,12 +410,16 @@
   }
 
   /* ---- События ---- */
-  Object.keys(controls).forEach(function (key) {
-    controls[key].addEventListener("change", function () { state[key] = this.value; state.shown = PAGE_SIZE; render(); });
+  document.querySelector("[data-sort]").addEventListener("change", function () {
+    state.sort = this.value;
+    state.shown = PAGE_SIZE;
+    render();
   });
 
   document.querySelector("[data-reset]").addEventListener("click", function () {
-    Object.assign(state, { collection: "all", size: "all", price: "all", color: "all", sort: "new", shown: PAGE_SIZE });
+    dynamicKeys.forEach(function (key) { state[key] = "all"; });
+    state.sort = "new";
+    state.shown = PAGE_SIZE;
     render();
   });
 
@@ -256,8 +428,16 @@
     render();
   });
 
-  document.addEventListener("products:ready", function () { state.shown = PAGE_SIZE; render(); });
-  document.addEventListener("lang:change", function () { state.shown = PAGE_SIZE; render(); });
+  document.addEventListener("products:ready", function () {
+    state.shown = PAGE_SIZE;
+    buildFilterControls();
+    render();
+  });
+  document.addEventListener("lang:change", function () {
+    state.shown = PAGE_SIZE;
+    buildFilterControls();
+    render();
+  });
 })();
 </script>
 </body>
