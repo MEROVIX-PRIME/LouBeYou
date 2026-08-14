@@ -17,7 +17,7 @@
 
 <div class="page-head">
   <div class="wrap">
-    <nav class="breadcrumbs breadcrumbs-shop" aria-label="Breadcrumb">
+    <nav class="breadcrumbs breadcrumbs-shop" aria-label="Breadcrumb" data-breadcrumbs>
       <a href="index.html" data-i18n="breadcrumb.home">Home</a><span>›</span><span data-i18n="breadcrumb.shop">Shop</span>
     </nav>
     <h1 class="page-title" data-i18n="shop.title">Shop</h1>
@@ -25,13 +25,11 @@
   </div>
 </div>
 
+<!-- Баннеры категорий -->
+<section class="wrap category-banners" data-banners style="display:none"></section>
+
 <main class="wrap" style="padding-bottom:60px">
-  <div class="shop-topline">
-    <div class="chips category-switch" data-category-switch></div>
-    <span class="count" data-count></span>
-  </div>
-  <div class="filter-panel">
-    <label><span data-i18n="filter.type">Product type</span><select class="select" data-type></select></label>
+  <div class="filter-panel filter-panel--row">
     <label><span data-i18n="filter.collection">Collection</span><select class="select" data-collection></select></label>
     <label><span data-i18n="filter.size">Size</span><select class="select" data-size></select></label>
     <label><span data-i18n="filter.price">Price</span><select class="select" data-price></select></label>
@@ -39,7 +37,11 @@
     <label><span data-i18n="filter.sort">Sort</span><select class="select" data-sort></select></label>
     <button class="btn filter-reset" data-reset data-i18n="filter.reset">Clear filters</button>
   </div>
+  <span class="count" data-count></span>
   <div class="products" data-grid></div>
+  <div class="show-more-wrap" data-show-more-wrap style="display:none">
+    <button class="btn btn-outline show-more-btn" data-show-more data-i18n="shop.showMore">Show more</button>
+  </div>
 </main>
 
 <div data-footer></div>
@@ -50,17 +52,117 @@
 <script src="assets/js/app.js"></script>
 <script>
 (function () {
-  const params = new URLSearchParams(location.search);
-  const state = { type: params.get("cat") || "all", collection: "all", size: "all", price: "all", stock: "all", sort: "new" };
-  const controls = {
-    type: document.querySelector("[data-type]"), collection: document.querySelector("[data-collection]"),
-    size: document.querySelector("[data-size]"), price: document.querySelector("[data-price]"),
-    stock: document.querySelector("[data-stock]"), sort: document.querySelector("[data-sort]")
+  var PAGE_SIZE = 8;
+  var params = new URLSearchParams(location.search);
+
+  /* Текущая категория из URL: ?cat=clothes&sub=t-shits&sub2=adults */
+  var state = {
+    cat: params.get("cat") || "",
+    sub: params.get("sub") || "",
+    sub2: params.get("sub2") || "",
+    collection: "all",
+    size: "all",
+    price: "all",
+    stock: "all",
+    sort: "new",
+    shown: PAGE_SIZE
+  };
+
+  var controls = {
+    collection: document.querySelector("[data-collection]"),
+    size: document.querySelector("[data-size]"),
+    price: document.querySelector("[data-price]"),
+    stock: document.querySelector("[data-stock]"),
+    sort: document.querySelector("[data-sort]")
   };
 
   function option(value, label) { return '<option value="' + value + '">' + label + '</option>'; }
+
+  /* ---- Хлебные крошки с категориями ---- */
+  function renderBreadcrumbs() {
+    var bc = document.querySelector("[data-breadcrumbs]");
+    if (!bc) return;
+    var tree = window.LOU_CATEGORY_TREE || {};
+    var html = '<a href="index.html" data-i18n="breadcrumb.home">' + LOU.t("breadcrumb.home") + '</a><span>›</span>';
+
+    if (!state.cat) {
+      html += '<span data-i18n="breadcrumb.shop">' + LOU.t("breadcrumb.shop") + '</span>';
+    } else {
+      html += '<a href="shop.html">' + LOU.t("breadcrumb.shop") + '</a><span>›</span>';
+      var catNode = tree[state.cat];
+      var catName = catNode ? LOU.pick(catNode.name) : state.cat;
+
+      if (!state.sub) {
+        html += '<span>' + catName + '</span>';
+      } else {
+        html += '<a href="shop.html?cat=' + encodeURIComponent(state.cat) + '">' + catName + '</a><span>›</span>';
+        var subNode = catNode && catNode.children ? catNode.children[state.sub] : null;
+        var subName = subNode ? LOU.pick(subNode.name) : state.sub;
+
+        if (!state.sub2) {
+          html += '<span>' + subName + '</span>';
+        } else {
+          html += '<a href="shop.html?cat=' + encodeURIComponent(state.cat) + '&sub=' + encodeURIComponent(state.sub) + '">' + subName + '</a><span>›</span>';
+          var sub2Node = subNode && subNode.children ? subNode.children[state.sub2] : null;
+          var sub2Name = sub2Node ? LOU.pick(sub2Node.name) : state.sub2;
+          html += '<span>' + sub2Name + '</span>';
+        }
+      }
+    }
+    bc.innerHTML = html;
+  }
+
+  /* ---- Баннеры категорий ---- */
+  function renderBanners() {
+    var host = document.querySelector("[data-banners]");
+    if (!host) return;
+    var tree = window.LOU_CATEGORY_TREE || {};
+    var items = [];
+
+    if (!state.cat) {
+      /* Верхний уровень: показываем родительские категории */
+      for (var slug in tree) {
+        var c = tree[slug];
+        items.push({ slug: slug, name: LOU.pick(c.name), image: c.image, href: 'shop.html?cat=' + encodeURIComponent(slug) });
+      }
+    } else if (!state.sub) {
+      /* Показываем подкатегории выбранной родительской */
+      var catNode = tree[state.cat];
+      if (catNode && catNode.children) {
+        for (var slug in catNode.children) {
+          var s = catNode.children[slug];
+          items.push({ slug: slug, name: LOU.pick(s.name), image: s.image, href: 'shop.html?cat=' + encodeURIComponent(state.cat) + '&sub=' + encodeURIComponent(slug) });
+        }
+      }
+    } else if (!state.sub2) {
+      /* Показываем подкатегории 2-го уровня */
+      var catNode = tree[state.cat];
+      var subNode = catNode && catNode.children ? catNode.children[state.sub] : null;
+      if (subNode && subNode.children) {
+        for (var slug in subNode.children) {
+          var s2 = subNode.children[slug];
+          items.push({ slug: slug, name: LOU.pick(s2.name), image: s2.image, href: 'shop.html?cat=' + encodeURIComponent(state.cat) + '&sub=' + encodeURIComponent(state.sub) + '&sub2=' + encodeURIComponent(slug) });
+        }
+      }
+    }
+
+    if (!items.length) {
+      host.style.display = 'none';
+      return;
+    }
+
+    host.style.display = '';
+    host.innerHTML = '<div class="banners-grid">' + items.map(function(it) {
+      var img = it.image || 'assets/img/lou-logo.webp';
+      return '<a class="cat-banner" href="' + it.href + '">' +
+        '<div class="cat-banner__img"><img src="' + img + '" alt="' + it.name + '" loading="lazy"></div>' +
+        '<span class="cat-banner__name">' + it.name + '</span>' +
+      '</a>';
+    }).join('') + '</div>';
+  }
+
+  /* ---- Фильтры ---- */
   function renderFilters() {
-    controls.type.innerHTML = option("all", LOU.t("filter.all")) + option("tshirt", LOU.t("shop.tshirt")) + option("mug", LOU.t("shop.mug"));
     controls.collection.innerHTML = option("all", LOU.t("filter.all")) + LOU.collections.map(function (c) { return option(c.id, LOU.pick(c)); }).join("");
     controls.size.innerHTML = option("all", LOU.t("filter.all")) + ["XS","S","M","L","XL","XXL"].map(function (s) { return option(s, s); }).join("");
     controls.price.innerHTML = option("all", LOU.t("filter.all")) + option("low", LOU.t("filter.priceLow")) + option("mid", LOU.t("filter.priceMid")) + option("high", LOU.t("filter.priceHigh"));
@@ -69,49 +171,64 @@
     Object.keys(controls).forEach(function (key) { controls[key].value = state[key]; });
   }
 
-  function renderCategorySwitch() {
-    const labels = { all: LOU.t("filter.all"), tshirt: LOU.t("shop.tshirt"), mug: LOU.t("shop.mug") };
-    document.querySelector("[data-category-switch]").innerHTML = ["all", "tshirt", "mug"].map(function (type) {
-      return '<button class="chip ' + (state.type === type ? 'active' : '') + '" data-category="' + type + '">' + labels[type] + '</button>';
-    }).join("");
-    document.querySelectorAll("[data-category]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        state.type = button.dataset.category;
-        const u = new URL(location);
-        if (state.type === "all") u.searchParams.delete("cat"); else u.searchParams.set("cat", state.type);
-        history.replaceState(null, "", u);
-        render();
-      });
-    });
-  }
+  /* ---- Фильтрация товаров ---- */
+  function getFilteredItems() {
+    return LOU.products.filter(function (p) {
+      /* Фильтр по категории из URL */
+      if (state.cat && p.category !== state.cat) return false;
+      if (state.sub && p.subcategory !== state.sub) return false;
+      if (state.sub2 && p.subcategory2 !== state.sub2) return false;
 
-  function render() {
-    renderFilters();
-    renderCategorySwitch();
-    let items = LOU.products.filter(function (p) {
-      const usd = p.price / window.LOU_CONFIG.usdToVnd;
-      return (state.type === "all" || p.category === state.type) &&
-        (state.collection === "all" || p.collection === state.collection) &&
-        (state.size === "all" || (p.sizes || []).includes(state.size)) &&
+      var usd = p.price / window.LOU_CONFIG.usdToVnd;
+      return (state.collection === "all" || p.collection === state.collection) &&
+        (state.size === "all" || (p.sizes || []).indexOf(state.size) !== -1) &&
         (state.price === "all" || (state.price === "low" && usd < 10) || (state.price === "mid" && usd >= 10 && usd < 12) || (state.price === "high" && usd >= 12)) &&
         (state.stock === "all" || (state.stock === "available" && p.stock > 0) || (state.stock === "low" && p.stock > 0 && p.stock <= window.LOU_CONFIG.stock.lowThreshold));
     });
-    if (state.sort === "asc") items.sort(function (a, b) { return a.price - b.price; });
-    if (state.sort === "desc") items.sort(function (a, b) { return b.price - a.price; });
-    document.querySelector("[data-count]").textContent = items.length + " " + LOU.t("shop.found");
-    LOU.renderGrid(document.querySelector("[data-grid]"), items);
   }
 
+  /* ---- Рендер ---- */
+  function render() {
+    renderFilters();
+    renderBreadcrumbs();
+    renderBanners();
+
+    var items = getFilteredItems();
+    if (state.sort === "asc") items.sort(function (a, b) { return a.price - b.price; });
+    if (state.sort === "desc") items.sort(function (a, b) { return b.price - a.price; });
+
+    document.querySelector("[data-count]").textContent = items.length + " " + LOU.t("shop.found");
+
+    /* Пагинация: показываем первые state.shown штук */
+    var visible = items.slice(0, state.shown);
+    LOU.renderGrid(document.querySelector("[data-grid]"), visible);
+
+    /* Кнопка «Показать больше» */
+    var wrap = document.querySelector("[data-show-more-wrap]");
+    if (items.length > state.shown) {
+      wrap.style.display = '';
+    } else {
+      wrap.style.display = 'none';
+    }
+  }
+
+  /* ---- События ---- */
   Object.keys(controls).forEach(function (key) {
-    controls[key].addEventListener("change", function () { state[key] = this.value; render(); });
+    controls[key].addEventListener("change", function () { state[key] = this.value; state.shown = PAGE_SIZE; render(); });
   });
+
   document.querySelector("[data-reset]").addEventListener("click", function () {
-    Object.assign(state, { type: "all", collection: "all", size: "all", price: "all", stock: "all", sort: "new" });
-    history.replaceState(null, "", location.pathname);
+    Object.assign(state, { collection: "all", size: "all", price: "all", stock: "all", sort: "new", shown: PAGE_SIZE });
     render();
   });
-  document.addEventListener("products:ready", render);
-  document.addEventListener("lang:change", render);
+
+  document.querySelector("[data-show-more]").addEventListener("click", function () {
+    state.shown += PAGE_SIZE;
+    render();
+  });
+
+  document.addEventListener("products:ready", function () { state.shown = PAGE_SIZE; render(); });
+  document.addEventListener("lang:change", function () { state.shown = PAGE_SIZE; render(); });
 })();
 </script>
 </body>

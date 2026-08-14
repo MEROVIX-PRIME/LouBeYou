@@ -40,6 +40,7 @@
   /* ---------- Загрузка товаров ---------- */
   let PRODUCTS = [];
   let COLLECTIONS = window.LOU_COLLECTIONS || [];
+  let CATEGORY_TREE = window.LOU_CATEGORY_TREE || {};
 
   function parseCSV(text) {
     const rows = [];
@@ -216,6 +217,7 @@
 
   function applyCatalog(mapped) {
     PRODUCTS = mapped;
+    CATEGORY_TREE = window.LOU_CATEGORY_TREE || CATEGORY_TREE || {};
     const ids = [...new Set(mapped.map(p => p.collection).filter(Boolean))];
     const known = new Map((window.LOU_COLLECTIONS || COLLECTIONS).map(c => [c.id, c]));
     COLLECTIONS = ids.map(id => known.get(id) || {
@@ -872,6 +874,7 @@
     t, pick, money, setLang, getLang: () => lang,
     get products() { return PRODUCTS; },
     get collections() { return COLLECTIONS; },
+    get categoryTree() { return CATEGORY_TREE; },
     get cart() { return cart; },
     cartCount, cartSubtotal, shippingCost, lineKey,
     addToCart, updateQty, removeItem, clearCart,
