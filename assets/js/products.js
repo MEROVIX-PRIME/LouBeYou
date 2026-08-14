@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T07:51:40.837Z
+   Обновлено: 2026-08-14T08:33:48.802Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -2469,11 +2469,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "just-one-more-pag",
-    "image": "https://lh3.googleusercontent.com/d/1_X0xC15KDRb9scp9fSQbL_-3AEfcp_Er",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1_X0xC15KDRb9scp9fSQbL_-3AEfcp_Er",
-      "https://lh3.googleusercontent.com/d/1uwKTuBonlC65QMq_ForIPN09vV3z8Q_e",
-      "https://lh3.googleusercontent.com/d/1FsrwocrrpTf8NvtmT_HYObjQihj1kfUs"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -2487,9 +2485,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "Just One More Page",
     "name": {
@@ -2663,11 +2661,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "waiting-together",
-    "image": "https://lh3.googleusercontent.com/d/1yD-ud4QPnXDGhqYM8R_196pwVtDsdYTA",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1yD-ud4QPnXDGhqYM8R_196pwVtDsdYTA",
-      "https://lh3.googleusercontent.com/d/1O1qiKBTY02UxmZXdv8Qdqy6uIPEdft9p",
-      "https://lh3.googleusercontent.com/d/1AoP2_tvlSo0edJGRZZ-XQ-pcpAuOsP5I"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -2681,9 +2677,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "Waiting Together",
     "name": {
@@ -2857,11 +2853,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "fresh-out-of-the-oven",
-    "image": "https://lh3.googleusercontent.com/d/17z9yCnkv-jEX76YrENPl4vN5SJg7kCAl",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/17z9yCnkv-jEX76YrENPl4vN5SJg7kCAl",
-      "https://lh3.googleusercontent.com/d/1PBYAEsyZ2c9k4o95tCQVpAzHR4bNjRiz",
-      "https://lh3.googleusercontent.com/d/1Lu6o6kO5m2eBf311qt8CTqw_PGb1nfzR"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -2875,9 +2869,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "Fresh Out of the Oven",
     "name": {
@@ -3051,11 +3045,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "im-fixing-this",
-    "image": "https://lh3.googleusercontent.com/d/1yu7rPX37tuasD9CDPiX5Y0Ic63oFUo42",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1yu7rPX37tuasD9CDPiX5Y0Ic63oFUo42",
-      "https://lh3.googleusercontent.com/d/1Gd-9YuSL1YjKmLbY0OUelxa8JVdgMpju",
-      "https://lh3.googleusercontent.com/d/1ivYkUNyXYPFceXRbr48JRpydxB48StHY"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -3069,9 +3061,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "I’m Fixing This",
     "name": {
@@ -3245,11 +3237,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "no-plans-for-today",
-    "image": "https://lh3.googleusercontent.com/d/183xtgSaIF9XxwAVX0hxo38dqidJuKvoH",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/183xtgSaIF9XxwAVX0hxo38dqidJuKvoH",
-      "https://lh3.googleusercontent.com/d/1y9jsvjmvz7y3wQvDr-ej3XBbonZN2xWJ",
-      "https://lh3.googleusercontent.com/d/1m3GcDd6wJqkY1Kagz-rjXs6VB7kCWdyA"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -3263,9 +3253,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "No Plans for Today",
     "name": {
@@ -3439,11 +3429,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "youve-grown-so-much",
-    "image": "https://lh3.googleusercontent.com/d/1e4xl8OlhnUdlUXhFVRUp4qjQuTU0StJ_",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1e4xl8OlhnUdlUXhFVRUp4qjQuTU0StJ_",
-      "https://lh3.googleusercontent.com/d/1VBk5Uw1Z8rMInwLo-LD5cuflwWQ1AYgk",
-      "https://lh3.googleusercontent.com/d/19J-nldbd2OvCDjhiGK5bwCbh_gsvQZdx"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -3457,9 +3445,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "You’ve Grown So Much",
     "name": {
@@ -3633,11 +3621,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "i-love-this-part",
-    "image": "https://lh3.googleusercontent.com/d/1Yyr_cPVhFtmlTB1k07yzVWXabgzy4atV",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1Yyr_cPVhFtmlTB1k07yzVWXabgzy4atV",
-      "https://lh3.googleusercontent.com/d/1Rdb7QlT-zNviwOJnaMD2MNncNxyk_vI7",
-      "https://lh3.googleusercontent.com/d/1bwOKF3UPO5_GLpbhUfgLu2PMo6SFfR_K"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -3651,9 +3637,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "I Love This Part",
     "name": {
@@ -3827,11 +3813,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "one-more-photo",
-    "image": "https://lh3.googleusercontent.com/d/186BabIMcNr7V_2TB8lzi8UcSSSS0P2zg",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/186BabIMcNr7V_2TB8lzi8UcSSSS0P2zg",
-      "https://lh3.googleusercontent.com/d/1GzUtFepW_IOwC_VQ9tFpjBKEpc9DrDNM",
-      "https://lh3.googleusercontent.com/d/1FcNY8u1hZT-W2888fFCIi30QDYYBbl0I"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -3845,9 +3829,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "One More Photo",
     "name": {
@@ -4021,11 +4005,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "just-listening-to-the-rain",
-    "image": "https://lh3.googleusercontent.com/d/1H_vSx8zGdvd538ikyWxZe9a7jCcBoe_W",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1H_vSx8zGdvd538ikyWxZe9a7jCcBoe_W",
-      "https://lh3.googleusercontent.com/d/1wX0Z9ePWo4jy0La3-RF4RMvak6XcCNkg",
-      "https://lh3.googleusercontent.com/d/1n6fCUWy9xmRvIUiI_zMg9F0G9oH3cDsq"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -4039,9 +4021,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "Just Listening to the Rain",
     "name": {
@@ -4215,11 +4197,9 @@ window.LOU_PRODUCTS = [
     "subcategory": "т_shits",
     "subcategory2": "adults",
     "collection": "five-more-minutes",
-    "image": "https://lh3.googleusercontent.com/d/1RFktsrYLJwXv1jEb8kDPCybEJ6cG8jd2",
+    "image": "assets/img/lou-logo.webp",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1RFktsrYLJwXv1jEb8kDPCybEJ6cG8jd2",
-      "https://lh3.googleusercontent.com/d/1y04gBPDWILgp5POwvAlpOxy5Re5bW69N",
-      "https://lh3.googleusercontent.com/d/10_COur2Ta8mHEPAKrK0lzlvqkWNi5ZJU"
+      "assets/img/lou-logo.webp"
     ],
     "price": 303396,
     "oldPrice": null,
@@ -4233,9 +4213,9 @@ window.LOU_PRODUCTS = [
     ],
     "colors": [
       "white",
+      "ivory",
       "black",
-      "moss",
-      "ivory"
+      "moss"
     ],
     "quote": "Five More Minutes",
     "name": {
