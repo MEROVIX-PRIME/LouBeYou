@@ -514,6 +514,7 @@ html[lang="vi"] .hero-title {
   display: flex; align-items: center; justify-content: center; gap: 9px;
   flex-wrap: wrap;
   margin-bottom: 14px; color: var(--ink-soft); font-size: .84rem;
+  overflow: hidden;
 }
 .breadcrumbs a { color: var(--moss); font-weight: 700; }
 .breadcrumbs a:hover { color: var(--caramel); }
@@ -946,6 +947,13 @@ html[lang="vi"] .hero-title {
 @media (max-width: 720px) {
   .wrap { padding: 0 18px; }
   :root { --header-h: 64px; }
+
+  .breadcrumbs {
+    flex-wrap: nowrap; direction: rtl; justify-content: flex-start;
+  }
+  .breadcrumbs > * { direction: ltr; flex-shrink: 0; }
+  .similar-row { grid-template-columns: repeat(2, 1fr); }
+  .similar-card:nth-child(n+5) { display: none; }
 
   .hero-bg { min-height: auto; flex-direction: column; background: var(--ivory); }
   .hero-photo {
