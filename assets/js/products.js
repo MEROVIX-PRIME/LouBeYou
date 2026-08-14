@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T14:24:09.388Z
+   Обновлено: 2026-08-14T14:31:43.470Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -224,140 +224,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 130000
+        "price": 130000,
+        "priceRub": 425
       },
       {
         "sku": "Т_shirt_book",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_book",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -436,140 +456,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_bus",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -647,140 +687,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_cook",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -858,140 +918,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_fix",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -1070,140 +1150,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_noplans",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -1282,140 +1382,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_flower",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -1494,140 +1614,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_music",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -1706,140 +1846,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_photo",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -1918,140 +2078,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_rain",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -2129,140 +2309,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       },
       {
         "sku": "Т_shirt_sleep",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 312000
+        "price": 312000,
+        "priceRub": 1020
       }
     ],
     "galleries": {
@@ -2330,7 +2530,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2382,7 +2583,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2434,7 +2636,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2486,7 +2689,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2538,7 +2742,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2590,7 +2795,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2642,7 +2848,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2694,7 +2901,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2746,7 +2954,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
@@ -2798,7 +3007,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 208000
+        "price": 208000,
+        "priceRub": 680
       }
     ],
     "galleries": {
