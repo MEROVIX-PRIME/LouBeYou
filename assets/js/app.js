@@ -665,11 +665,13 @@
           <div class="pd-cat">${collectionLabel(p) ? t("card.collection") + " " + collectionLabel(p) : ""}</div>
           <h2 class="pd-title" data-pd-title>${pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name)}</h2>
           ${"" /* quote removed — дублирует название коллекции */}
-          <div class="pd-price">
-            <span class="price">${money(p.price, p)}</span>
-            ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
+          <div class="pd-price-stock" data-pd-price-stock>
+            <div class="pd-price">
+              <span class="price">${money(p.price, p)}</span>
+              ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
+            </div>
+            <div class="pd-stock" data-pd-stock></div>
           </div>
-          <div class="pd-stock" data-pd-stock></div>
 
           ${p.sizes && p.sizes.length ? `
           <div class="field">
