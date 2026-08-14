@@ -805,7 +805,7 @@
         dotsEl = document.createElement("div");
         dotsEl.className = "pd-dots";
         const main = box.querySelector(".pd-main");
-        main.parentNode.insertBefore(dotsEl, main.nextSibling);
+        main.parentNode.insertBefore(dotsEl, main);
       }
       dotsEl.innerHTML = currentGallery.map((_, i) =>
         `<span class="pd-dot ${i === currentImgIdx ? "active" : ""}"></span>`).join("");
