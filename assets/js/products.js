@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T18:14:47.492Z
+   Обновлено: 2026-08-14T18:16:03.237Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -1587,9 +1587,9 @@ window.LOU_PRODUCTS = [
     "collection": "youve-grown-so-much",
     "image": "https://lh3.googleusercontent.com/d/1e4xl8OlhnUdlUXhFVRUp4qjQuTU0StJ_",
     "gallery": [
-      "https://lh3.googleusercontent.com/d/1e4xl8OlhnUdlUXhFVRUp4qjQuTU0StJ_",
-      "https://lh3.googleusercontent.com/d/1VBk5Uw1Z8rMInwLo-LD5cuflwWQ1AYgk",
-      "https://lh3.googleusercontent.com/d/19J-nldbd2OvCDjhiGK5bwCbh_gsvQZdx"
+      "https://lh3.googleusercontent.com/d/1jSiYVH8qMshoS6mq84S62xqg21wT1bAo",
+      "https://lh3.googleusercontent.com/d/1vgEzBY32IGUmSL3lfZsdfB-nsSekS7KM",
+      "https://lh3.googleusercontent.com/d/1YtNOs9i_DRnpOaAc-ehOoVxGJg-V3HGW"
     ],
     "price": 312000,
     "priceRub": 1020,
@@ -1788,11 +1788,6 @@ window.LOU_PRODUCTS = [
       }
     ],
     "galleries": {
-      "white": [
-        "https://lh3.googleusercontent.com/d/1e4xl8OlhnUdlUXhFVRUp4qjQuTU0StJ_",
-        "https://lh3.googleusercontent.com/d/1VBk5Uw1Z8rMInwLo-LD5cuflwWQ1AYgk",
-        "https://lh3.googleusercontent.com/d/19J-nldbd2OvCDjhiGK5bwCbh_gsvQZdx"
-      ],
       "ivory": [
         "https://lh3.googleusercontent.com/d/1jSiYVH8qMshoS6mq84S62xqg21wT1bAo",
         "https://lh3.googleusercontent.com/d/1vgEzBY32IGUmSL3lfZsdfB-nsSekS7KM",
