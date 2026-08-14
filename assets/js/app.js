@@ -547,9 +547,16 @@
   }
 
   /* ---------- Карточка товара ---------- */
+  function collectionLabel(p) {
+    if (!p.collection) return "";
+    var c = COLLECTIONS.find(function(x) { return x.id === p.collection; });
+    return c ? pick(c) : "";
+  }
+
   function cardHTML(p) {
     const sb = stockBadge(p.stock);
-    const catKey = p.category === "mug" ? "shop.mug" : "shop.tshirt";
+    const collName = collectionLabel(p);
+    const catLine = collName ? (t("card.collection") + " " + collName) : "";
     return `
       <a class="card" href="product.html?id=${encodeURIComponent(p.id)}">
         <div class="card-media">
@@ -559,7 +566,7 @@
           <img src="${p.image}" alt="${pick(p.name)}" loading="lazy">
         </div>
         <div class="card-body">
-          <div class="card-cat">${t(catKey)}</div>
+          ${catLine ? '<div class="card-cat">' + catLine + '</div>' : ''}
           <div class="card-title">${pick(p.name)}</div>
           ${p.quote ? '<div class="card-quote">' + p.quote + "</div>" : ""}
           <div class="card-foot">
@@ -644,7 +651,7 @@
             `<button class="pd-thumb ${i === 0 ? "active" : ""}" data-thumb="${g}"><img src="${g}" alt=""></button>`).join("") + "</div>" : ""}
         </div>
         <div class="pd-info">
-          <div class="pd-cat">${t(p.category === "mug" ? "shop.mug" : "shop.tshirt")}</div>
+          <div class="pd-cat">${collectionLabel(p) ? t("card.collection") + " " + collectionLabel(p) : ""}</div>
           <h2 class="pd-title" data-pd-title>${pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name)}</h2>
           ${p.quote ? '<div class="pd-quote">' + p.quote + " — Lou</div>" : ""}
           <div class="pd-price">
