@@ -315,10 +315,10 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.2; font-weight: 600; }
   filter: drop-shadow(0 10px 12px rgba(37,36,31,.12));
 }
 .hero-card:first-child .hero-card-img img {
-  transform: scale(2.1) translateX(-10%) translateY(-33%);
+  transform: scale(2.1) translateX(-5%) translateY(-23%);
 }
 .hero-card:last-child .hero-card-img img {
-  transform: scale(2.275) translateX(-10%) translateY(-13%);
+  transform: scale(2.275) translateX(-5%) translateY(-3%);
 }
 .hero-card h3 { font-family: var(--font-body); font-size: .94rem; line-height: 1.38; font-weight: 700; margin-bottom: 13px; }
 .hero-card p { font-size: .9rem; color: var(--ink-soft); margin: 0 0 11px; line-height: 1.45; }
