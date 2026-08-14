@@ -633,7 +633,9 @@
       : (p.colors && p.colors.includes("white") ? "white" : (p.colors && p.colors[0]));
     const productCrumb = document.querySelector("[data-product-crumb]");
     if (productCrumb) productCrumb.textContent = pick((p.namesByColor && p.namesByColor[defaultColor]) || p.name);
-    const gallery = (p.galleries && p.galleries[defaultColor]) || (p.gallery && p.gallery.length ? p.gallery : [p.image]);
+    var gallery = (p.galleries && p.galleries[defaultColor]) || (p.gallery && p.gallery.length ? p.gallery : [p.image]);
+    gallery = gallery.slice();
+    if (p.sizeImage) gallery.push(p.sizeImage);
     const similar = PRODUCTS
       .filter(x => x.id !== p.id)
       .sort((a, b) => {
@@ -742,7 +744,8 @@
       });
     }
     function renderColorGallery(color) {
-      const images = (p.galleries && p.galleries[color]) || p.gallery || [p.image];
+      var images = ((p.galleries && p.galleries[color]) || p.gallery || [p.image]).slice();
+      if (p.sizeImage) images.push(p.sizeImage);
       box.querySelector("[data-pd-main]").src = images[0];
       const colorTitle = p.namesByColor && p.namesByColor[color];
       if (colorTitle) {
