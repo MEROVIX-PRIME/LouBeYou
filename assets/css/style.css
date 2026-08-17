@@ -610,7 +610,7 @@ html[lang="vi"] .hero-title {
 }
 .cat-banner {
   display: flex; align-items: center;
-  padding: 14px 20% 14px 15%;
+  padding: 14px 10% 14px 15%;
   min-height: 130px;
   background: var(--white-soft);
   border: 1px solid var(--border);
@@ -654,7 +654,7 @@ html[lang="vi"] .hero-title {
 
 @media (max-width: 600px) {
   .banners-grid { grid-template-columns: 1fr; gap: 10px; }
-  .cat-banner { padding: 10px 20% 10px 10%; min-height: 100px; }
+  .cat-banner { padding: 10px 10% 10px 10%; min-height: 100px; }
   .cat-banner__img { height: calc(100px - 20px); }
   .cat-banner__name { font-size: .95rem; }
   .filter-panel--row { padding: 12px 14px; gap: 8px; }
