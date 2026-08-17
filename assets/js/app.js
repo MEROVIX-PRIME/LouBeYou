@@ -566,12 +566,6 @@
     const sb = stockBadge(p.stock);
     const collName = collectionLabel(p);
     const catLine = collName ? (t("card.collection") + " «" + collName + "»") : "";
-    const swatches = (p.colors && p.colors.length)
-      ? '<div class="card-swatches">' + p.colors.map(c => {
-          const sw = CFG.colorSwatch[c] || "#DDD4C5";
-          return '<i class="card-swatch" style="background:' + sw + '" title="' + colorLabel(c) + '"></i>';
-        }).join("") + '</div>'
-      : "";
     return `
       <a class="card" href="product.html?id=${encodeURIComponent(p.id)}">
         <div class="card-media">
@@ -579,7 +573,6 @@
           ${p.hit ? '<span class="badge badge-hit">' + t("card.hit") + '</span>' : ""}
           ${p.oldPrice ? '<span class="badge badge-sale">-' + Math.round((1 - p.price / p.oldPrice) * 100) + "%</span>" : ""}
           <img src="${p.image}" alt="${pick(p.name)}" loading="lazy">
-          ${swatches}
         </div>
         <div class="card-body">
           ${catLine ? '<div class="card-cat">' + catLine + '</div>' : ''}
@@ -664,7 +657,19 @@
       ${pageMode ? "" : `<button class="modal-close" data-modal-close aria-label="${t("common.close")}">${ICONS.close}</button>`}
       <div class="pd">
         <div class="pd-media">
-          <div class="pd-main"><img src="${gallery[0]}" alt="${pick(p.name)}" data-pd-main></div>
+          <div class="pd-main-wrap">
+            <div class="pd-main">
+              <span class="badge ${stockBadge(p.stock).cls} pd-badge-stock" data-pd-badge-stock>${stockBadge(p.stock).text}</span>
+              <img src="${gallery[0]}" alt="${pick(p.name)}" data-pd-main>
+            </div>
+            ${p.colors && p.colors.length ? `<div class="pd-color-side" data-pd-color-side>
+              ${p.colors.map(c => {
+                const sw = CFG.colorSwatch[c] || "#DDD4C5";
+                return `<button class="pd-color-dot${c === defaultColor ? " active" : ""}" data-side-color="${c}" title="${colorLabel(c)}" aria-label="${colorLabel(c)}">
+                  <i style="background:${sw}"></i></button>`;
+              }).join("")}
+            </div>` : ""}
+          </div>
           ${gallery.length > 1 ? '<div class="pd-thumbs">' + gallery.map((g, i) =>
             `<button class="pd-thumb ${i === 0 ? "active" : ""}" data-thumb="${g}"><img src="${g}" alt=""></button>`).join("") + "</div>" : ""}
         </div>
@@ -856,6 +861,9 @@
       const s = currentStock();
       const b = stockBadge(s);
       stockEl.innerHTML = '<span class="badge ' + b.cls + '" style="position:static">' + b.text + "</span>";
+      /* Обновляем бейдж на картинке товара */
+      const badgeOnImg = box.querySelector("[data-pd-badge-stock]");
+      if (badgeOnImg) { badgeOnImg.className = "badge " + b.cls + " pd-badge-stock"; badgeOnImg.textContent = b.text; }
       if (colorNameEl) colorNameEl.textContent = sel.color ? colorLabel(sel.color) : "";
 
       /* Обновляем цену при выборе варианта */
@@ -909,6 +917,37 @@
         renderColorGallery(sel.color);
       }
     }
+
+    /* Боковые цветовые кнопки (справа от картинки) — синхрон с основным селектором */
+    function syncSideColors() {
+      box.querySelectorAll("[data-side-color]").forEach(dot => {
+        dot.classList.toggle("active", dot.dataset.sideColor === sel.color);
+      });
+    }
+    box.querySelectorAll("[data-side-color]").forEach(dot => {
+      dot.addEventListener("click", () => {
+        sel.color = dot.dataset.sideColor;
+        /* Синхронизируем основной селектор */
+        const mainOpts = box.querySelector('[data-opts="color"]');
+        if (mainOpts) {
+          mainOpts.querySelectorAll(".opt").forEach(x => x.classList.remove("active"));
+          const match = mainOpts.querySelector('.opt[data-val="' + sel.color + '"]');
+          if (match) match.classList.add("active");
+        }
+        renderColorGallery(sel.color);
+        refreshStock();
+        syncSideColors();
+        /* Обновляем бейдж на картинке */
+        const badgeEl = box.querySelector("[data-pd-badge-stock]");
+        if (badgeEl) {
+          const b = stockBadge(currentStock());
+          badgeEl.className = "badge " + b.cls + " pd-badge-stock";
+          badgeEl.textContent = b.text;
+        }
+      });
+    });
+    syncSideColors();
+
     refreshStock();
 
     box.querySelectorAll(".acc-head").forEach(h => {
