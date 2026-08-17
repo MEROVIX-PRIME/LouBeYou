@@ -348,7 +348,6 @@ html[lang="vi"] .hero-title {
 .usp-item { text-align: center; padding: 0 22px; }
 .usp-item + .usp-item { border-left: 1px solid var(--border); }
 .usp-item svg { width: 26px; height: 26px; color: var(--moss); margin: 0 auto 12px; }
-.usp-moon { display: block; color: var(--moss); font-size: 2.15rem; line-height: 26px; margin: 0 auto 12px; }
 .usp-item h3 { font-size: 1rem; margin-bottom: 6px; }
 .usp-item p { font-size: .86rem; color: var(--ink-soft); margin: 0; line-height: 1.5; }
 
@@ -917,11 +916,8 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   margin: 0 0 16px;
 }
 .about-greeting {
-  font-size: 1.2rem !important; color: var(--ink) !important;
-}
-.about-greeting strong {
-  font-family: var(--font-display); font-size: 1.4rem;
-  color: var(--caramel);
+  font-size: 1.05rem !important; font-weight: 400 !important;
+  color: var(--ink-soft) !important;
 }
 
 .about-quote-section {
@@ -1188,6 +1184,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .about-page-hero .wrap { padding-left: 22px; padding-right: 22px; }
   .about-sign.wrap { padding-left: 22px; padding-right: 22px; }
   .about-cta.wrap { padding-left: 22px; padding-right: 22px; }
+  .about-text { text-align: center; }
   .about-blockquote { font-size: 1.1rem; }
   .about-blockquote br { display: none; }
   .about-wide-photo img { max-height: 300px; }
