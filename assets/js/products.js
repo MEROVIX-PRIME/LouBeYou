@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-17T12:16:57.187Z
+   Обновлено: 2026-08-17T12:25:42.081Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -450,9 +450,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "Just One More Page",
     "name": {
-      "ru": "Т_shirt_book",
+      "ru": "Футболка Lou Be You «Just One More Page»",
       "en": "Lou Be You T-Shirt «Just One More Page»",
       "vi": "Áo thun Lou Be You «Just One More Page»"
     },
@@ -682,9 +682,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "Waiting Together",
     "name": {
-      "ru": "Т_shirt_bus",
+      "ru": "Футболка Lou Be You «Waiting Together»",
       "en": "Lou Be You T-Shirt «Waiting Together»",
       "vi": "Áo thun Lou Be You «Waiting Together»"
     },
@@ -913,9 +913,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "Fresh Out of the Oven",
     "name": {
-      "ru": "Т_shirt_cook",
+      "ru": "Футболка Lou Be You «Fresh Out of the Oven»",
       "en": "Lou Be You T-Shirt «Fresh Out of the Oven»",
       "vi": "Áo thun Lou Be You «Fresh Out of the Oven»"
     },
@@ -1144,9 +1144,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "I’m Fixing This",
     "name": {
-      "ru": "Т_shirt_fix",
+      "ru": "Футболка Lou Be You «I’m Fixing This»",
       "en": "Lou Be You T-Shirt «I’m Fixing This»",
       "vi": "Áo thun Lou Be You «I’m Fixing This»"
     },
@@ -1376,9 +1376,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "No Plans for Today",
     "name": {
-      "ru": "Т_shirt_noplans",
+      "ru": "Футболка Lou Be You «No Plans for Today»",
       "en": "Lou Be You T-Shirt «No Plans for Today»",
       "vi": "Áo thun Lou Be You «No Plans for Today»"
     },
@@ -1608,9 +1608,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "You’ve Grown So Much",
     "name": {
-      "ru": "Т_shirt_flower",
+      "ru": "Футболка Lou Be You «You’ve Grown So Much»",
       "en": "Lou Be You T-Shirt «You’ve Grown So Much»",
       "vi": "Áo thun Lou Be You «You’ve Grown So Much»"
     },
@@ -1840,9 +1840,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "I Love This Part",
     "name": {
-      "ru": "Т_shirt_music",
+      "ru": "Футболка Lou Be You «I Love This Part»",
       "en": "Lou Be You T-Shirt «I Love This Part»",
       "vi": "Áo thun Lou Be You «I Love This Part»"
     },
@@ -2072,9 +2072,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "One More Photo",
     "name": {
-      "ru": "Т_shirt_photo",
+      "ru": "Футболка Lou Be You «One More Photo»",
       "en": "Lou Be You T-Shirt «One More Photo»",
       "vi": "Áo thun Lou Be You «One More Photo»"
     },
@@ -2304,9 +2304,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "Just Listening to the Rain",
     "name": {
-      "ru": "Т_shirt_rain",
+      "ru": "Футболка Lou Be You «Just Listening to the Rain»",
       "en": "Lou Be You T-Shirt «Just Listening to the Rain»",
       "vi": "Áo thun Lou Be You «Just Listening to the Rain»"
     },
@@ -2535,9 +2535,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "",
+    "quote": "Five More Minutes",
     "name": {
-      "ru": "Т_shirt_sleep",
+      "ru": "Футболка Lou Be You «Five More Minutes»",
       "en": "Lou Be You T-Shirt «Five More Minutes»",
       "vi": "Áo thun Lou Be You «Five More Minutes»"
     },
@@ -2756,9 +2756,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "Just One More Page",
     "name": {
-      "ru": "mug_book",
+      "ru": "Кружка Lou Be You «Just One More Page»",
       "en": "Lou Be You Mug «Just One More Page»",
       "vi": "Cốc Lou Be You «Just One More Page»"
     },
@@ -2809,9 +2809,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "Fresh Out of the Oven",
     "name": {
-      "ru": "mug_cook",
+      "ru": "Кружка Lou Be You «Fresh Out of the Oven»",
       "en": "Lou Be You Mug «Fresh Out of the Oven»",
       "vi": "Cốc Lou Be You «Fresh Out of the Oven»"
     },
@@ -2862,9 +2862,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "Just Listening to the Rain",
     "name": {
-      "ru": "mug_rain",
+      "ru": "Кружка Lou Be You «Just Listening to the Rain»",
       "en": "Lou Be You Mug «Just Listening to the Rain»",
       "vi": "Cốc Lou Be You «Just Listening to the Rain»"
     },
@@ -2915,9 +2915,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "Five More Minutes",
     "name": {
-      "ru": "mug_sleep",
+      "ru": "Кружка Lou Be You «Five More Minutes»",
       "en": "Lou Be You Mug «Five More Minutes»",
       "vi": "Cốc Lou Be You «Five More Minutes»"
     },
@@ -2968,9 +2968,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "No Plans for Today",
     "name": {
-      "ru": "mug_noplans",
+      "ru": "Кружка Lou Be You «No Plans for Today»",
       "en": "Lou Be You Mug «No Plans for Today»",
       "vi": "Cốc Lou Be You «No Plans for Today»"
     },
@@ -3021,9 +3021,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "You’ve Grown So Much",
     "name": {
-      "ru": "mug_flower",
+      "ru": "Кружка Lou Be You «You’ve Grown So Much»",
       "en": "Lou Be You Mug «You’ve Grown So Much»",
       "vi": "Cốc Lou Be You «You’ve Grown So Much»"
     },
@@ -3074,9 +3074,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "Waiting Together",
     "name": {
-      "ru": "mug_bus",
+      "ru": "Кружка Lou Be You «Waiting Together»",
       "en": "Lou Be You Mug «Waiting Together»",
       "vi": "Cốc Lou Be You «Waiting Together»"
     },
@@ -3127,9 +3127,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "I Love This Part",
     "name": {
-      "ru": "mug_music",
+      "ru": "Кружка Lou Be You «I Love This Part»",
       "en": "Lou Be You Mug «I Love This Part»",
       "vi": "Cốc Lou Be You «I Love This Part»"
     },
@@ -3180,9 +3180,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "I’m Fixing This",
     "name": {
-      "ru": "mug_fix",
+      "ru": "Кружка Lou Be You «I’m Fixing This»",
       "en": "Lou Be You Mug «I’m Fixing This»",
       "vi": "Cốc Lou Be You «I’m Fixing This»"
     },
@@ -3233,9 +3233,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "",
+    "quote": "One More Photo",
     "name": {
-      "ru": "mug_photo",
+      "ru": "Кружка Lou Be You «One More Photo»",
       "en": "Lou Be You Mug «One More Photo»",
       "vi": "Cốc Lou Be You «One More Photo»"
     },
