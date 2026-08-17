@@ -601,6 +601,76 @@ html[lang="vi"] .hero-title {
 .filter-panel--row .select { width: 100%; min-width: 0; border-radius: var(--r-sm); }
 .filter-panel--row .filter-reset { white-space: nowrap; align-self: end; padding: 9px 16px; background: var(--moss-tint); border-radius: var(--r-sm); }
 
+/* ---- Ценовой ползунок (выпадающий) ---- */
+.price-filter-label {
+  display: grid; gap: 5px; min-width: 0; flex: 1 1 130px;
+}
+.price-filter-label > span {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .07em;
+  font-weight: 700; color: var(--ink-soft);
+}
+.price-dd { position: relative; }
+.price-dd-head {
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer; user-select: none; gap: 6px;
+}
+.price-dd-text {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: .9rem; font-weight: 600;
+}
+.price-dd-arrow {
+  font-size: .65rem; color: var(--ink-soft); flex-shrink: 0;
+  transition: transform .2s;
+}
+.price-dd.open .price-dd-arrow { transform: rotate(180deg); }
+.price-dd-body {
+  display: none; position: absolute; top: calc(100% + 6px); left: 0;
+  width: 240px; z-index: 50;
+  background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: 18px 16px 14px; box-shadow: var(--shadow-md);
+}
+.price-dd.open .price-dd-body { display: block; }
+.price-slider-track {
+  position: relative; height: 28px;
+}
+.price-slider-fill {
+  position: absolute; top: 12px; height: 4px;
+  background: var(--moss); border-radius: 2px;
+  pointer-events: none;
+}
+.price-range {
+  position: absolute; top: 0; left: 0; width: 100%; height: 28px;
+  -webkit-appearance: none; appearance: none;
+  background: transparent; pointer-events: none; margin: 0;
+}
+.price-range::-webkit-slider-runnable-track {
+  height: 4px; background: var(--border); border-radius: 2px;
+}
+.price-range--max::-webkit-slider-runnable-track { background: transparent; }
+.price-range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; border: 2.5px solid var(--moss);
+  margin-top: -8px; cursor: pointer;
+  pointer-events: all; position: relative; z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+.price-range::-moz-range-track {
+  height: 4px; background: var(--border); border-radius: 2px; border: none;
+}
+.price-range--max::-moz-range-track { background: transparent; }
+.price-range::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; border: 2.5px solid var(--moss);
+  cursor: pointer; pointer-events: all;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+.price-slider-vals {
+  display: flex; justify-content: space-between;
+  font-size: .78rem; color: var(--ink-soft); font-weight: 600;
+  margin-top: 2px;
+}
+
 /* ---- Баннеры категорий ---- */
 .category-banners { margin-bottom: 24px; }
 .banners-grid {

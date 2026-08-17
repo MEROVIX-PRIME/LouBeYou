@@ -102,8 +102,114 @@
 
     var config = getCurrentFilterConfig();
 
-    for (var i = config.length - 1; i >= 0; i--) {
+    for (var i = 0; i < config.length; i++) {
       var f = config[i];
+
+      if (f.key === "price") {
+        /* ---- Ползунок цены в выпадающем блоке ---- */
+        var outer = document.createElement("label");
+        outer.className = "price-filter-label";
+        var spanP = document.createElement("span");
+        spanP.textContent = LOU.pick(f);
+        outer.appendChild(spanP);
+
+        var dd = document.createElement("div");
+        dd.className = "price-dd";
+        var ddHead = document.createElement("div");
+        ddHead.className = "price-dd-head select";
+        var ddText = document.createElement("span");
+        ddText.className = "price-dd-text";
+        ddText.textContent = LOU.t("filter.all");
+        ddHead.appendChild(ddText);
+        var ddArrow = document.createElement("span");
+        ddArrow.className = "price-dd-arrow";
+        ddArrow.innerHTML = "&#9662;";
+        ddHead.appendChild(ddArrow);
+        dd.appendChild(ddHead);
+
+        var ddBody = document.createElement("div");
+        ddBody.className = "price-dd-body";
+
+        var track = document.createElement("div");
+        track.className = "price-slider-track";
+        var fill = document.createElement("div");
+        fill.className = "price-slider-fill";
+        track.appendChild(fill);
+
+        var inputMin = document.createElement("input");
+        inputMin.type = "range"; inputMin.className = "price-range price-range--min";
+        inputMin.min = 0; inputMin.max = 100; inputMin.value = 0;
+        var inputMax = document.createElement("input");
+        inputMax.type = "range"; inputMax.className = "price-range price-range--max";
+        inputMax.min = 0; inputMax.max = 100; inputMax.value = 100;
+        track.appendChild(inputMin);
+        track.appendChild(inputMax);
+        ddBody.appendChild(track);
+
+        var vals = document.createElement("div");
+        vals.className = "price-slider-vals";
+        var valMin = document.createElement("span");
+        valMin.className = "price-val-min";
+        var valMax = document.createElement("span");
+        valMax.className = "price-val-max";
+        vals.appendChild(valMin);
+        vals.appendChild(valMax);
+        ddBody.appendChild(vals);
+        dd.appendChild(ddBody);
+        outer.appendChild(dd);
+
+        /* Открытие / закрытие */
+        ddHead.addEventListener("click", function (e) {
+          e.preventDefault(); e.stopPropagation();
+          var open = dd.classList.toggle("open");
+          if (open) {
+            /* Закроем при клике снаружи */
+            setTimeout(function () {
+              document.addEventListener("click", closePrice);
+            }, 0);
+          }
+        });
+        function closePrice(e) {
+          if (!dd.contains(e.target)) {
+            dd.classList.remove("open");
+            document.removeEventListener("click", closePrice);
+          }
+        }
+        /* Не закрывать при клике внутри body */
+        ddBody.addEventListener("click", function (e) { e.stopPropagation(); });
+
+        filterPanel.insertBefore(outer, sortLabel);
+        dynamicLabels.push(outer);
+        dynamicKeys.push("price");
+        state.price = "all";
+        state._priceMin = 0;
+        state._priceMax = Infinity;
+        state._priceSliderMin = inputMin;
+        state._priceSliderMax = inputMax;
+        state._priceFill = fill;
+        state._priceValMin = valMin;
+        state._priceValMax = valMax;
+        state._priceDdText = ddText;
+
+        (function (inMin, inMax) {
+          function upd() {
+            var lo = Number(inMin.value), hi = Number(inMax.value);
+            if (lo > hi) { var t = lo; lo = hi; hi = t; inMin.value = lo; inMax.value = hi; }
+            state._priceMin = lo;
+            state._priceMax = hi;
+            state.price = "range";
+            updateSliderFill();
+            updateSliderLabels();
+            state.shown = PAGE_SIZE;
+            render();
+          }
+          inMin.addEventListener("input", upd);
+          inMax.addEventListener("input", upd);
+        })(inputMin, inputMax);
+
+        continue;
+      }
+
       var label = document.createElement("label");
       var span = document.createElement("span");
       span.textContent = LOU.pick(f);
@@ -115,8 +221,8 @@
 
       /* Вставляем перед Sort */
       filterPanel.insertBefore(label, sortLabel);
-      dynamicLabels.unshift(label);
-      dynamicKeys.unshift(f.key);
+      dynamicLabels.push(label);
+      dynamicKeys.push(f.key);
       state[f.key] = "all";
 
       /* Событие */
@@ -127,6 +233,42 @@
           render();
         });
       })(f.key);
+    }
+  }
+
+  /* ---- Ценовой ползунок: вспомогательные функции ---- */
+  function priceMoney(vnd) {
+    var cfg = window.LOU_CONFIG || {};
+    var lang = LOU.getLang();
+    if (lang === "en") return "$" + Math.round(vnd / (cfg.usdToVnd || 26000));
+    if (lang === "ru") return Math.round(vnd / (cfg.usdToVnd || 26000) * (cfg.usdToRub || 85)) + " ₽";
+    return Math.round(vnd).toLocaleString("vi-VN") + " ₫";
+  }
+
+  function updateSliderFill() {
+    if (!state._priceFill || !state._priceSliderMin) return;
+    var min = Number(state._priceSliderMin.min);
+    var max = Number(state._priceSliderMin.max);
+    var range = max - min || 1;
+    var lo = (Number(state._priceSliderMin.value) - min) / range * 100;
+    var hi = (Number(state._priceSliderMax.value) - min) / range * 100;
+    state._priceFill.style.left = lo + "%";
+    state._priceFill.style.width = (hi - lo) + "%";
+  }
+
+  function updateSliderLabels() {
+    if (!state._priceValMin) return;
+    var lo = priceMoney(state._priceMin);
+    var hi = priceMoney(state._priceMax);
+    state._priceValMin.textContent = lo;
+    state._priceValMax.textContent = hi;
+    /* Текст в свёрнутом виде */
+    if (state._priceDdText) {
+      if (state.price === "all") {
+        state._priceDdText.textContent = LOU.t("filter.all");
+      } else {
+        state._priceDdText.textContent = lo + " — " + hi;
+      }
     }
   }
 
@@ -320,11 +462,8 @@
       case "color":
         return (p.colors || []).indexOf(value) !== -1;
       case "price":
-        var usd = p.price / window.LOU_CONFIG.usdToVnd;
-        if (value === "low") return usd < 10;
-        if (value === "mid") return usd >= 10 && usd < 12;
-        if (value === "high") return usd >= 12;
-        return true;
+        if (value === "all") return true;
+        return p.price >= state._priceMin && p.price <= state._priceMax;
       case "product_type":
         return p.subcategory === value;
       case "for_whom":
@@ -342,12 +481,45 @@
     var config = getCurrentFilterConfig();
 
     dynamicKeys.forEach(function (key, idx) {
-      var label = dynamicLabels[idx];
-      var select = label.querySelector("select");
+      var el = dynamicLabels[idx];
       var filterDef = config[idx];
 
+      if (key === "price") {
+        /* Ценовой ползунок — обновляем диапазон */
+        /* Обновляем заголовок (при смене языка) */
+        var labelSpan = el.querySelector("span");
+        if (labelSpan && filterDef) labelSpan.textContent = LOU.pick(filterDef);
+
+        var prices = catProducts.map(function (p) { return p.price; }).filter(function (v) { return v > 0; });
+        if (!prices.length) { el.style.display = "none"; return; }
+        el.style.display = "";
+
+        var minP = Math.min.apply(null, prices);
+        var maxP = Math.max.apply(null, prices);
+        /* Округляем */
+        var step = maxP > 1000000 ? 50000 : maxP > 100000 ? 10000 : 1000;
+        minP = Math.floor(minP / step) * step;
+        maxP = Math.ceil(maxP / step) * step;
+        if (minP === maxP) maxP = minP + step;
+
+        var inMin = state._priceSliderMin;
+        var inMax = state._priceSliderMax;
+        inMin.min = minP; inMin.max = maxP; inMin.step = step;
+        inMax.min = minP; inMax.max = maxP; inMax.step = step;
+
+        /* Если цена «all» (сброс) — ставим концы */
+        if (state.price === "all") {
+          inMin.value = minP; inMax.value = maxP;
+          state._priceMin = minP; state._priceMax = maxP;
+        }
+        updateSliderFill();
+        updateSliderLabels();
+        return;
+      }
+
+      var select = el.querySelector("select");
       /* Обновляем заголовок фильтра (при смене языка) */
-      label.querySelector("span").textContent = filterDef ? LOU.pick(filterDef) : key;
+      el.querySelector("span").textContent = filterDef ? LOU.pick(filterDef) : key;
 
       var vals = getFilterValues(key, catProducts);
 
@@ -355,8 +527,8 @@
         return option(v.value, v.label);
       }).join("");
 
-      /* Скрываем если значений <= 1 (кроме price — всегда показываем) */
-      label.style.display = (key !== "price" && vals.length <= 1) ? "none" : "";
+      /* Скрываем если значений <= 1 */
+      el.style.display = vals.length <= 1 ? "none" : "";
 
       /* Восстанавливаем выбранное значение */
       select.value = state[key] || "all";
@@ -420,6 +592,8 @@
     dynamicKeys.forEach(function (key) { state[key] = "all"; });
     state.sort = "new";
     state.shown = PAGE_SIZE;
+    state._priceMin = 0;
+    state._priceMax = Infinity;
     render();
   });
 
