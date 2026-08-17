@@ -886,7 +886,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 
 /* --- About-страница: новый дизайн --- */
 .about-page-hero {
-  text-align: center; padding: 40px 0 20px;
+  text-align: center; padding: 28px 0 20px;
   background: var(--ivory);
 }
 .about-page-title {
