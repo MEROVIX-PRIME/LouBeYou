@@ -150,8 +150,7 @@ window.LOU_I18N = {
 
     "ap.title": "Thế giới nhỏ mang tên <span class='lou-accent'>Lou</span>",
     "ap.subtitle": "Câu chuyện bắt đầu từ một suy nghĩ nhỏ",
-    "ap.greeting": "Tôi tên là <strong>Anastasia</strong>.",
-    "ap.intro1": "Tôi 35 tuổi và tôi là tác giả của <span class='lou-accent'>Lou</span>.",
+    "ap.greeting": "Tôi tên là <strong>Anastasia</strong>, và tôi là tác giả và người tạo ra <span class='lou-accent'>Lou</span>.",
     "ap.intro2": "Lou ra đời từ một mong muốn đơn giản — tạo ra điều gì đó tử tế.",
     "ap.intro3": "Tôi luôn muốn thế giới có thêm một chút ấm áp, yêu thương và tử tế. Để giữa guồng quay bất tận của công việc, nhiệm vụ và suy nghĩ, vẫn còn chỗ cho điều gì đó giản dị và chân thật.",
     "ap.intro4": "Và thế là Lou xuất hiện.",
@@ -362,8 +361,7 @@ window.LOU_I18N = {
 
     "ap.title": "A little world called Lou",
     "ap.subtitle": "A story that began with one little thought",
-    "ap.greeting": "My name is <strong>Anastasia</strong>.",
-    "ap.intro1": "I am 35 years old, and I am the author of Lou.",
+    "ap.greeting": "My name is <strong>Anastasia</strong>, and I am the author and creator of <span class='lou-accent'>Lou</span>.",
     "ap.intro2": "Lou was born from a simple desire — to create something kind.",
     "ap.intro3": "I have always wanted there to be a little more warmth, love, and kindness in the world. So that amidst the endless rush, tasks, and thoughts, there would still be room for something simple and real.",
     "ap.intro4": "And so Lou appeared.",
@@ -574,8 +572,7 @@ window.LOU_I18N = {
 
     "ap.title": "Маленький мир по имени <span class='lou-accent'>Lou</span>",
     "ap.subtitle": "История, которая началась с одной маленькой мысли",
-    "ap.greeting": "Меня зовут <strong>Анастасия</strong>.",
-    "ap.intro1": "Мне 35 лет, и я — автор <span class='lou-accent'>Lou</span>.",
+    "ap.greeting": "Меня зовут <strong>Анастасия</strong>, и я — автор и создатель <span class='lou-accent'>Lou</span>.",
     "ap.intro2": "Lou родился из простого желания — создать что-то доброе.",
     "ap.intro3": "Мне всегда хотелось, чтобы в мире было чуть больше тепла, любви и доброты. Чтобы среди бесконечной гонки, задач и мыслей оставалось место для чего-то простого и настоящего.",
     "ap.intro4": "Так появился Lou.",
