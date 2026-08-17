@@ -1037,28 +1037,29 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .carousel-next { right: -10px; }
   .products { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 
-  /* Карточка товара: кружки цвета справа от картинки */
-  .card-media {
-    display: grid; grid-template-columns: 1fr auto;
-    aspect-ratio: auto; position: relative;
+  /* Карточка листинга: цвета справа, бейдж на картинке */
+  .card .card-media {
+    display: flex; flex-direction: row;
+    aspect-ratio: auto; place-items: initial; overflow: visible;
   }
-  .card-media > img {
-    grid-column: 1; grid-row: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover;
+  .card .card-media > img {
+    flex: 1 1 0; min-width: 0; aspect-ratio: 1/1; object-fit: cover;
+    overflow: hidden;
   }
-  /* badges remain absolutely positioned over the image */
-  .card-swatches {
+  .card .card-swatches {
     display: flex !important; flex-direction: column; gap: 5px;
     padding: 6px 5px; align-items: center; justify-content: center;
-    background: var(--ivory); grid-column: 2; grid-row: 1 / -1;
+    background: var(--ivory); flex-shrink: 0;
   }
-  .card-swatch { width: 16px; height: 16px; }
+  .card .card-swatch { width: 16px; height: 16px; }
 
-  /* Бейджи — меньше на мобильном, правые бейджи сдвигаем левее (не на swatch-полосу) */
-  .card-media > .badge {
+  /* Бейджи — меньше на мобильном */
+  .card .card-media > .badge {
     font-size: .65rem; padding: 3px 8px;
   }
-  .card-media > .badge-sale,
-  .card-media > .badge-hit {
+  /* Скидка/хит — в нижний левый угол чтобы не перекрывать бейдж наличия */
+  .card .card-media > .badge-sale,
+  .card .card-media > .badge-hit {
     right: auto; left: 12px; top: auto; bottom: 12px;
   }
 
