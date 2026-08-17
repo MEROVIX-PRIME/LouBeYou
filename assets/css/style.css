@@ -872,6 +872,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 /* ============================================================
    О LOU
    ============================================================ */
+/* --- About-страница (старые стили, не используются) --- */
 .about-hero { text-align: center; padding: 60px 0 40px; }
 .about-hero img { width: 170px; margin: 0 auto 26px; }
 .about-lead {
@@ -883,6 +884,114 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 .about-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 46px 0; }
 .about-gallery div { aspect-ratio: 1/1; background: var(--white-soft); border-radius: var(--r-lg); overflow: hidden; }
 .about-gallery img { width: 100%; height: 100%; object-fit: contain; padding: 12%; }
+
+/* --- About-страница: новый дизайн --- */
+.about-page-hero {
+  text-align: center; padding: 80px 0 20px;
+  background: var(--ivory);
+}
+.about-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: .05em; margin: 0 0 12px; color: var(--ink);
+}
+.about-page-subtitle {
+  font-size: 1.1rem; color: var(--ink-soft); margin: 0;
+  font-style: italic;
+}
+
+.about-section { padding: 50px 0; }
+
+.about-two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+  align-items: center; max-width: 960px; margin: 0 auto;
+}
+.about-photo img {
+  width: 100%; border-radius: var(--r-lg);
+  object-fit: cover;
+}
+.about-photo--portrait img { aspect-ratio: 3/4; }
+
+.about-text p {
+  font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.about-greeting {
+  font-size: 1.2rem !important; color: var(--ink) !important;
+}
+.about-greeting strong {
+  font-family: var(--font-display); font-size: 1.4rem;
+  color: var(--caramel);
+}
+
+.about-quote-section {
+  background: var(--ivory); padding: 50px 0;
+}
+.about-blockquote {
+  max-width: 700px; margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  line-height: 1.6; text-align: center;
+  color: var(--ink); padding: 0 20px;
+}
+
+.about-centered {
+  max-width: 680px; margin: 0 auto; text-align: center;
+}
+.about-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: .04em; margin: 0 0 30px; color: var(--ink);
+}
+.about-heading--big {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--caramel);
+}
+
+.about-moments p {
+  font-family: var(--font-display);
+  font-size: 1.15rem; line-height: 1.5;
+  color: var(--ink-soft); margin: 0 0 8px;
+}
+
+.about-soft {
+  font-size: 1.05rem; line-height: 1.7;
+  color: var(--ink-soft); margin: 0 0 20px;
+}
+.about-accent {
+  font-family: var(--font-display);
+  font-size: 1.25rem; color: var(--caramel);
+  margin: 0 0 24px;
+}
+.about-accent--large { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+
+.about-wide-photo {
+  padding: 10px 0 50px;
+}
+.about-wide-photo img {
+  width: 100%; max-height: 500px;
+  object-fit: cover; border-radius: var(--r-lg);
+}
+
+.about-beyou { padding-bottom: 30px; }
+
+.about-sign {
+  text-align: center; padding: 20px 0 10px;
+}
+.about-sign p { margin: 0 0 4px; color: var(--ink-soft); font-style: italic; font-size: 1.05rem; }
+.about-sign-name {
+  font-family: var(--font-display) !important;
+  font-size: 1.8rem !important; color: var(--caramel) !important;
+  font-style: normal !important; margin-bottom: 4px !important;
+}
+.about-sign-role {
+  font-size: .92rem !important; color: var(--ink-soft) !important;
+  font-style: normal !important;
+}
+
+.about-cta {
+  text-align: center; padding: 30px 0 70px;
+}
 
 /* ============================================================
    ПОДВАЛ
@@ -1067,6 +1176,16 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .usp-grid { grid-template-columns: 1fr 1fr; }
   .usp-item { border-left: none !important; padding: 0 10px; }
   .about-gallery { grid-template-columns: repeat(2, 1fr); }
+
+  .about-two-col { grid-template-columns: 1fr; gap: 30px; }
+  .about-photo--portrait img { aspect-ratio: 4/5; max-height: 420px; width: 100%; }
+  .about-page-hero { padding: 50px 0 16px; }
+  .about-page-title { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  .about-section { padding: 30px 0; }
+  .about-quote-section { padding: 30px 0; }
+  .about-blockquote { font-size: 1.1rem; }
+  .about-blockquote br { display: none; }
+  .about-wide-photo img { max-height: 300px; }
 }
 
 @media (max-width: 420px) {

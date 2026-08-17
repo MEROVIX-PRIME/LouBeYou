@@ -480,13 +480,13 @@
             </div>
             <div class="footer-col">
               <h4 data-i18n="footer.help">${t("footer.help")}</h4>
-              <a href="index.html#faq" data-i18n="footer.faq">${t("footer.faq")}</a>
-              <a href="index.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
-              <a href="index.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
+              <a href="about.html#faq" data-i18n="footer.faq">${t("footer.faq")}</a>
+              <a href="about.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
+              <a href="about.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
             </div>
             <div class="footer-col">
               <h4 data-i18n="footer.about">${t("footer.about")}</h4>
-              <a href="index.html" data-i18n="footer.story">${t("footer.story")}</a>
+              <a href="about.html" data-i18n="footer.story">${t("footer.story")}</a>
               <a href="${CFG.instagram}" target="_blank" rel="noopener">Instagram</a>
               <a href="mailto:${CFG.orderEmail}" data-i18n="footer.contact">${t("footer.contact")}</a>
             </div>
@@ -503,8 +503,8 @@
           <div class="footer-bottom">
             <span>© ${new Date().getFullYear()} Lou Be You. <span data-i18n="footer.rights">${t("footer.rights")}</span></span>
             <nav>
-              <a href="index.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
-              <a href="index.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
+              <a href="about.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
+              <a href="about.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
               <a href="mailto:${CFG.orderEmail}" data-i18n="footer.contact">${t("footer.contact")}</a>
             </nav>
           </div>
