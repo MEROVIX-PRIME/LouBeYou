@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-17T10:20:36.011Z
+   Обновлено: 2026-08-17T11:55:12.654Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -450,9 +450,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "Just One More Page",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «Just One More Page»",
+      "ru": "Т_shirt_book",
       "en": "Lou Be You T-Shirt «Just One More Page»",
       "vi": "Áo thun Lou Be You «Just One More Page»"
     },
@@ -469,7 +469,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -477,7 +477,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -485,7 +485,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -493,7 +493,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -501,7 +501,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -509,87 +509,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -597,7 +517,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -605,7 +525,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -613,7 +533,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -621,9 +541,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_book",
+        "sku": "Т_shirt_book_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_book_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -682,9 +682,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "Waiting Together",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «Waiting Together»",
+      "ru": "Т_shirt_bus",
       "en": "Lou Be You T-Shirt «Waiting Together»",
       "vi": "Áo thun Lou Be You «Waiting Together»"
     },
@@ -701,7 +701,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -709,7 +709,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -717,7 +717,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -725,7 +725,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -733,7 +733,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -741,87 +741,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -829,7 +749,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -837,7 +757,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -845,7 +765,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -853,9 +773,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_bus",
+        "sku": "Т_shirt_bus_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_bus_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -913,9 +913,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "Fresh Out of the Oven",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «Fresh Out of the Oven»",
+      "ru": "Т_shirt_cook",
       "en": "Lou Be You T-Shirt «Fresh Out of the Oven»",
       "vi": "Áo thun Lou Be You «Fresh Out of the Oven»"
     },
@@ -932,7 +932,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -940,7 +940,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -948,7 +948,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -956,7 +956,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -964,7 +964,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -972,87 +972,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -1060,7 +980,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -1068,7 +988,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -1076,7 +996,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -1084,9 +1004,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_cook",
+        "sku": "Т_shirt_cook_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_cook_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -1144,9 +1144,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "I’m Fixing This",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «I’m Fixing This»",
+      "ru": "Т_shirt_fix",
       "en": "Lou Be You T-Shirt «I’m Fixing This»",
       "vi": "Áo thun Lou Be You «I’m Fixing This»"
     },
@@ -1163,7 +1163,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -1171,7 +1171,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -1179,7 +1179,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -1187,7 +1187,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -1195,7 +1195,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -1203,87 +1203,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -1291,7 +1211,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -1299,7 +1219,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -1307,7 +1227,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -1315,9 +1235,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_fix",
+        "sku": "Т_shirt_fix_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_fix_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -1376,9 +1376,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "No Plans for Today",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «No Plans for Today»",
+      "ru": "Т_shirt_noplans",
       "en": "Lou Be You T-Shirt «No Plans for Today»",
       "vi": "Áo thun Lou Be You «No Plans for Today»"
     },
@@ -1395,7 +1395,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -1403,7 +1403,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -1411,7 +1411,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -1419,7 +1419,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -1427,7 +1427,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -1435,87 +1435,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -1523,7 +1443,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -1531,7 +1451,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -1539,7 +1459,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -1547,9 +1467,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_noplans",
+        "sku": "Т_shirt_noplans_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_noplans_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -1608,9 +1608,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "You’ve Grown So Much",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «You’ve Grown So Much»",
+      "ru": "Т_shirt_flower",
       "en": "Lou Be You T-Shirt «You’ve Grown So Much»",
       "vi": "Áo thun Lou Be You «You’ve Grown So Much»"
     },
@@ -1627,7 +1627,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -1635,7 +1635,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -1643,7 +1643,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -1651,7 +1651,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -1659,7 +1659,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -1667,87 +1667,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -1755,7 +1675,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -1763,7 +1683,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -1771,7 +1691,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -1779,9 +1699,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_flower",
+        "sku": "Т_shirt_flower_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_flower_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -1840,9 +1840,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "I Love This Part",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «I Love This Part»",
+      "ru": "Т_shirt_music",
       "en": "Lou Be You T-Shirt «I Love This Part»",
       "vi": "Áo thun Lou Be You «I Love This Part»"
     },
@@ -1859,7 +1859,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -1867,7 +1867,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -1875,7 +1875,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -1883,7 +1883,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -1891,7 +1891,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -1899,87 +1899,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -1987,7 +1907,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -1995,7 +1915,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -2003,7 +1923,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -2011,9 +1931,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_music",
+        "sku": "Т_shirt_music_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_music_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -2072,9 +2072,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "One More Photo",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «One More Photo»",
+      "ru": "Т_shirt_photo",
       "en": "Lou Be You T-Shirt «One More Photo»",
       "vi": "Áo thun Lou Be You «One More Photo»"
     },
@@ -2091,7 +2091,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -2099,7 +2099,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -2107,7 +2107,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -2115,7 +2115,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -2123,7 +2123,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -2131,87 +2131,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -2219,7 +2139,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -2227,7 +2147,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -2235,7 +2155,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -2243,9 +2163,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_photo",
+        "sku": "Т_shirt_photo_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_photo_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -2304,9 +2304,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "Just Listening to the Rain",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «Just Listening to the Rain»",
+      "ru": "Т_shirt_rain",
       "en": "Lou Be You T-Shirt «Just Listening to the Rain»",
       "vi": "Áo thun Lou Be You «Just Listening to the Rain»"
     },
@@ -2323,7 +2323,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -2331,7 +2331,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -2339,7 +2339,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -2347,7 +2347,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -2355,7 +2355,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -2363,87 +2363,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -2451,7 +2371,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -2459,7 +2379,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -2467,7 +2387,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -2475,9 +2395,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_rain",
+        "sku": "Т_shirt_rain_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_rain_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -2535,9 +2535,9 @@ window.LOU_PRODUCTS = [
       "black",
       "moss"
     ],
-    "quote": "Five More Minutes",
+    "quote": "",
     "name": {
-      "ru": "Футболка Lou Be You «Five More Minutes»",
+      "ru": "Т_shirt_sleep",
       "en": "Lou Be You T-Shirt «Five More Minutes»",
       "vi": "Áo thun Lou Be You «Five More Minutes»"
     },
@@ -2554,7 +2554,7 @@ window.LOU_PRODUCTS = [
     "sizeImage": "https://lh3.googleusercontent.com/d/1syRWdr7MW9YG8cNpT_iJOk4z52TAY7NA",
     "variants": [
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_w_XS",
         "size": "XS",
         "color": "white",
         "stock": 1000,
@@ -2562,7 +2562,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
@@ -2570,7 +2570,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
@@ -2578,7 +2578,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
@@ -2586,7 +2586,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
@@ -2594,87 +2594,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
-        "size": "XS",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "S",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "M",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "L",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "XL",
-        "color": "black",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "XS",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "S",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "M",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "L",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
-        "size": "XL",
-        "color": "moss",
-        "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
-      },
-      {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
@@ -2682,7 +2602,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
@@ -2690,7 +2610,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
@@ -2698,7 +2618,7 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
@@ -2706,9 +2626,89 @@ window.LOU_PRODUCTS = [
         "priceRub": 1955
       },
       {
-        "sku": "Т_shirt_sleep",
+        "sku": "Т_shirt_sleep_i_XL",
         "size": "XL",
         "color": "ivory",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_b_XS",
+        "size": "XS",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_b_S",
+        "size": "S",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_b_M",
+        "size": "M",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_b_L",
+        "size": "L",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_b_XL",
+        "size": "XL",
+        "color": "black",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_m_XS",
+        "size": "XS",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_m_S",
+        "size": "S",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_m_M",
+        "size": "M",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_m_L",
+        "size": "L",
+        "color": "moss",
+        "stock": 1000,
+        "price": 598000,
+        "priceRub": 1955
+      },
+      {
+        "sku": "Т_shirt_sleep_m_XL",
+        "size": "XL",
+        "color": "moss",
         "stock": 1000,
         "price": 598000,
         "priceRub": 1955
@@ -2756,9 +2756,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "Just One More Page",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «Just One More Page»",
+      "ru": "mug_book",
       "en": "Lou Be You Mug «Just One More Page»",
       "vi": "Cốc Lou Be You «Just One More Page»"
     },
@@ -2809,9 +2809,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "Fresh Out of the Oven",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «Fresh Out of the Oven»",
+      "ru": "mug_cook",
       "en": "Lou Be You Mug «Fresh Out of the Oven»",
       "vi": "Cốc Lou Be You «Fresh Out of the Oven»"
     },
@@ -2862,9 +2862,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "Just Listening to the Rain",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «Just Listening to the Rain»",
+      "ru": "mug_rain",
       "en": "Lou Be You Mug «Just Listening to the Rain»",
       "vi": "Cốc Lou Be You «Just Listening to the Rain»"
     },
@@ -2915,9 +2915,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "Five More Minutes",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «Five More Minutes»",
+      "ru": "mug_sleep",
       "en": "Lou Be You Mug «Five More Minutes»",
       "vi": "Cốc Lou Be You «Five More Minutes»"
     },
@@ -2968,9 +2968,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "No Plans for Today",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «No Plans for Today»",
+      "ru": "mug_noplans",
       "en": "Lou Be You Mug «No Plans for Today»",
       "vi": "Cốc Lou Be You «No Plans for Today»"
     },
@@ -3021,9 +3021,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "You’ve Grown So Much",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «You’ve Grown So Much»",
+      "ru": "mug_flower",
       "en": "Lou Be You Mug «You’ve Grown So Much»",
       "vi": "Cốc Lou Be You «You’ve Grown So Much»"
     },
@@ -3074,9 +3074,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "Waiting Together",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «Waiting Together»",
+      "ru": "mug_bus",
       "en": "Lou Be You Mug «Waiting Together»",
       "vi": "Cốc Lou Be You «Waiting Together»"
     },
@@ -3127,9 +3127,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "I Love This Part",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «I Love This Part»",
+      "ru": "mug_music",
       "en": "Lou Be You Mug «I Love This Part»",
       "vi": "Cốc Lou Be You «I Love This Part»"
     },
@@ -3180,9 +3180,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "I’m Fixing This",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «I’m Fixing This»",
+      "ru": "mug_fix",
       "en": "Lou Be You Mug «I’m Fixing This»",
       "vi": "Cốc Lou Be You «I’m Fixing This»"
     },
@@ -3233,9 +3233,9 @@ window.LOU_PRODUCTS = [
     "colors": [
       "white"
     ],
-    "quote": "One More Photo",
+    "quote": "",
     "name": {
-      "ru": "Кружка Lou Be You «One More Photo»",
+      "ru": "mug_photo",
       "en": "Lou Be You Mug «One More Photo»",
       "vi": "Cốc Lou Be You «One More Photo»"
     },
