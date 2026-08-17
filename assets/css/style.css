@@ -763,7 +763,7 @@ html[lang="vi"] .hero-title {
 .modal-close:hover { background: var(--border); }
 
 .pd { display: grid; grid-template-columns: 1fr 1fr; min-width: 0; }
-.pd-media { min-width: 0; background: var(--ivory); padding: 34px; border-radius: var(--r-lg) 0 0 var(--r-lg); }
+.pd-media { min-width: 0; background: var(--ivory); padding: 34px; border-radius: var(--r-lg) 0 0 0; }
 .pd-main {
   aspect-ratio: 1/1; display: grid; place-items: center;
   background: var(--white-soft); border-radius: var(--r-md); overflow: hidden;
@@ -854,7 +854,7 @@ html[lang="vi"] .hero-title {
 .acc-item.open .acc-body { display: block; }
 .acc-item + .acc-item { border-top: 1px solid var(--border); }
 
-.similar { min-width: 0; padding: 30px 36px 36px; border-top: 1px solid var(--border); }
+.similar { min-width: 0; padding: 30px 36px 36px; border-top: 1px solid var(--border); background: #fff; }
 .similar h3 { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 18px; letter-spacing: .05em; }
 html[lang="ru"] .similar h3 { letter-spacing: .1em; }
 html[lang="ru"] .hero-title,
