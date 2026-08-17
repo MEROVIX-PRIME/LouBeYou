@@ -167,6 +167,11 @@ window.LOU_CONFIG = {
   orderFormName: "lou-order",
   orderEmail: "hello@loubeyou.com",
 
+  /* URL Google Apps Script Web App для приёма заказов.
+     Замени на свой URL после деплоя скрипта.
+     Пока пусто — используется резервный mailto. */
+  orderScriptUrl: "https://script.google.com/macros/s/AKfycbxyOi1KnDRUqZT2dZf4iT_aALgpllm-Txh_wd_-pQEIhBfJ86BhOFVf2kBLRVs_lmnA3w/exec",
+
   /* --- ДОСТАВКА ---------------------------------------------- */
   shipping: {
     flatRate: 30000,

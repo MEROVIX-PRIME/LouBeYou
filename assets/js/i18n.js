@@ -125,8 +125,11 @@ window.LOU_I18N = {
     "checkout.name": "Họ và tên",
     "checkout.phone": "Số điện thoại",
     "checkout.email": "Email",
-    "checkout.city": "Tỉnh / Thành phố",
-    "checkout.address": "Địa chỉ nhận hàng",
+    "checkout.province": "Tỉnh / Thành phố",
+    "checkout.provincePlaceholder": "— Chọn —",
+    "checkout.district": "Quận / Huyện",
+    "checkout.address": "Địa chỉ chi tiết",
+    "checkout.addressPlaceholder": "Số nhà, đường, phường / xã",
     "checkout.note": "Ghi chú cho đơn hàng",
     "checkout.notePlaceholder": "Ví dụ: giao sau 18h",
     "checkout.payment": "Thanh toán",
@@ -213,7 +216,20 @@ window.LOU_I18N = {
 
     "common.close": "Đóng",
     "common.loading": "Đang tải...",
-    "common.currency": "₫"
+    "common.currency": "₫",
+
+    "ship.title": "Giao hàng",
+    "ship.subtitle": "Tất cả thông tin bạn cần về việc nhận hàng Lou",
+    "ship.where.title": "Chúng tôi giao hàng ở đâu",
+    "ship.where.text": "Hiện tại, giao hàng chỉ khả dụng trong phạm vi Việt Nam. Chúng tôi đang mở rộng sang các quốc gia khác — hãy theo dõi nhé!",
+    "ship.cost.title": "Phí giao hàng",
+    "ship.cost.text": "Giao hàng trên toàn Việt Nam hoàn toàn miễn phí cho tất cả đơn hàng. Không yêu cầu đơn hàng tối thiểu, không phí ẩn.",
+    "ship.how.title": "Cách đặt hàng",
+    "ship.how.text1": "Chọn sản phẩm bạn thích, thêm vào giỏ hàng và điền thông tin — họ tên, số điện thoại, email, thành phố và địa chỉ giao hàng.",
+    "ship.how.text2": "Sau khi bạn gửi đơn hàng, quản lý của chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết và sắp xếp giao hàng. Thanh toán khi nhận hàng.",
+    "ship.time.title": "Thời gian giao hàng",
+    "ship.time.text": "Giao hàng thường mất 3–7 ngày làm việc tùy thuộc vào vị trí của bạn tại Việt Nam.",
+    "ship.cta": "Bắt đầu mua sắm"
   },
 
   en: {
@@ -336,8 +352,11 @@ window.LOU_I18N = {
     "checkout.name": "Full name",
     "checkout.phone": "Phone number",
     "checkout.email": "Email",
-    "checkout.city": "City / Province",
-    "checkout.address": "Delivery address",
+    "checkout.province": "Province / City",
+    "checkout.provincePlaceholder": "— Select —",
+    "checkout.district": "District",
+    "checkout.address": "Street address",
+    "checkout.addressPlaceholder": "House number, street, ward",
     "checkout.note": "Order note",
     "checkout.notePlaceholder": "For example: deliver after 6pm",
     "checkout.payment": "Payment",
@@ -424,7 +443,20 @@ window.LOU_I18N = {
 
     "common.close": "Close",
     "common.loading": "Loading...",
-    "common.currency": "₫"
+    "common.currency": "₫",
+
+    "ship.title": "Shipping & Delivery",
+    "ship.subtitle": "Everything you need to know about getting your Lou",
+    "ship.where.title": "Where we deliver",
+    "ship.where.text": "At the moment, delivery is available only within Vietnam. We are working on expanding to other countries — stay tuned!",
+    "ship.cost.title": "Shipping cost",
+    "ship.cost.text": "Delivery across Vietnam is completely free for all orders. No minimum order amount, no hidden fees.",
+    "ship.how.title": "How to order",
+    "ship.how.text1": "Choose the items you like, add them to your cart, and fill in your details — name, phone number, email, city, and delivery address.",
+    "ship.how.text2": "After you submit your order, our manager will contact you to confirm the details and arrange delivery. Payment is made upon delivery.",
+    "ship.time.title": "Delivery time",
+    "ship.time.text": "Delivery usually takes 3–7 business days depending on your location within Vietnam.",
+    "ship.cta": "Start shopping"
   },
 
   ru: {
@@ -547,8 +579,11 @@ window.LOU_I18N = {
     "checkout.name": "Имя и фамилия",
     "checkout.phone": "Телефон",
     "checkout.email": "Email",
-    "checkout.city": "Город / провинция",
+    "checkout.province": "Провинция / Город",
+    "checkout.provincePlaceholder": "— Выбери —",
+    "checkout.district": "Район",
     "checkout.address": "Адрес доставки",
+    "checkout.addressPlaceholder": "Дом, улица, район",
     "checkout.note": "Комментарий к заказу",
     "checkout.notePlaceholder": "Например: доставить после 18:00",
     "checkout.payment": "Оплата",
@@ -635,6 +670,19 @@ window.LOU_I18N = {
 
     "common.close": "Закрыть",
     "common.loading": "Загружаем...",
-    "common.currency": "₫"
+    "common.currency": "₫",
+
+    "ship.title": "Доставка",
+    "ship.subtitle": "Всё, что нужно знать о получении вашего Lou",
+    "ship.where.title": "Куда доставляем",
+    "ship.where.text": "На данный момент доставка работает только по Вьетнаму. Мы работаем над расширением в другие страны — следите за обновлениями!",
+    "ship.cost.title": "Стоимость доставки",
+    "ship.cost.text": "Доставка по всему Вьетнаму полностью бесплатная для всех заказов. Без минимальной суммы заказа, без скрытых платежей.",
+    "ship.how.title": "Как заказать",
+    "ship.how.text1": "Выберите понравившиеся товары, добавьте их в корзину и заполните данные — имя, телефон, email, город и адрес доставки.",
+    "ship.how.text2": "После оформления заказа наш менеджер свяжется с вами для подтверждения деталей и организации доставки. Оплата при получении.",
+    "ship.time.title": "Сроки доставки",
+    "ship.time.text": "Доставка обычно занимает 3–7 рабочих дней в зависимости от вашего расположения во Вьетнаме.",
+    "ship.cta": "Перейти в магазин"
   }
 };

@@ -57,13 +57,23 @@
               <label for="f-email"><span data-i18n="checkout.email">Email</span> <i>*</i></label>
               <input id="f-email" name="email" type="email" required autocomplete="email">
             </div>
+            <div class="form-field" data-zalo-field style="display:none">
+              <label for="f-zalo">Zalo</label>
+              <input id="f-zalo" name="zalo" type="tel" autocomplete="tel">
+            </div>
             <div class="form-field">
-              <label for="f-city"><span data-i18n="checkout.city">City</span> <i>*</i></label>
-              <input id="f-city" name="city" required autocomplete="address-level2">
+              <label for="f-province"><span data-i18n="checkout.province">Province / City</span> <i>*</i></label>
+              <select id="f-province" name="province" required>
+                <option value="" data-i18n="checkout.provincePlaceholder">— Select —</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="f-district"><span data-i18n="checkout.district">District</span> <i>*</i></label>
+              <input id="f-district" name="district" required>
             </div>
             <div class="form-field full">
               <label for="f-address"><span data-i18n="checkout.address">Address</span> <i>*</i></label>
-              <input id="f-address" name="address" required autocomplete="street-address">
+              <input id="f-address" name="address" required autocomplete="street-address" data-i18n-ph="checkout.addressPlaceholder">
             </div>
             <div class="form-field full">
               <label for="f-note" data-i18n="checkout.note">Order note</label>
@@ -113,14 +123,6 @@
   </div>
 </main>
 
-<!-- Скрытая форма для Netlify Forms — она регистрирует форму при деплое -->
-<form name="lou-order" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name"><input type="text" name="phone">
-  <input type="email" name="email"><input type="text" name="city">
-  <input type="text" name="address"><textarea name="note"></textarea>
-  <input type="text" name="order_id"><textarea name="order_items"></textarea>
-  <input type="text" name="order_total"><input type="text" name="language">
-</form>
 
 <div data-footer></div>
 
@@ -137,6 +139,40 @@
   const form = document.querySelector("[data-order-form]");
   const errEl = document.querySelector("[data-error]");
 
+  /* ---------- Провинции Вьетнама ---------- */
+  const VN_PROVINCES = [
+    "An Giang","Bà Rịa – Vũng Tàu","Bắc Giang","Bắc Kạn","Bạc Liêu",
+    "Bắc Ninh","Bến Tre","Bình Định","Bình Dương","Bình Phước",
+    "Bình Thuận","Cà Mau","Cần Thơ","Cao Bằng","Đà Nẵng",
+    "Đắk Lắk","Đắk Nông","Điện Biên","Đồng Nai","Đồng Tháp",
+    "Gia Lai","Hà Giang","Hà Nam","Hà Nội","Hà Tĩnh",
+    "Hải Dương","Hải Phòng","Hậu Giang","Hoà Bình","Hưng Yên",
+    "Khánh Hoà","Kiên Giang","Kon Tum","Lai Châu","Lâm Đồng",
+    "Lạng Sơn","Lào Cai","Long An","Nam Định","Nghệ An",
+    "Ninh Bình","Ninh Thuận","Phú Thọ","Phú Yên","Quảng Bình",
+    "Quảng Nam","Quảng Ngãi","Quảng Ninh","Quảng Trị","Sóc Trăng",
+    "Sơn La","Tây Ninh","Thái Bình","Thái Nguyên","Thanh Hoá",
+    "Thừa Thiên Huế","Tiền Giang","TP. Hồ Chí Minh","Trà Vinh",
+    "Tuyên Quang","Vĩnh Long","Vĩnh Phúc","Yên Bái"
+  ];
+
+  /* Заполняем выпадающий список провинций */
+  const provinceSelect = document.getElementById("f-province");
+  VN_PROVINCES.forEach(function (p) {
+    const opt = document.createElement("option");
+    opt.value = p; opt.textContent = p;
+    provinceSelect.appendChild(opt);
+  });
+
+  /* ---------- Zalo — показываем только для вьетнамского ---------- */
+  const zaloField = document.querySelector("[data-zalo-field]");
+  function toggleZalo() {
+    zaloField.style.display = LOU.getLang() === "vi" ? "" : "none";
+  }
+  document.addEventListener("lang:change", toggleZalo);
+  document.addEventListener("products:ready", toggleZalo);
+
+  /* ---------- Рендер корзины ---------- */
   function render() {
     const items = LOU.cart;
 
@@ -212,12 +248,13 @@
     }).join("\n");
   }
 
+  /* ---------- Отправка заказа ---------- */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     errEl.classList.remove("show");
 
     const data = Object.fromEntries(new FormData(form).entries());
-    const required = ["name", "phone", "email", "city", "address"];
+    const required = ["name", "phone", "email", "province", "district", "address"];
     const missing = required.filter(function (k) { return !String(data[k] || "").trim(); });
     if (missing.length || !LOU.cart.length) {
       errEl.classList.add("show");
@@ -230,37 +267,55 @@
     btn.disabled = true;
     btn.querySelector("span").textContent = LOU.t("checkout.sending");
 
-    const payload = new URLSearchParams({
-      "form-name": LOU_CONFIG.orderFormName,
-      name: data.name, phone: data.phone, email: data.email,
-      city: data.city, address: data.address, note: data.note || "",
+    const fullAddress = data.address + ", " + data.district + ", " + data.province;
+
+    const payload = {
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      zalo: data.zalo || "",
+      province: data.province,
+      district: data.district,
+      address: data.address,
+      fullAddress: fullAddress,
+      note: data.note || "",
       order_id: id,
       order_items: itemsText(),
       order_total: LOU.money(sub + ship) + " (" + LOU.t("cart.shipping") + ": " +
         (ship ? LOU.money(ship) : LOU.t("cart.shippingFree")) + ")",
       language: LOU.getLang()
-    });
+    };
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: payload.toString()
-    }).then(function (r) {
-      if (!r.ok) throw new Error("form");
-      done(id);
-    }).catch(function () {
-      // Резервный путь: открыть почтовый клиент
-      const body = "Order " + id + "\n\n" + itemsText() +
-        "\n\nTotal: " + LOU.money(sub + ship) +
-        "\n\n" + data.name + "\n" + data.phone + "\n" + data.email +
-        "\n" + data.city + ", " + data.address +
-        (data.note ? "\n\nNote: " + data.note : "");
-      window.location.href = "mailto:" + LOU_CONFIG.orderEmail +
-        "?subject=" + encodeURIComponent("Lou order " + id) +
-        "&body=" + encodeURIComponent(body);
-      done(id);
-    });
+    const scriptUrl = LOU_CONFIG.orderScriptUrl;
+
+    if (scriptUrl) {
+      fetch(scriptUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function () {
+        done(id);
+      }).catch(function () {
+        fallbackMail(id, data, sub, ship);
+      });
+    } else {
+      fallbackMail(id, data, sub, ship);
+    }
   });
+
+  function fallbackMail(id, data, sub, ship) {
+    const body = "Order " + id + "\n\n" + itemsText() +
+      "\n\nTotal: " + LOU.money(sub + ship) +
+      "\n\n" + data.name + "\n" + data.phone + "\n" + data.email +
+      (data.zalo ? "\nZalo: " + data.zalo : "") +
+      "\n" + data.address + ", " + data.district + ", " + data.province +
+      (data.note ? "\n\nNote: " + data.note : "");
+    window.location.href = "mailto:" + LOU_CONFIG.orderEmail +
+      "?subject=" + encodeURIComponent("Lou order " + id) +
+      "&body=" + encodeURIComponent(body);
+    done(id);
+  }
 
   function done(id) {
     LOU.clearCart();

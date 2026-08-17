@@ -882,6 +882,39 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 .size-note { font-size: .85rem; color: var(--ink-soft); margin-top: 14px; }
 
 /* ============================================================
+   ДОСТАВКА
+   ============================================================ */
+.shipping-hero {
+  text-align: center; padding: 20px 0 10px;
+  background: var(--ivory);
+}
+.shipping-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: .05em; margin: 0 0 12px; color: var(--ink);
+}
+.shipping-subtitle {
+  font-size: 1.1rem; color: var(--ink-soft); margin: 0;
+  font-style: italic;
+}
+.shipping-page { max-width: 720px; margin: 0 auto; padding-top: 40px; padding-bottom: 70px; }
+.shipping-image {
+  text-align: center; margin-bottom: 40px;
+}
+.shipping-image img {
+  max-width: 100%; height: auto; border-radius: var(--r-lg);
+}
+.shipping-block { margin-bottom: 36px; }
+.shipping-block h2 {
+  font-family: var(--font-display); font-size: 1.5rem;
+  letter-spacing: .04em; margin: 0 0 12px; color: var(--ink);
+}
+.shipping-block p {
+  font-size: 1rem; line-height: 1.7; color: var(--ink-soft); margin: 0 0 10px;
+}
+.shipping-cta { text-align: center; padding: 20px 0 0; }
+
+/* ============================================================
    КОРЗИНА
    ============================================================ */
 .cart-layout { display: grid; grid-template-columns: 1fr 370px; gap: 34px; align-items: start; }
@@ -893,7 +926,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   width: 92px; height: 92px; flex-shrink: 0; border-radius: var(--r-md);
   background: var(--ivory); overflow: hidden;
 }
-.cart-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+.cart-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .cart-info { flex: 1; min-width: 0; }
 .cart-info h3 { font-size: .98rem; font-weight: 600; margin-bottom: 5px; }
 .cart-meta { font-size: .84rem; color: var(--ink-soft); }
@@ -928,7 +961,8 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   border: 1.5px solid var(--border); background: var(--white-soft);
   transition: border-color .18s;
 }
-.form-field input:focus, .form-field textarea:focus { border-color: var(--moss); outline: none; }
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--moss); outline: none; }
+.form-field select { cursor: pointer; }
 .form-field textarea { resize: vertical; min-height: 90px; }
 .form-error { color: #B4523C; font-size: .86rem; margin-top: 10px; display: none; }
 .form-error.show { display: block; }
@@ -1065,8 +1099,9 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
    ============================================================ */
 .footer { background: var(--white-soft); border-top: 1px solid var(--border); margin-top: 70px; padding: 54px 0 0; }
 .footer-grid {
-  display: grid; grid-template-columns: 1.6fr repeat(4, 1fr) 1.7fr;
-  gap: 32px; padding-bottom: 40px;
+  display: grid; grid-template-columns: 1.4fr repeat(4, 1fr);
+  gap: 40px; padding-bottom: 40px;
+  max-width: 960px; margin: 0 auto;
 }
 .footer-brand .logo { margin-bottom: 14px; }
 .footer-brand p { font-size: .88rem; color: var(--ink-soft); margin: 0 0 18px; max-width: 220px; }
@@ -1086,28 +1121,12 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 .footer-col a { display: block; font-size: .88rem; color: var(--ink-soft); padding: 5px 0; transition: color .18s; }
 .footer-col a:hover { color: var(--caramel); }
 
-.footer-news h4 { font-family: var(--font-display); font-size: 1.3rem; text-transform: none; letter-spacing: 0; margin-bottom: 8px; }
-.footer-news p { font-size: .86rem; color: var(--ink-soft); margin: 0 0 15px; }
-.news-form { display: flex; gap: 8px; }
-.news-form input {
-  flex: 1; padding: 12px 16px; border-radius: var(--r-pill);
-  border: 1.5px solid var(--border); background: var(--ivory);
-  font-size: .88rem;
-}
-.news-form input:focus { border-color: var(--moss); outline: none; }
-.news-form button {
-  width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
-  background: var(--moss); color: #fff; display: grid; place-items: center;
-  transition: background .18s;
-}
-.news-form button:hover { background: var(--moss-dark); }
-.news-done { font-size: .86rem; color: var(--moss); font-weight: 600; margin-top: 10px; display: none; }
-.news-done.show { display: block; }
 
 .footer-bottom {
   border-top: 1px solid var(--border); padding: 20px 0;
-  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
   font-size: .82rem; color: var(--ink-soft);
+  max-width: 960px; margin: 0 auto;
 }
 .footer-bottom nav { display: flex; gap: 22px; }
 
@@ -1135,8 +1154,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 @media (max-width: 1100px) {
   .hero-cards { display: none; }
   .hero-photo { width: 100%; }
-  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
-  .footer-col:nth-child(4), .footer-col:nth-child(5) { display: none; }
+  .footer-grid { max-width: none; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 24px; }
   .coll-row { grid-template-columns: repeat(3, 1fr); }
   .similar-row { grid-template-columns: repeat(3, 1fr); }
   .filter-panel { grid-template-columns: repeat(3, 1fr); }
@@ -1237,8 +1255,10 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
   .cart-actions { flex-direction: row; width: 100%; justify-content: space-between; align-items: center; }
 
   .form-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-  .footer-brand, .footer-news { grid-column: 1 / -1; }
+  .footer-grid { max-width: none; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .footer-brand { grid-column: 1 / -1; text-align: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; }
+  .footer-brand .socials { justify-content: center; }
   .footer-bottom { flex-direction: column; }
   .usp-grid { grid-template-columns: 1fr 1fr; }
   .usp-item { border-left: none !important; padding: 0 10px; }

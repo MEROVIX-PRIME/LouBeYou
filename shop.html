@@ -237,12 +237,20 @@
   }
 
   /* ---- Ценовой ползунок: вспомогательные функции ---- */
-  function priceMoney(vnd) {
+  function displayPrice(p) {
+    /* Возвращает числовую цену в валюте текущего языка */
     var cfg = window.LOU_CONFIG || {};
     var lang = LOU.getLang();
-    if (lang === "en") return "$" + Math.round(vnd / (cfg.usdToVnd || 26000));
-    if (lang === "ru") return Math.round(vnd / (cfg.usdToVnd || 26000) * (cfg.usdToRub || 85)) + " ₽";
-    return Math.round(vnd).toLocaleString("vi-VN") + " ₫";
+    if (lang === "ru") return p.priceRub ? Math.round(Number(p.priceRub)) : Math.round(p.price / (cfg.usdToVnd || 26000) * (cfg.usdToRub || 85));
+    if (lang === "en") return Math.round(p.price / (cfg.usdToVnd || 26000));
+    return Math.round(p.price);
+  }
+
+  function formatDisplayPrice(val) {
+    var lang = LOU.getLang();
+    if (lang === "en") return "$" + val;
+    if (lang === "ru") return val + " ₽";
+    return val.toLocaleString("vi-VN") + " ₫";
   }
 
   function updateSliderFill() {
@@ -258,8 +266,8 @@
 
   function updateSliderLabels() {
     if (!state._priceValMin) return;
-    var lo = priceMoney(state._priceMin);
-    var hi = priceMoney(state._priceMax);
+    var lo = formatDisplayPrice(state._priceMin);
+    var hi = formatDisplayPrice(state._priceMax);
     state._priceValMin.textContent = lo;
     state._priceValMax.textContent = hi;
     /* Текст в свёрнутом виде */
@@ -463,7 +471,8 @@
         return (p.colors || []).indexOf(value) !== -1;
       case "price":
         if (value === "all") return true;
-        return p.price >= state._priceMin && p.price <= state._priceMax;
+        var dp = displayPrice(p);
+        return dp >= state._priceMin && dp <= state._priceMax;
       case "product_type":
         return p.subcategory === value;
       case "for_whom":
@@ -490,14 +499,14 @@
         var labelSpan = el.querySelector("span");
         if (labelSpan && filterDef) labelSpan.textContent = LOU.pick(filterDef);
 
-        var prices = catProducts.map(function (p) { return p.price; }).filter(function (v) { return v > 0; });
+        var prices = catProducts.map(function (p) { return displayPrice(p); }).filter(function (v) { return v > 0; });
         if (!prices.length) { el.style.display = "none"; return; }
         el.style.display = "";
 
         var minP = Math.min.apply(null, prices);
         var maxP = Math.max.apply(null, prices);
-        var step = maxP > 1000000 ? 50000 : maxP > 100000 ? 10000 : 1000;
-        if (minP === maxP) maxP = minP + step;
+        var step = 1;
+        if (minP === maxP) maxP = minP + 1;
 
         var inMin = state._priceSliderMin;
         var inMax = state._priceSliderMax;

@@ -481,8 +481,7 @@
             <div class="footer-col">
               <h4 data-i18n="footer.help">${t("footer.help")}</h4>
               <a href="about.html#faq" data-i18n="footer.faq">${t("footer.faq")}</a>
-              <a href="about.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
-              <a href="about.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
+              <a href="shipping.html" data-i18n="footer.shipping">${t("footer.shipping")}</a>
             </div>
             <div class="footer-col">
               <h4 data-i18n="footer.about">${t("footer.about")}</h4>
@@ -490,33 +489,17 @@
               <a href="${CFG.instagram}" target="_blank" rel="noopener">Instagram</a>
               <a href="mailto:${CFG.orderEmail}" data-i18n="footer.contact">${t("footer.contact")}</a>
             </div>
-            <div class="footer-news">
-              <h4 data-i18n="footer.newsletter">${t("footer.newsletter")}</h4>
-              <p data-i18n="footer.newsletterText">${t("footer.newsletterText")}</p>
-              <form class="news-form" data-news>
-                <input type="email" required placeholder="${t("footer.emailPlaceholder")}" data-i18n-ph="footer.emailPlaceholder" aria-label="Email">
-                <button type="submit" aria-label="${t("footer.subscribe")}">${ICONS.arrow}</button>
-              </form>
-              <div class="news-done" data-news-done data-i18n="footer.subscribed">${t("footer.subscribed")}</div>
-            </div>
           </div>
           <div class="footer-bottom">
             <span>© ${new Date().getFullYear()} Lou Be You. <span data-i18n="footer.rights">${t("footer.rights")}</span></span>
             <nav>
-              <a href="about.html#shipping" data-i18n="footer.shipping">${t("footer.shipping")}</a>
-              <a href="about.html#returns" data-i18n="footer.returns">${t("footer.returns")}</a>
+              <a href="shipping.html" data-i18n="footer.shipping">${t("footer.shipping")}</a>
               <a href="mailto:${CFG.orderEmail}" data-i18n="footer.contact">${t("footer.contact")}</a>
             </nav>
           </div>
         </div>
       </footer>`;
 
-    const form = host.querySelector("[data-news]");
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      host.querySelector("[data-news-done]").classList.add("show");
-      form.reset();
-    });
     renderFooterCollections();
   }
 
