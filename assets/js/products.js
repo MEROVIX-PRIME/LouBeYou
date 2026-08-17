@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-14T18:16:03.237Z
+   Обновлено: 2026-08-17T08:32:40.075Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -12,7 +12,7 @@ window.LOU_CATEGORY_TREE = {
       "ru": "Одежда",
       "vi": "Vải"
     },
-    "image": "https://lh3.googleusercontent.com/d/1IcjmQcy1Qkh43pkKN3A1XMsYjOFT0qdD",
+    "image": "https://lh3.googleusercontent.com/d/1PDgcotdiXYH5QzdM4fBw_C9zY5vItoOd",
     "children": {
       "t-shirts": {
         "name": {
@@ -20,7 +20,7 @@ window.LOU_CATEGORY_TREE = {
           "ru": "Футболки",
           "vi": "Áo phông"
         },
-        "image": "https://lh3.googleusercontent.com/d/19j59HQp3WqclQg6EFwev9ehUMWMMEA6a",
+        "image": "https://lh3.googleusercontent.com/d/1v0t4awcP1xWqiM1UpcEBQK7pPf43wMKG",
         "children": {
           "adults": {
             "name": {
@@ -46,7 +46,7 @@ window.LOU_CATEGORY_TREE = {
           "ru": "Худи",
           "vi": "Áo hoodie"
         },
-        "image": "https://lh3.googleusercontent.com/d/1-Q7yA_8uPl1anw2-xC1l5YyeBzV6DFlB",
+        "image": "https://lh3.googleusercontent.com/d/1kT0sfZnXKnbFX8f0FqLrR7IKJd9gBEtN",
         "children": {
           "adults": {
             "name": {
@@ -74,7 +74,7 @@ window.LOU_CATEGORY_TREE = {
       "ru": "Дом и хозяйство",
       "vi": "Nhà cửa và Đồ gia dụng"
     },
-    "image": "https://lh3.googleusercontent.com/d/1Kly79DMdf0ufOE6wntpwew-hIs5YYJVS",
+    "image": "https://lh3.googleusercontent.com/d/1LCzmJO_E-o5n3bXxogmoHaqD2e3C92V_",
     "children": {
       "mugs": {
         "name": {
@@ -91,7 +91,7 @@ window.LOU_CATEGORY_TREE = {
           "ru": "Фартуки",
           "vi": "Tạp dề"
         },
-        "image": "https://lh3.googleusercontent.com/d/1zvf_3a55sUU9TBhceQ3l8EfbcTxFsr56",
+        "image": "https://lh3.googleusercontent.com/d/1XFVpCGzp95DnOxBt2qLAtvCt2MtLQyNb",
         "children": {}
       }
     }
