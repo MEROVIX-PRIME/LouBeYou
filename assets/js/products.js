@@ -2,7 +2,7 @@
    Lou Be You — каталог товаров
    Сгенерировано автоматически из Google Таблицы.
    НЕ РЕДАКТИРОВАТЬ ВРУЧНУЮ — изменения перезапишутся.
-   Обновлено: 2026-08-17T11:59:56.011Z
+   Обновлено: 2026-08-17T12:16:57.187Z
    ============================================================ */
 
 window.LOU_CATEGORY_TREE = {
@@ -433,8 +433,8 @@ window.LOU_PRODUCTS = [
       "https://lh3.googleusercontent.com/d/1uwKTuBonlC65QMq_ForIPN09vV3z8Q_e",
       "https://lh3.googleusercontent.com/d/1FsrwocrrpTf8NvtmT_HYObjQihj1kfUs"
     ],
-    "price": 598000,
-    "priceRub": 1955,
+    "price": 806000,
+    "priceRub": 2635,
     "oldPrice": null,
     "stock": 20000,
     "sizes": [
@@ -473,160 +473,160 @@ window.LOU_PRODUCTS = [
         "size": "XS",
         "color": "white",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_w_S",
         "size": "S",
         "color": "white",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_w_M",
         "size": "M",
         "color": "white",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_w_L",
         "size": "L",
         "color": "white",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_w_XL",
         "size": "XL",
         "color": "white",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_i_XS",
         "size": "XS",
         "color": "ivory",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_i_S",
         "size": "S",
         "color": "ivory",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_i_M",
         "size": "M",
         "color": "ivory",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_i_L",
         "size": "L",
         "color": "ivory",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_i_XL",
         "size": "XL",
         "color": "ivory",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_b_XS",
         "size": "XS",
         "color": "black",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_b_S",
         "size": "S",
         "color": "black",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_b_M",
         "size": "M",
         "color": "black",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_b_L",
         "size": "L",
         "color": "black",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_b_XL",
         "size": "XL",
         "color": "black",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_m_XS",
         "size": "XS",
         "color": "moss",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_m_S",
         "size": "S",
         "color": "moss",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_m_M",
         "size": "M",
         "color": "moss",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_m_L",
         "size": "L",
         "color": "moss",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       },
       {
         "sku": "Т_shirt_book_m_XL",
         "size": "XL",
         "color": "moss",
         "stock": 1000,
-        "price": 598000,
-        "priceRub": 1955
+        "price": 806000,
+        "priceRub": 2635
       }
     ],
     "galleries": {
@@ -2748,8 +2748,8 @@ window.LOU_PRODUCTS = [
       "https://lh3.googleusercontent.com/d/1TXBCNKO6AlZX3oef0OKYoTjNiDr4Tbt9",
       "https://lh3.googleusercontent.com/d/18h3jhw7LI34fZADs5COxbj1R3t0xheR-"
     ],
-    "price": 156000,
-    "priceRub": 510,
+    "price": 650000,
+    "priceRub": 2125,
     "oldPrice": null,
     "stock": 1000,
     "sizes": [],
@@ -2779,8 +2779,8 @@ window.LOU_PRODUCTS = [
         "size": "",
         "color": "white",
         "stock": 1000,
-        "price": 156000,
-        "priceRub": 510
+        "price": 650000,
+        "priceRub": 2125
       }
     ],
     "galleries": {
