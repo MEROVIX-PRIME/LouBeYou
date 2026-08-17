@@ -170,7 +170,7 @@ window.LOU_CONFIG = {
   /* URL Google Apps Script Web App для приёма заказов.
      Замени на свой URL после деплоя скрипта.
      Пока пусто — используется резервный mailto. */
-  orderScriptUrl: "https://script.google.com/macros/s/AKfycbxyOi1KnDRUqZT2dZf4iT_aALgpllm-Txh_wd_-pQEIhBfJ86BhOFVf2kBLRVs_lmnA3w/exec",
+  orderScriptUrl: "https://script.google.com/macros/s/AKfycbyIfABPItmR7HqpoI7DTHVDLvt4Suo7KDChpZhZRI70U8yEdTrcLmfZdjJbMWeK-Yt9/exec",
 
   /* --- ДОСТАВКА ---------------------------------------------- */
   shipping: {
