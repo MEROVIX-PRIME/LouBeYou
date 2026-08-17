@@ -496,10 +496,7 @@
 
         var minP = Math.min.apply(null, prices);
         var maxP = Math.max.apply(null, prices);
-        /* Округляем */
         var step = maxP > 1000000 ? 50000 : maxP > 100000 ? 10000 : 1000;
-        minP = Math.floor(minP / step) * step;
-        maxP = Math.ceil(maxP / step) * step;
         if (minP === maxP) maxP = minP + step;
 
         var inMin = state._priceSliderMin;
