@@ -657,11 +657,8 @@
       ${pageMode ? "" : `<button class="modal-close" data-modal-close aria-label="${t("common.close")}">${ICONS.close}</button>`}
       <div class="pd">
         <div class="pd-media">
-          <div class="pd-main-wrap">
-            <div class="pd-main">
-              <span class="badge ${stockBadge(p.stock).cls} pd-badge-stock" data-pd-badge-stock>${stockBadge(p.stock).text}</span>
-              <img src="${gallery[0]}" alt="${pick(p.name)}" data-pd-main>
-            </div>
+          <div class="pd-main">
+            <span class="badge ${stockBadge(p.stock).cls} pd-badge-stock" data-pd-badge-stock>${stockBadge(p.stock).text}</span>
             ${p.colors && p.colors.length ? `<div class="pd-color-side" data-pd-color-side>
               ${p.colors.map(c => {
                 const sw = CFG.colorSwatch[c] || "#DDD4C5";
@@ -669,6 +666,7 @@
                   <i style="background:${sw}"></i></button>`;
               }).join("")}
             </div>` : ""}
+            <img src="${gallery[0]}" alt="${pick(p.name)}" data-pd-main>
           </div>
           ${gallery.length > 1 ? '<div class="pd-thumbs">' + gallery.map((g, i) =>
             `<button class="pd-thumb ${i === 0 ? "active" : ""}" data-thumb="${g}"><img src="${g}" alt=""></button>`).join("") + "</div>" : ""}
@@ -681,7 +679,7 @@
             <span class="price">${money(p.price, p)}</span>
             ${p.oldPrice ? '<span class="price-old">' + money(p.oldPrice) + "</span>" : ""}
           </div>
-          <div class="pd-stock" data-pd-stock></div>
+          <div class="pd-stock" data-pd-stock style="display:none"></div>
 
           ${p.sizes && p.sizes.length ? `
           <div class="field">
