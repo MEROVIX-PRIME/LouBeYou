@@ -465,7 +465,7 @@ html[lang="vi"] .hero-title {
 
 .product-page { padding-top: 0; padding-bottom: 70px; }
 .product-page .modal-box {
-  width: 100%; min-width: 0; max-width: none; max-height: none; overflow: visible;
+  width: 100%; min-width: 0; max-width: none; max-height: none; overflow: hidden;
   border: 1px solid var(--border); box-shadow: var(--shadow-md);
   border-radius: var(--r-lg);
 }
