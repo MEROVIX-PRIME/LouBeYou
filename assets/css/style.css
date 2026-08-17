@@ -886,7 +886,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 
 /* --- About-страница: новый дизайн --- */
 .about-page-hero {
-  text-align: center; padding: 0 0 20px;
+  text-align: center; padding: 20px 0 10px;
   background: var(--ivory);
 }
 .about-page-title {
@@ -900,6 +900,7 @@ html[lang="ru"] .page-title { letter-spacing: .1em; }
 }
 
 .about-section { padding: 50px 0; }
+.about-page-hero + .about-section { padding-top: 25px; }
 
 .about-two-col {
   display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
